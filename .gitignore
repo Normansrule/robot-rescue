@@ -49,3 +49,6 @@ Thumbs.db
 # Robot Rescue helper output
 /dist/
 /docs/progress/
+
+# Burst/WebGL build leftovers
+/Data/
