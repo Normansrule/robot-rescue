@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976006531153724f8306a1fd441aa0c, type: 3}
+  m_Name: Dispatch_Test02_ConveyorCaper
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Narrative.DispatchScript
+  lines:
+  - cue: intro
+    text: 'Test two: conveyor belts! The crate you need is behind that fence. Belts go under fences. Crates go on belts. You see where I''m going.'
+    duration: 8
+    repeatable: 0
+  - cue: belt_on
+    text: Belt's running! Let the crate come to you. Patience is a rescue skill.
+    duration: 5
+    repeatable: 0
+  - cue: crate_on_plate
+    text: Plate's down. That's half the door happy. The other half wants you.
+    duration: 5
+    repeatable: 0
+  - cue: tether_power
+    text: 'Plugged in. Look at the wires: green means go. Orange means ''PIP, do something''.'
+    duration: 5
+    repeatable: 0
+  - cue: door_open
+    text: Door's open! You're holding it open, so walk through and stay plugged in.
+    duration: 5
+    repeatable: 0
+  - cue: cable_taut
+    text: End of the cable! If you unplug, the door shuts. Physics. And also me.
+    duration: 5
+    repeatable: 0
+  - cue: exit
+    text: 'Test two: passed. Free treadmill workout included.'
+    duration: 5
+    repeatable: 0

@@ -1,0 +1,4 @@
+﻿<Solution>
+  <Project Path="RobotRescue.Runtime.csproj" />
+  <Project Path="RobotRescue.Editor.csproj" />
+</Solution>

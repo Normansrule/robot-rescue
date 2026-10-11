@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976006531153724f8306a1fd441aa0c, type: 3}
+  m_Name: Dispatch_Ch2_Call01
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Narrative.DispatchScript
+  lines:
+  - cue: intro
+    text: Morning, PIP! Your first real call. Nonna Lucia's lunch rush is in eight minutes and her pasta is still in the box. No pressure. Some pressure. Pasta pressure.
+    duration: 7
+    repeatable: 0
+  - cue: plate_too_light
+    text: The plate isn't budging. No offence, PIP, but you weigh about as much as a sandwich. Find something heavier.
+    duration: 6
+    repeatable: 0
+  - cue: tap_on
+    text: Water's running! Get the pot under that tap.
+    duration: 4
+    repeatable: 0
+  - cue: water_filled
+    text: 'Pot filled. Step one of being a chef: done. Step two: don''t set anything on fire.'
+    duration: 4
+    repeatable: 0
+  - cue: tether_pull
+    text: Yoink! The Bureau approves tether-pulling for objects, snacks and, in emergencies, cats.
+    duration: 5
+    repeatable: 0
+  - cue: pasta_grabbed
+    text: That's the pasta! Into the pot it goes. Dropping it in is fine. Throwing it in is more fun.
+    duration: 5
+    repeatable: 0
+  - cue: ingredient_added
+    text: Pasta's in! Now it needs heat. The stove's dead though... if only someone had a power cable growing out of their back.
+    duration: 6
+    repeatable: 0
+  - cue: wrong_ingredient
+    text: Nonna says that doesn't go in there.
+    duration: 3
+    repeatable: 1
+  - cue: tether_power
+    text: Plugged in! You are now technically a kitchen appliance. I've never been prouder.
+    duration: 5
+    repeatable: 0
+  - cue: cable_taut
+    text: That's the end of your cable. You're the battery, PIP. Batteries don't wander off.
+    duration: 5
+    repeatable: 0
+  - cue: boiling
+    text: It's boiling! Stay plugged in. Watching water boil is officially part of your job now.
+    duration: 5
+    repeatable: 0
+  - cue: cooked
+    text: Al dente! Unplug and get it to the serving hatch before Nonna starts doing the angry hand thing.
+    duration: 6
+    repeatable: 0
+  - cue: served_raw
+    text: Nonna sent it back. Apparently 'crunchy spaghetti' isn't a dish. Cook it first!
+    duration: 5
+    repeatable: 1
+  - cue: served
+    text: Nonna Lucia is saved! She says you're a good boy. I told her you're a robot. She doesn't care.
+    duration: 6
+    repeatable: 0
+  - cue: swing_hint
+    text: Exit's over the harbour. See that hook? Tether it, swing, and jump to let go at the top.
+    duration: 6
+    repeatable: 0
+  - cue: tether_swing
+    text: Swinging over open water. Very heroic. Please don't tell Insurance.
+    duration: 4
+    repeatable: 0
+  - cue: fell
+    text: Splash! Don't worry, you're waterproof. Mostly. Try again.
+    duration: 4
+    repeatable: 1
+  - cue: fell
+    text: 'Bureau policy: if at first you don''t succeed, respawn.'
+    duration: 4
+    repeatable: 1
+  - cue: exit
+    text: Call complete! Take five, PIP. Not five minutes. Five seconds. The phones are ringing.
+    duration: 6
+    repeatable: 0

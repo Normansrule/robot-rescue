@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976006531153724f8306a1fd441aa0c, type: 3}
+  m_Name: Dispatch_Test01_StackEmUp
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Narrative.DispatchScript
+  lines:
+  - cue: intro
+    text: Welcome to the Bureau training wing! These are Helper Drones. Wind-up, very loyal, and they cost more than you, so be nice.
+    duration: 7
+    repeatable: 0
+  - cue: drone_grabbed
+    text: Ooh, it likes you. The key spins faster when it's happy.
+    duration: 4
+    repeatable: 0
+  - cue: climb
+    text: Look at you, up on the big-bot floor! Stairs made of coworkers. Very team-building.
+    duration: 5
+    repeatable: 0
+  - cue: plate_too_light
+    text: Too light again. Drones weigh more than you. Don't take it personally.
+    duration: 5
+    repeatable: 0
+  - cue: tether_pull
+    text: Pulling a drone up with your Tether. Remember that one, it's on the test. This is the test.
+    duration: 5
+    repeatable: 0
+  - cue: door_open
+    text: Door's open! Drones make excellent paperweights.
+    duration: 4
+    repeatable: 0
+  - cue: exit
+    text: 'Test one: passed! I''m writing ''competent'' on your file. In pencil.'
+    duration: 5
+    repeatable: 0

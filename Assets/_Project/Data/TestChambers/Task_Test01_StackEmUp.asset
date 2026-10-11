@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fc3bbfe2d08f84aaa4a0203272180c, type: 3}
+  m_Name: Task_Test01_StackEmUp
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Tasks.TaskDefinition
+  taskId: Test01_StackEmUp
+  title: 'Test 01: Stack ''Em Up'
+  rescuee: Bureau Training
+  description: 
+  timeLimit: 0
+  boltsReward: 10
+  steps:
+  - id: climb
+    label: Stack drones to reach the upper floor
+  - id: door_open
+    label: Weigh down the plate upstairs (PIP's too light!)
