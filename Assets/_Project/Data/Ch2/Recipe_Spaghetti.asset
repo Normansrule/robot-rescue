@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 392dece15fd961a49b3f4d8bb26e7287, type: 3}
+  m_Name: Recipe_Spaghetti
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Tasks.Cooking.RecipeDefinition
+  dishName: Spaghetti
+  method: 0
+  needsWater: 1
+  ingredients:
+  - {fileID: 11400000, guid: 4b47fda398b4f9345afaf2146a0ecfac, type: 2}
+  cookTime: 8
+  dishColor: {r: 1, g: 0.92, b: 0.65, a: 1}

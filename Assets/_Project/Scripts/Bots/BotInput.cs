@@ -6,12 +6,12 @@ namespace RobotRescue.Bots
     /// <summary>
     /// Keyboard/mouse + gamepad bindings, built in code so the prototype has no asset dependencies.
     /// Swap for a generated .inputactions asset when remapping UI lands.
-    /// Default layout (pad): A jump, X grab/drop, RT throw, LT tether, RB/LB reel in/out.
+    /// Default layout (pad): A jump, X grab/drop, RT throw, LT tether, RB/LB reel in/out, B use tool, Y swap tool.
     /// </summary>
     public class BotInput : MonoBehaviour
     {
         InputActionMap map;
-        InputAction move, lookMouse, lookStick, jump, interact, throwAction, tether, reel;
+        InputAction move, lookMouse, lookStick, jump, interact, throwAction, tether, reel, useTool, cycleTool;
 
         public Vector2 Move => move.ReadValue<Vector2>();
         /// <summary>Mouse look in pixels this frame.</summary>
@@ -25,6 +25,9 @@ namespace RobotRescue.Bots
         public bool TetherPressed => tether.WasPressedThisFrame();
         /// <summary>+1 reel in, -1 reel out.</summary>
         public float Reel => reel.ReadValue<float>();
+        /// <summary>Tool Arm: hold to use the equipped tool (whisk, screwdriver...).</summary>
+        public bool UseToolHeld => useTool.IsPressed();
+        public bool CycleToolPressed => cycleTool.WasPressedThisFrame();
 
         void Awake()
         {
@@ -57,6 +60,12 @@ namespace RobotRescue.Bots
             reel = map.AddAction("Reel", InputActionType.Value);
             reel.AddCompositeBinding("1DAxis").With("Positive", "<Keyboard>/q").With("Negative", "<Keyboard>/z");
             reel.AddCompositeBinding("1DAxis").With("Positive", "<Gamepad>/rightShoulder").With("Negative", "<Gamepad>/leftShoulder");
+
+            useTool = map.AddAction("UseTool", InputActionType.Button, "<Keyboard>/f");
+            useTool.AddBinding("<Gamepad>/buttonEast");
+
+            cycleTool = map.AddAction("CycleTool", InputActionType.Button, "<Keyboard>/tab");
+            cycleTool.AddBinding("<Gamepad>/buttonNorth");
         }
 
         void OnEnable() => map.Enable();

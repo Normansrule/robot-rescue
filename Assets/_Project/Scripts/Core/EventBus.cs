@@ -10,13 +10,29 @@ namespace RobotRescue.Core
     {
         static event Action<T> Handlers;
 
+        static EventBus() => EventBusReset.Register(() => Handlers = null);
+
         public static void Subscribe(Action<T> handler) => Handlers += handler;
         public static void Unsubscribe(Action<T> handler) => Handlers -= handler;
         public static void Raise(T evt) => Handlers?.Invoke(evt);
+    }
 
-        // Static events survive play mode when domain reload is disabled.
+    /// <summary>
+    /// Clears every EventBus on entering play mode. Static events survive play mode when domain reload
+    /// is disabled, and Unity can't run [RuntimeInitializeOnLoadMethod] inside a generic type, so each
+    /// EventBus&lt;T&gt; registers its reset here.
+    /// </summary>
+    static class EventBusReset
+    {
+        static readonly System.Collections.Generic.List<Action> resets = new System.Collections.Generic.List<Action>();
+
+        public static void Register(Action reset) => resets.Add(reset);
+
         [UnityEngine.RuntimeInitializeOnLoadMethod(UnityEngine.RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void ResetOnPlay() => Handlers = null;
+        static void ResetAll()
+        {
+            foreach (var reset in resets) reset();
+        }
     }
 
     // ---- Shared game events ----

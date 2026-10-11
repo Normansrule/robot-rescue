@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Recipe_NonnasSpaghetti
   m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Tasks.Cooking.RecipeDefinition
   dishName: Nonna's Spaghetti
+  method: 0
   needsWater: 1
   ingredients:
   - {fileID: 11400000, guid: 4b47fda398b4f9345afaf2146a0ecfac, type: 2}
   cookTime: 8
+  dishColor: {r: 1, g: 0.92, b: 0.65, a: 1}

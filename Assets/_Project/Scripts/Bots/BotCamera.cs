@@ -32,7 +32,8 @@ namespace RobotRescue.Bots
         void LateUpdate()
         {
             if (!target) return;
-            if (input)
+            bool paused = Core.GameManager.Instance && Core.GameManager.Instance.Paused;
+            if (input && !paused)
             {
                 Vector2 m = input.LookMouse * mouseSensitivity;
                 Vector2 s = input.LookStick * (stickSensitivity * Time.deltaTime);

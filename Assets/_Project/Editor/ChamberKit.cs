@@ -4,6 +4,7 @@ using RobotRescue.Core;
 using RobotRescue.Narrative;
 using RobotRescue.Tasks;
 using RobotRescue.Tasks.Cooking;
+using RobotRescue.Tools;
 using RobotRescue.UI;
 using UnityEditor;
 using UnityEngine;
@@ -26,7 +27,7 @@ namespace RobotRescue.EditorTools
         /// <summary>Call at the start of every build so edited colours are picked up.</summary>
         public static void ResetCache() => mats.Clear();
 
-        public static void BuildSystems(TaskDefinition task, DispatchScript dispatch, BotController bot, CookingPot pot = null)
+        public static void BuildSystems(TaskDefinition task, DispatchScript dispatch, BotController bot)
         {
             var go = new GameObject("Game");
             go.AddComponent<GameManager>();
@@ -39,7 +40,7 @@ namespace RobotRescue.EditorTools
             hud.grabber = bot.GetComponent<Grabber>();
             hud.taskRunner = runner;
             hud.narrator = narrator;
-            hud.pot = pot;
+            hud.toolArm = bot.GetComponent<ToolArm>();
         }
 
         public static void BuildLighting()
@@ -70,7 +71,8 @@ namespace RobotRescue.EditorTools
             return go.AddComponent<BotCamera>();
         }
 
-        public static BotController BuildBot(BotCamera cam, Vector3 position, float yaw = 0f)
+        /// <summary>PIP with camera hookup. <paramref name="tools"/> are the Tool Arm heads it starts with (default: Grabber).</summary>
+        public static BotController BuildBot(BotCamera cam, Vector3 position, float yaw = 0f, params ToolDefinition[] tools)
         {
             var bot = new GameObject("PIP");
             bot.transform.position = position;
@@ -120,6 +122,13 @@ namespace RobotRescue.EditorTools
             tether.cableMaterial = Mat("Tether_Cable", new Color(1f, 0.55f, 0.15f), 0f, unlit: true);
 
             bot.AddComponent<Grabber>().cameraRig = cam;
+
+            // Tool Arm on PIP's right side; the head is tinted with the current tool and spins while in use.
+            Box("ToolArm", visual, o + new Vector3(0.42f, 0.55f, 0.1f), new Vector3(0.08f, 0.08f, 0.35f), grey, false);
+            var head = Box("ToolHead", visual, o + new Vector3(0.42f, 0.55f, 0.32f), new Vector3(0.2f, 0.2f, 0.08f), accent, false);
+            var arm = bot.AddComponent<ToolArm>();
+            arm.toolHead = head.GetComponent<Renderer>();
+            arm.startingTools = tools != null && tools.Length > 0 ? tools : new[] { ToolKit().grabber };
 
             SetLayerRecursively(bot, IgnoreRaycastLayer);
             bot.transform.rotation = Quaternion.Euler(0f, yaw, 0f);
@@ -177,11 +186,15 @@ namespace RobotRescue.EditorTools
             go.transform.position = worldPos;
         }
 
-        public static void Label(string text, Transform parent, Vector3 pos, float yaw, float charSize, Color color)
+        /// <summary>
+        /// World-space sign. <paramref name="facing"/> is the direction the text faces, toward its readers
+        /// (0 = readable from +Z, 180 = from -Z). TextMesh is read from behind its forward, hence the +180.
+        /// </summary>
+        public static void Label(string text, Transform parent, Vector3 pos, float facing, float charSize, Color color)
         {
             var go = new GameObject("Sign_" + text);
             go.transform.SetParent(parent, false);
-            go.transform.SetPositionAndRotation(pos, Quaternion.Euler(0f, yaw, 0f));
+            go.transform.SetPositionAndRotation(pos, Quaternion.Euler(0f, facing + 180f, 0f));
             var tm = go.AddComponent<TextMesh>();
             var font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             tm.font = font;

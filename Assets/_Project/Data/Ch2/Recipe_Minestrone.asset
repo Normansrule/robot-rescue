@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 392dece15fd961a49b3f4d8bb26e7287, type: 3}
+  m_Name: Recipe_Minestrone
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Tasks.Cooking.RecipeDefinition
+  dishName: Minestrone
+  method: 0
+  needsWater: 1
+  ingredients:
+  - {fileID: 11400000, guid: 414901c1718ed144585d166fb3026be7, type: 2}
+  - {fileID: 11400000, guid: ba1b1c727905a3940ad11db5c6764855, type: 2}
+  cookTime: 10
+  dishColor: {r: 0.95, g: 0.5, b: 0.3, a: 1}

@@ -1,13 +1,18 @@
 using RobotRescue.Core;
+using RobotRescue.Puzzles;
 using UnityEngine;
 
 namespace RobotRescue.Tasks.Cooking
 {
-    /// <summary>Bring (or throw) a cooked pot here to serve it.</summary>
+    /// <summary>
+    /// Bring (or throw) a finished dish here. With an <see cref="OrderBoard"/>, it must match an open order and the
+    /// empty pot/bowl goes back to its station. Without one, any cooked pot completes the "serve" step.
+    /// </summary>
     [RequireComponent(typeof(Collider))]
     public class ServingHatch : MonoBehaviour
     {
-        [Tooltip("Shown once the dish is served (a plate of pasta).")]
+        public OrderBoard orderBoard;
+        [Tooltip("Shown once the dish is served (no order board only).")]
         public GameObject servedVisual;
         float lastRejectTime = -10f;
 
@@ -16,20 +21,33 @@ namespace RobotRescue.Tasks.Cooking
         void OnTriggerEnter(Collider other)
         {
             var rb = other.attachedRigidbody;
-            if (!rb || !rb.TryGetComponent(out CookingPot pot)) return;
+            if (!rb || !rb.TryGetComponent(out IDish dish) || dish.IsEmpty) return;
 
-            if (!pot.IsCooked)
+            var recipe = dish.FinishedRecipe;
+            if (recipe == null)
             {
-                if (Time.time - lastRejectTime > 4f)
-                    EventBus<NarrationCue>.Raise(new NarrationCue("served_raw"));
-                lastRejectTime = Time.time;
+                Reject(dish.IsRuined ? "served_burnt" : "served_raw");
                 return;
             }
 
-            pot.gameObject.SetActive(false);
+            if (orderBoard)
+            {
+                if (!orderBoard.TryFulfill(recipe)) { Reject("order_wrong"); return; }
+                dish.Empty();
+                if (rb.TryGetComponent(out Respawnable home)) home.Respawn();
+                return;
+            }
+
+            dish.gameObject.SetActive(false);
             if (servedVisual) servedVisual.SetActive(true);
             EventBus<NarrationCue>.Raise(new NarrationCue("served"));
             EventBus<TaskStepCompleted>.Raise(new TaskStepCompleted("serve"));
+        }
+
+        void Reject(string cue)
+        {
+            if (Time.time - lastRejectTime > 4f) EventBus<NarrationCue>.Raise(new NarrationCue(cue));
+            lastRejectTime = Time.time;
         }
     }
 }

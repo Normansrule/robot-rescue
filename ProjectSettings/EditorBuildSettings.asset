@@ -6,16 +6,28 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Project/Scenes/TestChambers/Test03_SwingShift.unity
-    guid: c7bf37368c9d8064092932fa11b3ca34
-  - enabled: 1
-    path: Assets/_Project/Scenes/TestChambers/Test02_ConveyorCaper.unity
-    guid: cb4f24cbe34431342afb513f307b160a
+    path: Assets/_Project/Scenes/MainMenu.unity
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/_Project/Scenes/TestChambers/Test01_StackEmUp.unity
     guid: 33eb1f2dd68e44a4fa516ee9f0ba7b16
   - enabled: 1
+    path: Assets/_Project/Scenes/TestChambers/Test02_ConveyorCaper.unity
+    guid: cb4f24cbe34431342afb513f307b160a
+  - enabled: 1
+    path: Assets/_Project/Scenes/TestChambers/Test03_SwingShift.unity
+    guid: c7bf37368c9d8064092932fa11b3ca34
+  - enabled: 1
+    path: Assets/_Project/Scenes/Ch1_Boss_CoffeeCrisis.unity
+    guid: 0194f0abc7a94f3408b6d1a3ce1f8ce4
+  - enabled: 1
     path: Assets/_Project/Scenes/Ch2_Call01_PastaEmergency.unity
     guid: ca4765178269eb343b29977e5530d2d3
+  - enabled: 1
+    path: Assets/_Project/Scenes/Ch2_Call02_WhiskBusiness.unity
+    guid: a2fb24f75855d5f459205f66801cddb1
+  - enabled: 1
+    path: Assets/_Project/Scenes/Ch2_Boss_PastaPanic.unity
+    guid: 3ed148dd1cbe0334e8710b38dd6e8098
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

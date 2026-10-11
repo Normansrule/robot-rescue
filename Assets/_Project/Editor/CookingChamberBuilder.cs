@@ -170,7 +170,7 @@ namespace RobotRescue.EditorTools
             var doorComp = door.AddComponent<Door>();
             doorComp.openOnTaskComplete = true;
             doorComp.openOffset = new Vector3(3.2f, 0, 0);
-            Label("EXIT", p, new Vector3(0, 3.8f, -5.95f), 180f, 0.12f, Color.white);
+            Label("EXIT", p, new Vector3(0, 3.8f, -5.95f), 0f, 0.12f, Color.white);
 
             // Cheerful clutter so the room reads as a trattoria kitchen.
             var wood = Mat("Wood", new Color(0.8f, 0.6f, 0.42f));
@@ -219,7 +219,7 @@ namespace RobotRescue.EditorTools
             var water = Cylinder("StreamVisual", zone.transform, new Vector3(6.5f, 1.55f, 2.72f), 0.15f, 1.3f, Mat("Water", new Color(0.5f, 0.8f, 1f), 0.9f));
             stream.streamVisual = water;
 
-            Label("SINK", root, new Vector3(6.5f, 2.9f, 3.6f), 0f, 0.1f, new Color(0.15f, 0.4f, 0.5f));
+            Label("SINK", root, new Vector3(6.5f, 2.9f, 3.6f), 180f, 0.1f, new Color(0.15f, 0.4f, 0.5f));
             return stream;
         }
 
@@ -363,7 +363,7 @@ namespace RobotRescue.EditorTools
         // ------------------------------------------------------------------ bot, camera, systems
 
         static void BuildSystems(ChamberData data, BotController bot, CookingPot pot) =>
-            ChamberKit.BuildSystems(data.task, data.dispatch, bot, pot);
+            ChamberKit.BuildSystems(data.task, data.dispatch, bot);
 
     }
 }

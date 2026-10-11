@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fc3bbfe2d08f84aaa4a0203272180c, type: 3}
+  m_Name: Task_Ch2_Boss_PastaPanic
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Tasks.TaskDefinition
+  taskId: ch2_boss
+  title: 'BIG RESCUE: Pasta Panic'
+  rescuee: Nonna Lucia (and her review)
+  description: The food critic Mr. Grumbleton is here. Five dishes. The kitchen is falling apart.
+  timeLimit: 0
+  boltsReward: 80
+  steps:
+  - id: cook
+    label: Get a pot boiling
+  - id: whisk
+    label: Whisk something
+  - id: orders_done
+    label: Cook 5 dishes before he storms out

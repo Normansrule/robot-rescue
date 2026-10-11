@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976006531153724f8306a1fd441aa0c, type: 3}
+  m_Name: Dispatch_Ch1_Boss
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Narrative.DispatchScript
+  lines:
+  - cue: intro
+    text: PIP! Code Brown! My coffee machine is making a noise I can only describe as 'pre-explosion'. Open all three vents. Please. I haven't had my coffee.
+    duration: 7
+    repeatable: 0
+  - cue: plate_too_light
+    text: Too light! That plate wants a Helper Drone. Or a very large sandwich.
+    duration: 4
+    repeatable: 1
+  - cue: drone_grabbed
+    text: Drones stack, by the way. Very stable. Unlike me, right now.
+    duration: 4
+    repeatable: 0
+  - cue: tether_pull
+    text: Yoink! Bring those drones down off the shelf.
+    duration: 4
+    repeatable: 0
+  - cue: tether_power
+    text: Plugged in! You're a pressure valve now. Congratulations on your promotion.
+    duration: 4
+    repeatable: 0
+  - cue: cable_taut
+    text: That's the end of your cable. Stay close to the socket.
+    duration: 4
+    repeatable: 1
+  - cue: vent_open
+    text: Vent open! I can hear it sighing. I'm sighing too.
+    duration: 3
+    repeatable: 1
+  - cue: vents_all_open
+    text: All three vents open! Hold them! Hold them steady!
+    duration: 4
+    repeatable: 1
+  - cue: pressure_high
+    text: The gauge is in the red-ish. Orange-red. Red-orange. Hurry.
+    duration: 4
+    repeatable: 0
+  - cue: pressure_danger
+    text: PIP it's SHAKING. Why is it shaking? Coffee machines shouldn't shake!
+    duration: 4
+    repeatable: 0
+  - cue: coffee_boom
+    text: ...well. The break room is now a latte. Let's try that again.
+    duration: 5
+    repeatable: 1
+  - cue: coffee_saved
+    text: It's stable! You saved my coffee. You saved ME. The exit's open, hero.
+    duration: 6
+    repeatable: 0
+  - cue: fell
+    text: Respawning. The coffee waits for no bot.
+    duration: 3
+    repeatable: 1
+  - cue: exit
+    text: 'Chapter one complete! Next stop: Nonna Lucia''s Trattoria. Bring an appetite. You can''t eat. Bring one anyway.'
+    duration: 6
+    repeatable: 0

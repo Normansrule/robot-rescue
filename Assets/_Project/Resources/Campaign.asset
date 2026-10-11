@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac68203612e022b41bbd3f11dbec4ded, type: 3}
+  m_Name: Campaign
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Campaign.CampaignDefinition
+  mainMenuScene: MainMenu
+  chapters:
+  - title: Bureau HQ
+    location: Robot Rescue Bureau, Brightwater
+    levels:
+    - scene: Test01_StackEmUp
+      title: 'Training 1: Stack ''Em Up'
+      isBigRescue: 0
+    - scene: Test02_ConveyorCaper
+      title: 'Training 2: Conveyor Caper'
+      isBigRescue: 0
+    - scene: Test03_SwingShift
+      title: 'Training 3: Swing Shift'
+      isBigRescue: 0
+    - scene: Ch1_Boss_CoffeeCrisis
+      title: Coffee Crisis
+      isBigRescue: 1
+  - title: Nonna Lucia's Trattoria
+    location: Brightwater harbour
+    levels:
+    - scene: Ch2_Call01_PastaEmergency
+      title: 'Call 2-1: Pasta Emergency'
+      isBigRescue: 0
+    - scene: Ch2_Call02_WhiskBusiness
+      title: 'Call 2-2: Whisk Business'
+      isBigRescue: 0
+    - scene: Ch2_Boss_PastaPanic
+      title: Pasta Panic
+      isBigRescue: 1

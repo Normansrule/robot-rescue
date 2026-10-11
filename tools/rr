@@ -1,0 +1,333 @@
+#!/usr/bin/env bash
+# rr: Robot Rescue helper for Ubuntu / WSL. Works from any directory.
+#   bash "/mnt/c/Users/aleks/Desktop/Robot Rescue/tools/rr" help
+# Overrides: RR_PROJECT (project folder), RR_UNITY (Unity editor binary), RR_REPO (GitHub repo name).
+set -euo pipefail
+
+say()  { printf '\033[1;36m[rr]\033[0m %s\n' "$*"; }
+warn() { printf '\033[1;33m[rr]\033[0m %s\n' "$*" >&2; }
+die()  { printf '\033[1;31m[rr]\033[0m %s\n' "$*" >&2; exit 1; }
+
+is_wsl() { grep -qi microsoft /proc/version 2>/dev/null; }
+
+# ---------------------------------------------------------------- locate the project
+find_project() {
+  local here cand
+  if [[ -n "${RR_PROJECT:-}" ]]; then echo "$RR_PROJECT"; return; fi
+  here="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")/.." && pwd)"
+  if [[ -d "$here/Assets/_Project" ]]; then echo "$here"; return; fi
+  cand="$(git rev-parse --show-toplevel 2>/dev/null || true)"
+  if [[ -n "$cand" && -d "$cand/Assets/_Project" ]]; then echo "$cand"; return; fi
+  for cand in /mnt/c/Users/*/Desktop/"Robot Rescue" /mnt/c/Users/*/OneDrive/Desktop/"Robot Rescue" "$HOME/robot-rescue" "$HOME/Desktop/Robot Rescue"; do
+    if [[ -d "$cand/Assets/_Project" ]]; then echo "$cand"; return; fi
+  done
+  die "Can't find the Robot Rescue project. Set RR_PROJECT=/path/to/project"
+}
+PROJ="$(find_project)"
+
+winpath() { if is_wsl; then wslpath -w "$1"; else echo "$1"; fi; }
+
+# ---------------------------------------------------------------- locate Unity
+unity_version() { sed -n 's/^m_EditorVersion: //p' "$PROJ/ProjectSettings/ProjectVersion.txt" 2>/dev/null | tr -d '\r'; }
+
+find_unity() {
+  local v c
+  if [[ -n "${RR_UNITY:-}" ]]; then echo "$RR_UNITY"; return; fi
+  v="$(unity_version)"
+  for c in "/mnt/c/Program Files/Unity/Hub/Editor/$v/Editor/Unity.exe" \
+           "$HOME/Unity/Hub/Editor/$v/Editor/Unity" \
+           /mnt/c/Program\ Files/Unity/Hub/Editor/*/Editor/Unity.exe \
+           "$HOME"/Unity/Hub/Editor/*/Editor/Unity; do
+    if [[ -x "$c" || -f "$c" ]]; then echo "$c"; return; fi
+  done
+  die "Can't find Unity $v. Install it with Unity Hub, or set RR_UNITY=/path/to/Unity(.exe)"
+}
+
+need_closed() {
+  if [[ -f "$PROJ/Temp/UnityLockfile" ]] && { is_wsl && tasklist.exe 2>/dev/null | grep -qi '^Unity.exe'; }; then
+    die "Unity has the project open. Close Unity first, or use the same item from the 'Robot Rescue' menu inside Unity."
+  fi
+}
+
+# Run Unity headless. $1 = method, rest = extra args. Log goes to Logs/rr-<method>.log.
+unity_batch() {
+  local method="$1"; shift
+  local unity log
+  unity="$(find_unity)"
+  need_closed
+  mkdir -p "$PROJ/Logs"
+  log="$PROJ/Logs/rr-${method##*.}.log"
+  : > "$log"
+  say "Unity: $method (log: $log)"
+  set +e
+  "$unity" -batchmode -quit -projectPath "$(winpath "$PROJ")" -executeMethod "$method" -logFile "$(winpath "$log")" "$@"
+  local code=$?
+  set -e
+  grep -E '\[(Robot Rescue|Media|Build)\]|error CS|Exception' "$log" | tr -d '\r' | tail -n 40 || true
+  if [[ $code -ne 0 ]]; then
+    grep -iE 'error|failed' "$log" | grep -vE 'error CS|^\s*$' | tr -d '\r' | sort -u | tail -n 15 >&2 || true
+    die "Unity exited with code $code. Full log: $log"
+  fi
+  say "Done."
+}
+
+open_file() {
+  if is_wsl; then explorer.exe "$(winpath "$1")" >/dev/null 2>&1 || true
+  elif command -v xdg-open >/dev/null; then xdg-open "$1" >/dev/null 2>&1 &
+  else say "Open: $1"; fi
+}
+
+# ---------------------------------------------------------------- git / GitHub helpers
+ensure_tools() {
+  local missing=() t
+  for t in git git-lfs gh zip unzip python3 curl; do command -v "$t" >/dev/null || missing+=("$t"); done
+  [[ ${#missing[@]} -eq 0 ]] && return
+  say "Installing: ${missing[*]} (asks for your Ubuntu password)"
+  sudo apt-get update -y
+  sudo apt-get install -y git git-lfs zip unzip python3 curl ca-certificates
+  if ! command -v gh >/dev/null && ! sudo apt-get install -y gh; then
+    # Older Ubuntu without gh: use GitHub's own package repo.
+    sudo mkdir -p -m 755 /etc/apt/keyrings
+    curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg >/dev/null
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list >/dev/null
+    sudo apt-get update -y && sudo apt-get install -y gh
+  fi
+}
+
+trust_dir() { git config --global --get-all safe.directory 2>/dev/null | grep -qxF "$PROJ" || git config --global --add safe.directory "$PROJ"; }
+
+ensure_auth() {
+  if ! gh auth status >/dev/null 2>&1; then
+    say "Sign in to GitHub (a browser code flow):"
+    gh auth login --hostname github.com --git-protocol https --web
+  fi
+  gh auth setup-git >/dev/null
+}
+
+ensure_repo() {
+  cd "$PROJ"
+  trust_dir
+  [[ -d .git ]] || { say "git init"; git init -b main >/dev/null; }
+  git config core.filemode false
+  git config core.autocrlf true
+  git lfs install --local >/dev/null
+  if ! git config user.email >/dev/null; then
+    local login id
+    login="$(gh api user --jq .login)"; id="$(gh api user --jq .id)"
+    git config user.name "$login"
+    git config user.email "${id}+${login}@users.noreply.github.com"
+  fi
+}
+
+repo_slug() { gh repo view --json nameWithOwner --jq .nameWithOwner 2>/dev/null; }
+
+# ---------------------------------------------------------------- commands
+cmd_help() {
+  cat <<HELP
+Robot Rescue helper (project: $PROJ)
+
+ Look at progress
+  rr progress        What's built: levels, media, builds, last commits, Unity errors
+  rr open            Open the project in the Unity Editor
+  rr log             Follow the Unity Editor log live (Ctrl+C to stop)
+  rr gallery         Open the screenshots/GIFs folder
+  rr snap            Screenshot your screen (e.g. Unity) into docs/progress/ and open it
+
+ Make things (Unity must be closed for these)
+  rr levels          Rebuild every scene + main menu      (Robot Rescue > Build Everything)
+  rr media           Render README screenshots + GIFs     (Robot Rescue > Capture README Media)
+  rr build [all|windows|linux|mac|webgl]   Build the game into Builds/
+  rr modules         Which build platforms your Unity has installed
+  rr play            Run the Windows (or Linux) build
+  rr web             Serve the browser build at http://localhost:8080
+
+ Share it
+  rr publish         First time: create the GitHub repo and push. Later: commit + push
+  rr release <ver>   Zip the builds and publish a GitHub Release (download links in README)
+  rr pages           Put the browser build on GitHub Pages ("Play in browser" link)
+  rr install         Make 'rr' a command you can type anywhere
+HELP
+}
+
+cmd_install() {
+  mkdir -p "$HOME/.local/bin"
+  ln -sf "$PROJ/tools/rr" "$HOME/.local/bin/rr"
+  chmod +x "$PROJ/tools/rr" 2>/dev/null || true
+  grep -q '.local/bin' "$HOME/.bashrc" || echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$HOME/.bashrc"
+  say "Installed. Open a new terminal (or run: source ~/.bashrc), then type: rr help"
+}
+
+cmd_progress() {
+  cd "$PROJ"
+  printf '\n\033[1mROBOT RESCUE  ·  progress\033[0m   (%s)\n\n' "$PROJ"
+  printf 'Unity version   %s\n' "$(unity_version)"
+  printf 'C# scripts      %s runtime, %s editor\n' "$(find Assets/_Project/Scripts -name '*.cs' | wc -l)" "$(find Assets/_Project/Editor -name '*.cs' | wc -l)"
+  printf '\nLevels (scene files):\n'
+  local s
+  for s in MainMenu TestChambers/Test01_StackEmUp TestChambers/Test02_ConveyorCaper TestChambers/Test03_SwingShift \
+           Ch1_Boss_CoffeeCrisis Ch2_Call01_PastaEmergency Ch2_Call02_WhiskBusiness Ch2_Boss_PastaPanic; do
+    if [[ -f "Assets/_Project/Scenes/$s.unity" ]]; then printf '  \033[32m✔\033[0m %s\n' "$s"; else printf '  \033[31m✘\033[0m %s   (run: rr levels)\n' "$s"; fi
+  done
+  printf '\nREADME media:   %s PNG, %s GIF in docs/media\n' "$(ls docs/media/*.png 2>/dev/null | wc -l)" "$(ls docs/media/*.gif 2>/dev/null | wc -l)"
+  printf '\nBuilds:\n'
+  if [[ -f Builds/build-report.txt ]]; then sed 's/^/  /' Builds/build-report.txt | tr -d '\r'; else echo "  none yet (run: rr build)"; fi
+  if [[ -d .git ]]; then
+    trust_dir
+    printf '\nGit:\n'
+    git log --oneline -n 5 2>/dev/null | sed 's/^/  /'
+    printf '  remote: %s\n' "$(git remote get-url origin 2>/dev/null || echo 'none yet (run: rr publish)')"
+    printf '  uncommitted files: %s\n' "$(git status --porcelain 2>/dev/null | wc -l)"
+  fi
+  local elog
+  elog="$(editor_log)"
+  if [[ -n "$elog" && -f "$elog" ]]; then
+    local errs
+    errs="$(grep -c 'error CS' "$elog" 2>/dev/null || true)"
+    printf '\nUnity Editor log: %s compile errors (%s)\n' "${errs:-0}" "$elog"
+    grep 'error CS' "$elog" | tr -d '\r' | sort -u | head -n 5 | sed 's/^/  /' || true
+  fi
+  echo
+}
+
+editor_log() {
+  if is_wsl; then ls /mnt/c/Users/*/AppData/Local/Unity/Editor/Editor.log 2>/dev/null | head -n 1
+  else echo "$HOME/.config/unity3d/Editor.log"; fi
+}
+
+cmd_log() { local l; l="$(editor_log)"; [[ -f "$l" ]] || die "No Editor log yet: open the project in Unity first (rr open)."; tail -n 40 -f "$l"; }
+
+cmd_open() {
+  local unity; unity="$(find_unity)"
+  say "Opening the project in Unity..."
+  nohup "$unity" -projectPath "$(winpath "$PROJ")" >/dev/null 2>&1 &
+  say "Unity is starting. Menu 'Robot Rescue > Build Everything', then open Scenes/MainMenu and press Play."
+}
+
+cmd_gallery() { mkdir -p "$PROJ/docs/media"; open_file "$PROJ/docs/media"; }
+
+cmd_snap() {
+  is_wsl || die "rr snap needs WSL (it uses Windows PowerShell)."
+  mkdir -p "$PROJ/docs/progress"
+  local f="$PROJ/docs/progress/snap-$(date +%Y%m%d-%H%M%S).png"
+  powershell.exe -NoProfile -Command "Add-Type -AssemblyName System.Windows.Forms,System.Drawing; \$b=[System.Windows.Forms.Screen]::PrimaryScreen.Bounds; \$bmp=New-Object System.Drawing.Bitmap \$b.Width,\$b.Height; \$g=[System.Drawing.Graphics]::FromImage(\$bmp); \$g.CopyFromScreen(\$b.Location,[System.Drawing.Point]::Empty,\$b.Size); \$bmp.Save('$(winpath "$f")')" >/dev/null
+  say "Saved $f"
+  open_file "$f"
+}
+
+cmd_levels() { unity_batch RobotRescue.EditorTools.ProjectBuilder.BuildEverything; }
+cmd_media()  { unity_batch RobotRescue.EditorTools.Media.MediaCapture.CaptureAll; cmd_gallery; }
+
+cmd_build() {
+  local which="${1:-all}" list
+  case "${which,,}" in
+    all) list="Windows,Linux,Mac,WebGL" ;;
+    win|windows) list="Windows" ;;
+    linux) list="Linux" ;;
+    mac|macos|osx) list="Mac" ;;
+    web|webgl|browser) list="WebGL" ;;
+    *) die "Unknown platform '$which' (all, windows, linux, mac, webgl)" ;;
+  esac
+  unity_batch RobotRescue.EditorTools.BuildScript.BuildFromCommandLine -rrPlatforms "$list"
+  sed 's/^/  /' "$PROJ/Builds/build-report.txt" | tr -d '\r'
+}
+
+cmd_modules() {
+  local unity dir; unity="$(find_unity)"; dir="$(dirname "$unity")/Data/PlaybackEngines"
+  say "Unity: $unity"
+  for m in WindowsStandaloneSupport LinuxStandaloneSupport MacStandaloneSupport WebGLSupport; do
+    if [[ -d "$dir/$m" ]]; then printf '  \033[32m✔\033[0m %s\n' "$m"; else printf '  \033[31m✘\033[0m %s  (Unity Hub > Installs > ⚙ > Add modules)\n' "$m"; fi
+  done
+}
+
+cmd_play() {
+  if is_wsl && [[ -f "$PROJ/Builds/RobotRescue-Windows/RobotRescue.exe" ]]; then
+    (cd "$PROJ/Builds/RobotRescue-Windows" && nohup ./RobotRescue.exe >/dev/null 2>&1 &)
+  elif [[ -f "$PROJ/Builds/RobotRescue-Linux/RobotRescue.x86_64" ]]; then
+    chmod +x "$PROJ/Builds/RobotRescue-Linux/RobotRescue.x86_64"; "$PROJ/Builds/RobotRescue-Linux/RobotRescue.x86_64" &
+  else die "No build yet. Run: rr build windows"; fi
+  say "Have fun!"
+}
+
+cmd_web() {
+  local dir="$PROJ/Builds/RobotRescue-WebGL" port="${1:-8080}"
+  [[ -f "$dir/index.html" ]] || die "No browser build yet. Run: rr build webgl"
+  say "Playing at http://localhost:$port  (Ctrl+C to stop)"
+  is_wsl && (sleep 1; cmd.exe /c start "http://localhost:$port" >/dev/null 2>&1 || true) &
+  cd "$dir" && python3 -m http.server "$port"
+}
+
+cmd_publish() {
+  ensure_tools; ensure_auth; ensure_repo
+  cd "$PROJ"
+  git add -A
+  if ! git diff --cached --quiet; then git commit -m "${RR_MESSAGE:-Robot Rescue: progress update $(date +%Y-%m-%d)}" >/dev/null; say "Committed."; fi
+  if ! git remote get-url origin >/dev/null 2>&1; then
+    local name="${RR_REPO:-robot-rescue}"
+    say "Creating GitHub repo $name and pushing (LFS files too; first push can take a while)..."
+    gh repo create "$name" --public --source . --remote origin --push \
+      --description "ROBOT RESCUE: a cute co-op physics-puzzle game (Unity 6, URP)"
+  else
+    git push -u origin "$(git branch --show-current)"
+  fi
+  say "Online at: https://github.com/$(repo_slug)"
+}
+
+cmd_release() {
+  local ver="${1:-}"; [[ -n "$ver" ]] || die "Usage: rr release 0.3.0"
+  ver="${ver#v}"
+  ensure_tools; ensure_auth; ensure_repo
+  cd "$PROJ"
+  git remote get-url origin >/dev/null 2>&1 || die "No GitHub repo yet. Run: rr publish"
+  rm -rf dist && mkdir -p dist
+  local p n=0
+  for p in Windows Linux Mac WebGL; do
+    if [[ -d "Builds/RobotRescue-$p" ]]; then
+      (cd Builds && zip -qr -X "../dist/RobotRescue-$p.zip" "RobotRescue-$p" -x "*_BackUpThisFolder_ButDontShipItWithYourGame/*" "*_BurstDebugInformation_DoNotShip/*")
+      say "Packed dist/RobotRescue-$p.zip ($(du -h "dist/RobotRescue-$p.zip" | cut -f1))"; n=$((n+1))
+    fi
+  done
+  [[ $n -gt 0 ]] || die "No builds to release. Run: rr build all"
+  git push -q origin HEAD 2>/dev/null || true
+  local notes="Download the zip for your computer, unzip it, and run RobotRescue (Windows: RobotRescue.exe; Linux: RobotRescue.x86_64; Mac: RobotRescue.app, right-click > Open the first time). The WebGL zip is the browser version."
+  if gh release view "v$ver" >/dev/null 2>&1; then
+    gh release upload "v$ver" dist/*.zip --clobber
+  else
+    gh release create "v$ver" dist/*.zip --title "Robot Rescue v$ver" --notes "$notes"
+  fi
+  say "Release: https://github.com/$(repo_slug)/releases/tag/v$ver"
+}
+
+cmd_pages() {
+  ensure_tools; ensure_auth; ensure_repo
+  local src="$PROJ/Builds/RobotRescue-WebGL" tmp slug
+  [[ -f "$src/index.html" ]] || die "No browser build yet. Run: rr build webgl"
+  slug="$(repo_slug)"; [[ -n "$slug" ]] || die "No GitHub repo yet. Run: rr publish"
+  tmp="$(mktemp -d)"
+  cp -r "$src/." "$tmp/"
+  touch "$tmp/.nojekyll"
+  (cd "$tmp" && git init -q -b gh-pages && git add -A && git -c user.name="$(git -C "$PROJ" config user.name)" -c user.email="$(git -C "$PROJ" config user.email)" commit -qm "Browser build" \
+     && git push -qf "https://github.com/$slug.git" gh-pages)
+  rm -rf "$tmp"
+  gh api -X POST "repos/$slug/pages" -f "source[branch]=gh-pages" -f "source[path]=/" >/dev/null 2>&1 || true
+  say "Browser version: https://${slug%%/*}.github.io/${slug#*/}/  (first deploy takes a minute or two)"
+}
+
+case "${1:-help}" in
+  help|-h|--help) cmd_help ;;
+  install)  cmd_install ;;
+  progress|status) cmd_progress ;;
+  open)     cmd_open ;;
+  log)      cmd_log ;;
+  gallery)  cmd_gallery ;;
+  snap)     cmd_snap ;;
+  levels)   cmd_levels ;;
+  media)    cmd_media ;;
+  build)    shift; cmd_build "${1:-all}" ;;
+  modules)  cmd_modules ;;
+  play)     cmd_play ;;
+  web)      shift; cmd_web "${1:-8080}" ;;
+  publish)  cmd_publish ;;
+  release)  shift; cmd_release "${1:-}" ;;
+  pages)    cmd_pages ;;
+  *) cmd_help; exit 1 ;;
+esac

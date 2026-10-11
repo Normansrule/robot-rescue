@@ -1,0 +1,77 @@
+# Optional cloud builds. Runs only when you start it (Actions tab > "Build game" > Run workflow), because it needs
+# Unity licence secrets first: UNITY_LICENSE (contents of your .ulf file), UNITY_EMAIL, UNITY_PASSWORD.
+# See https://game.ci/docs/github/activation. Without them, build locally with: rr build all && rr release <version>
+name: Build game
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version, e.g. 0.3.0 (leave empty to only upload artifacts)"
+        required: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    name: ${{ matrix.target }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [StandaloneWindows64, StandaloneLinux64, StandaloneOSX, WebGL]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/cache@v4
+        with:
+          path: Library
+          key: Library-${{ matrix.target }}-${{ hashFiles('Packages/packages-lock.json') }}
+          restore-keys: Library-${{ matrix.target }}-
+      - uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          RR_VERSION: ${{ inputs.version }}
+        with:
+          targetPlatform: ${{ matrix.target }}
+          buildMethod: RobotRescue.EditorTools.BuildScript.BuildFromCommandLine
+          customParameters: -rrPlatforms ${{ matrix.target == 'StandaloneWindows64' && 'Windows' || matrix.target == 'StandaloneLinux64' && 'Linux' || matrix.target == 'StandaloneOSX' && 'Mac' || 'WebGL' }}
+      - name: Zip
+        run: |
+          cd Builds
+          sudo chown -R "$USER" .
+          for d in RobotRescue-*/; do zip -qr "../${d%/}.zip" "$d"; done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: build-${{ matrix.target }}
+          path: RobotRescue-*.zip
+
+  release:
+    needs: build
+    if: ${{ inputs.version != '' }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+      - name: GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "v${{ inputs.version }}" dist/*.zip --repo "$GITHUB_REPOSITORY" \
+            --title "Robot Rescue v${{ inputs.version }}" --notes "Download the zip for your computer, unzip, run RobotRescue."
+      - name: Unpack browser build
+        run: mkdir site && unzip -q dist/RobotRescue-WebGL.zip -d site && touch site/RobotRescue-WebGL/.nojekyll
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/RobotRescue-WebGL
+      - uses: actions/deploy-pages@v4

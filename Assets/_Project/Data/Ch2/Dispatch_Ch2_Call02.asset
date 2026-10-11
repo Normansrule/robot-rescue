@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976006531153724f8306a1fd441aa0c, type: 3}
+  m_Name: Dispatch_Ch2_Call02
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Narrative.DispatchScript
+  lines:
+  - cue: tap_on
+    text: Water's running. Pots go under the tap, PIP, not your head.
+    duration: 3
+    repeatable: 0
+  - cue: water_filled
+    text: Pot filled!
+    duration: 2
+    repeatable: 1
+  - cue: ingredient_added
+    text: In it goes!
+    duration: 2
+    repeatable: 1
+  - cue: wrong_ingredient
+    text: That doesn't go in there. Check the ticket!
+    duration: 3
+    repeatable: 1
+  - cue: bowl_ready_to_whisk
+    text: Set the bowl down and hold F (or B) to whisk it.
+    duration: 4
+    repeatable: 1
+  - cue: whisking
+    text: Whisk whisk whisk!
+    duration: 2
+    repeatable: 0
+  - cue: whisked
+    text: Smooth as silk. Off to the hatch!
+    duration: 3
+    repeatable: 1
+  - cue: tether_power
+    text: Plugged in. Stove's on. You are the kitchen now.
+    duration: 3
+    repeatable: 0
+  - cue: boiling
+    text: Bubbling! Keep that stove powered.
+    duration: 3
+    repeatable: 1
+  - cue: cooked
+    text: Done! Get it out before it burns.
+    duration: 3
+    repeatable: 1
+  - cue: burnt
+    text: It burnt! Bin it in the trash and start again.
+    duration: 4
+    repeatable: 1
+  - cue: trash
+    text: Binned. Fresh start.
+    duration: 2
+    repeatable: 1
+  - cue: served_raw
+    text: That's not cooked yet!
+    duration: 3
+    repeatable: 1
+  - cue: served_burnt
+    text: Charcoal is not on the menu.
+    duration: 3
+    repeatable: 1
+  - cue: order_wrong
+    text: Nobody ordered that. Check the tickets, top right.
+    duration: 3
+    repeatable: 1
+  - cue: order_new
+    text: New ticket!
+    duration: 2
+    repeatable: 1
+  - cue: order_served
+    text: Order up! Nicely done.
+    duration: 2
+    repeatable: 1
+  - cue: order_hero
+    text: With seconds to spare! HERO MOMENT!
+    duration: 3
+    repeatable: 1
+  - cue: order_expired
+    text: A ticket ran out. That's a strike.
+    duration: 3
+    repeatable: 1
+  - cue: fell
+    text: Respawned. Back to the stove!
+    duration: 3
+    repeatable: 1
+  - cue: intro
+    text: Nonna's whisking arm has retired. Grab the Whisk from its stand and help her through lunch.
+    duration: 6
+    repeatable: 0
+  - cue: got_whisk
+    text: Whisk equipped! Tab or Y swaps tools. Ingredients go in the bowl, then hold F or B.
+    duration: 6
+    repeatable: 0
+  - cue: panic_won
+    text: Every ticket cleared! Nonna says you can come back any time. She means it as a threat.
+    duration: 6
+    repeatable: 0
+  - cue: panic_failed
+    text: Too many tickets ran out. Backspace to try again!
+    duration: 5
+    repeatable: 0
+  - cue: exit
+    text: Call complete! But I'm hearing rumours of a food critic...
+    duration: 5
+    repeatable: 0
