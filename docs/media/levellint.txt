@@ -1,0 +1,21 @@
+Level lint: 20 scenes, 0 issue(s)
+== Test01_StackEmUp (0 climbs, 3 carryables, 1 doors): ok
+== Test02_ConveyorCaper (0 climbs, 0 carryables, 1 doors): ok
+== Test03_SwingShift (0 climbs, 1 carryables, 1 doors): ok
+== Ch1_Boss_CoffeeCrisis (0 climbs, 3 carryables, 1 doors): ok
+== Ch2_Call01_PastaEmergency (0 climbs, 2 carryables, 1 doors): ok
+== Ch2_Call02_WhiskBusiness (0 climbs, 2 carryables, 1 doors): ok
+== Ch2_Boss_PastaPanic (0 climbs, 5 carryables, 1 doors): ok
+== Ch3_Call01_LooseScrews (1 climbs, 0 carryables, 1 doors): ok
+== Ch3_Boss_UpATree (2 climbs, 1 carryables, 1 doors): ok
+== Ch4_Call01_CatchTheHum (1 climbs, 2 carryables, 1 doors): ok
+== Ch4_Boss_SlightlyTooBig (1 climbs, 3 carryables, 1 doors): ok
+== Ch5_Call01_HeavyLifting (1 climbs, 0 carryables, 1 doors): ok
+== Ch5_Boss_LightsOut (1 climbs, 0 carryables, 1 doors): ok
+== Ch6_Call01_CarouselChaos (1 climbs, 3 carryables, 1 doors): ok
+== Ch6_Boss_StuckAtTheTop (1 climbs, 0 carryables, 1 doors): ok
+== Ch7_Call01_GoingDown (0 climbs, 1 carryables, 2 doors): ok
+== Ch7_Boss_UnitZero (1 climbs, 1 carryables, 1 doors): ok
+== Ch8_Call01_StageFright (1 climbs, 2 carryables, 3 doors): ok
+== Ch8_Boss_TheFoundersSong (1 climbs, 2 carryables, 1 doors): ok
+== Side_PumpHouse (0 climbs, 8 carryables, 3 doors): ok

@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976006531153724f8306a1fd441aa0c, type: 3}
+  m_Name: Dispatch_Ch3_Call01
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Narrative.DispatchScript
+  lines:
+  - cue: intro
+    text: PIP, welcome to Brightwater Park! Rosa the park keeper says every time the hum comes through, more screws wriggle loose. The drawbridge is stuck up and the fountain's dry. There's a Screwdriver on the stand.
+    duration: 9
+    repeatable: 0
+  - cue: got_screwdriver
+    text: The Screwdriver! Hold F (or B) in front of a loose screw. The glowing yellow rings are the loose ones. Tab swaps tools.
+    duration: 7
+    repeatable: 0
+  - cue: bridge_down
+    text: Drawbridge down! The ducks are very relieved. They were tired of swimming around it.
+    duration: 5
+    repeatable: 0
+  - cue: fountain_on
+    text: The fountain's back! Rosa's doing a little dance. Don't look, she's shy.
+    duration: 5
+    repeatable: 0
+  - cue: fell
+    text: Splash! The ducks will remember this.
+    duration: 3
+    repeatable: 1
+  - cue: fell
+    text: 'Fell in the pond. Ducks: one. PIP: zero.'
+    duration: 3
+    repeatable: 1
+  - cue: exit
+    text: Park fixed! Rosa says thank you, and also 'nobody climbs my oak'. We'll see about that.
+    duration: 6
+    repeatable: 0

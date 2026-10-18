@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fc3bbfe2d08f84aaa4a0203272180c, type: 3}
+  m_Name: Task_Ch7_Call01_GoingDown
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Tasks.TaskDefinition
+  taskId: ch7_call01
+  title: 'Call 7-1: Going Down'
+  rescuee: the old Bureau outpost
+  description: The Old Rig's lower hall is flooded. Get across, get the outpost door open, and find out who's been calling.
+  timeLimit: 0
+  boltsReward: 60
+  steps:
+  - id: cross
+    label: Swing across the flooded hall on the crane hooks
+  - id: power
+    label: 'Open the outpost door: tighten both hinges and put a drone on the power plate'
+  - id: outpost
+    label: Go inside the Bureau outpost

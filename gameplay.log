@@ -1,0 +1,592 @@
+VBCSCompilerPreWarmer: watching VBCSCompiler (PID 36972)
+VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 25536)
+VBCSCompiler prewarm took 17.08 ms
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.6/staging' branch; Version is '6000.6.5f1 (3ff58d469c8a) revision 4191629'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Channel LicenseClient-aleks doesn't exist
+OS: 'Windows 11  (10.0.26200) Core' Language: 'en' Physical Memory: 32371 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-18T05:58:19Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 12180)
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Unity.exe
+-batchmode
+-projectPath
+C:\Users\aleks\Desktop\Robot Rescue
+-executeMethod
+RobotRescue.EditorTools.Media.GameplayCapture.CaptureAll
+-rrScenes
+Ch8_Call01_StageFright,Ch8_Boss_TheFoundersSong
+-logFile
+C:\Users\aleks\Desktop\Robot Rescue\gameplay.log
+Successfully changed project path to: C:\Users\aleks\Desktop\Robot Rescue
+C:/Users/aleks/Desktop/Robot Rescue
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-remapper-allocator-initial-capacity=32768"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=1"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.
+Player connection [44160]  Target information:
+
+Player connection [44160]  * "[IP] 192.168.1.60 [Port] 55504 [Flags] 2 [Guid] 1373989425 [EditorId] 1373989425 [Version] 1048832 [Id] WindowsEditor(7,Aleksander-Desk) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [44160]  * "[IP] 172.27.208.1 [Port] 55504 [Flags] 2 [Guid] 1373989425 [EditorId] 1373989425 [Version] 1048832 [Id] WindowsEditor(7,Aleksander-Desk) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [44160]  * "[IP] 100.107.128.19 [Port] 55504 [Flags] 2 [Guid] 1373989425 [EditorId] 1373989425 [Version] 1048832 [Id] WindowsEditor(7,Aleksander-Desk) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [44160] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [44160] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Starting IPC server.
+Waiting for clients to connect on \\.\pipe\Unity-LicenseClient-aleks, press Ctrl-C to exit.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-aleks" at "2026-10-18T05:58:19.6197809Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 12180, path: "C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.3+d7ffd15
+  Session Id:              66459d91dc9b48c38ef24e73bc45e8a4
+  Correlation Id:          7b30a35a6b2360ba985a5c01fbc16455
+  External correlation Id: 1065243021167548520
+  Machine Id:              9KTbQbfQiacTFiXz9Xs8CiyUqog=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-aleks" (connect: 0.24s, validation: 0.07s, handshake: 0.04s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-aleks-notifications" at "2026-10-18T05:58:19.7270211Z"
+[Licensing::Module] Connected to LicensingClient (PId: 12180, launch time: 0.00, total connection time: 0.35s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 20067664221254-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 0.39s
+[Package Manager] Connected to IPC stream "Upm-28300" after 0.2 seconds.
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+Initialising UDS system complete:
+  - System type: Client
+  - Resource namespace: eaecb6437470f5705b6fe808acdc8ac2
+  - Shared memory size: 1073741824
+  - Command buffer id: 1052576
+  - Command buffer size: 8192
+  - Hashmap size: 4194304
+  - Service connected: false
+Launching Unity Data Store - C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/Tools/Unity.DataStore.exe 
+Unity Data Store artifact dir = Library/DataStore, working dir = C:/Users/aleks/Desktop/Robot RescueUnity Data Store running and initialised
+[Physics::Module] Selected backend (deferred post-plugins).
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.6.5f1 (3ff58d469c8a)
+[EntityIdStore] init: VM path (explicit commit), pageSize=4096, blockCount=1048576, entitiesPerBlock=256, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/aleks/Desktop/Robot Rescue/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 5060 Ti (ID=0x2d04)
+    Vendor:   NVIDIA
+    VRAM:     16050 MB
+    Driver:   32.0.16.1088
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56300
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002522 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  0.550 seconds
+Domain Reload Profiling: 1025ms
+	BeginReloadAssembly (136ms)
+		CreateAndSetChildDomain (34ms)
+	RebuildCommonClasses (4ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (58ms)
+	LoadAllAssembliesAndSetupDomain (262ms)
+		LoadAssemblies (99ms)
+		TypeCache.Refresh (175ms)
+			TypeCache.ScanAssembly (164ms)
+		AnalyzeDomain (1ms)
+	FinalizeReload (550ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (81ms)
+			ProcessInitializeOnLoadAttributes (88ms)
+			ProcessInitializeOnLoadMethodAttributes (201ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 60 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.ai.navigation@2.0.15 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ai.navigation@a9c5744fc1de)
+    com.unity.ide.rider@3.0.38 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ide.rider@1f60b3138684)
+    com.unity.ide.visualstudio@2.0.26 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ide.visualstudio@a99d56dec63f)
+    com.unity.inputsystem@1.20.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.inputsystem@7a4e1a2a8194)
+    com.unity.searcher@4.9.5 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.searcher@a463122f2c00)
+    com.unity.profiling.core@1.0.3 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.profiling.core@8a49f7027d06)
+    com.unity.nuget.mono-cecil@1.11.6 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+  Built-in packages:
+    com.unity.2d.sprite@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.2d.sprite@752945c75a6f)
+    com.unity.2d.tilemap@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.2d.tilemap@f4c7bd71ac8a)
+    com.unity.multiplayer.center@2.0.1 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.multiplayer.center@01ba5271095b)
+    com.unity.render-pipelines.universal@17.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.render-pipelines.universal@2309ae255609)
+    com.unity.test-framework@1.8.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.test-framework@80f691d4262b)
+    com.unity.timeline@6.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.timeline@4891807c6bd8)
+    com.unity.ugui@2.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ugui@42f0bd825000)
+    com.unity.modules.accessibility@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.physicscore2d@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.physicscore2d)
+    com.unity.modules.screencapture@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tetgen@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.tetgen)
+    com.unity.modules.tilemap@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.timelinefoundation@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.timelinefoundation)
+    com.unity.modules.ui@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.wind@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.1.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ext.nunit@0198eae3b53e)
+    com.unity.render-pipelines.core@17.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.render-pipelines.core@285af6b8c83f)
+    com.unity.shadergraph@17.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.shadergraph@58bcb150677d)
+    com.unity.render-pipelines.universal-config@17.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.render-pipelines.universal-config@561422b74439)
+    com.unity.graph-authoring@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.graph-authoring@cfd2588851ee)
+    com.unity.burst@2.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.burst@626e66ab421b)
+    com.unity.collections@6.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.collections@10fff0607388)
+    com.unity.test-framework.performance@6.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.test-framework.performance@54c5bd86aedb)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+Starting: C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/2000b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/aleks/Desktop/Robot Rescue
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.runtime.interopservices.windowsruntime has duplicate hint path. Ignoring "C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.WindowsRuntime.dll" in favor of "C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Data\NetStandard\Extensions\2.0.0\System.Runtime.InteropServices.WindowsRuntime.dll"
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.componentmodel.composition has duplicate hint path. Ignoring "C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.ComponentModel.Composition.dll" in favor of "C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.ComponentModel.Composition.dll"
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 0s227ms
+[661/848    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+*** Tundra build success (0.20 seconds), 1 items updated, 848 evaluated
+AssetDatabase: script compilation time: 0.635528s
+Begin MonoManager ReloadAssembly
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  0.686 seconds
+Domain Reload Profiling: 1467ms
+	BeginReloadAssembly (326ms)
+		DisableScriptedObjects (24ms)
+		CreateAndSetChildDomain (152ms)
+	RebuildCommonClasses (7ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (388ms)
+		LoadAssemblies (256ms)
+		TypeCache.Refresh (73ms)
+			TypeCache.ScanAssembly (67ms)
+		AnalyzeDomain (42ms)
+			BuildScriptInfoCaches (35ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (687ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (98ms)
+			ProcessInitializeOnLoadAttributes (154ms)
+			ProcessInitializeOnLoadMethodAttributes (63ms)
+			AfterProcessingInitializeOnLoad (8ms)
+		AwakeInstancesAfterBackupRestoration (26ms)
+Starting new worker id: 0 with log in C:/Users/aleks/Desktop/Robot Rescue/Logs/AssetImportWorkerHW0.log
+Importing 'GUID: d19f4f8a13b6edb48b986a47ec96402e - Path: Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapShadowMaskIntegration.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Imported 'GUID: d19f4f8a13b6edb48b986a47ec96402e' -> (Import Result ID: '43d6fd403fdf71e58742a870e5694777') in 0.048 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9397bcd0fce242045cdce8e3b5a2aba4 DependenciesID=8a373a5146fbb58aea55c523baa095c9 StaticDependenciesID=9fd4e9b2e1ad89e7cbffc601eff4d03f 
+Importing 'GUID: 737a1597422c12547a8714d76a9406ec - Path: Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapGBufferDebug.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: 737a1597422c12547a8714d76a9406ec' -> (Import Result ID: '0e1d27347e03f38d073c364029283d4e') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3274572f4fde04790f67cdd67d1286ce DependenciesID=9ae62d7c41fc3ecbc73e12f22f61b7b5 StaticDependenciesID=b513b01e29d0aa4d28825e4d4fb57fb4 
+Importing 'GUID: f32463968f29423cad25aee15a14b9f1 - Path: Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/PunctualLightSampling.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: f32463968f29423cad25aee15a14b9f1' -> (Import Result ID: '9d9533d9f50a06e1602ffc18e5eab809') in 0.009 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2d217294809baaabf4c6802de73ada5f DependenciesID=ac82b0d5d2d0941abfefac1ca26b4c01 StaticDependenciesID=b63d74c4e924df89cb98a36e44fc1845 
+Importing 'GUID: 1451d029813b192429211be28181beab - Path: Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapNormalIntegration.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: 1451d029813b192429211be28181beab' -> (Import Result ID: '2e32466a4acb5576b9b296dbee9f2508') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=792fb6b4a6d6f71a36c0a6982fc1426c DependenciesID=0f8f9e9b6535fef561e381c46bac19e3 StaticDependenciesID=5afd8eadeec03e368f74c3a5603c453d 
+Importing 'GUID: 94a070d33e408384bafc1dea4a565df9 - Path: Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/RenderingLayerMask/TraceRenderingLayerMask.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: 94a070d33e408384bafc1dea4a565df9' -> (Import Result ID: '0c781a67a55911206a889603221d9bca') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b94ffcb26d5f42ffd39d19cb8e35fd74 DependenciesID=3811d43b6090fbdfcfb0ad1701be76a8 StaticDependenciesID=25a592d065c9c4788553066128367c57 
+Importing 'GUID: 94a39d12848d8d64ca962a72b74e7c50 - Path: Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/Estimation.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: 94a39d12848d8d64ca962a72b74e7c50' -> (Import Result ID: '41bcc62a1244b139c9ecbcba8f78e2e5') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=167a079466e5cb387aeadb5a551be10a DependenciesID=7b5f5eeaf7685216fbcb02149f23d0ad StaticDependenciesID=ffb0a11028fb7b99287455d15347e1d8 
+Importing 'GUID: f5ba4d424d4566249b3d94cf81a3e916 - Path: Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapDirectDirectionalAndEnvironmentIntegration.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: f5ba4d424d4566249b3d94cf81a3e916' -> (Import Result ID: '5788a1f5cedd115119b47e2e33d48a81') in 0.009 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4d6a2a59333dfef366e1127f2282d236 DependenciesID=4a0e6efd8530cef8fa820a861c7c2152 StaticDependenciesID=d4bdfd2147f181839dcd88d16b4cc45b 
+Importing 'GUID: 7624adbeb148b5c48ab5ab660cc2602a - Path: Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapIndirectIntegration.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: 7624adbeb148b5c48ab5ab660cc2602a' -> (Import Result ID: 'dd454e12721412dd99b952265f83c017') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=98fb6fb018a7d8d966d937ef920e36a5 DependenciesID=a54642d4f421af2ee0d8177520133000 StaticDependenciesID=637eaa30376abb268136eb146f59c034 
+Importing 'GUID: 5951703b3d165764c95c653e98350884 - Path: Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapDirectBRDFIntegration.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: 5951703b3d165764c95c653e98350884' -> (Import Result ID: 'e65655cd39f7b54344dc8da2a5735d2f') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=83f19ab253a4a697e0acb03ce54d8a88 DependenciesID=52da1aabed85392141bb3d7146778490 StaticDependenciesID=059ad849da4bff5dcc29e3cff7813344 
+Importing 'GUID: 99ac6221b6ecd7b479be13e8b9866300 - Path: Packages/com.unity.render-pipelines.core/Tests/Editor/PathTracing/Shaders/TerrainRayMarchingTest.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: 99ac6221b6ecd7b479be13e8b9866300' -> (Import Result ID: '5eab7c8de3b7e57723daad3070aa9a27') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a7952e0c284096391e16d473c1a693ca DependenciesID=152db2a1366e632fce00fe0317ab8904 StaticDependenciesID=dc53200b7c0c8c0e6f9de4f99348b559 
+Importing 'GUID: e9f4de6d1e07fb94f9a60d35b618f724 - Path: Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapGBufferIntegration.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: e9f4de6d1e07fb94f9a60d35b618f724' -> (Import Result ID: '1a34806f7d37437c0d39dc888d6023ed') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a21af36535753cc63734eefda150a03f DependenciesID=57a0fb6758a71078c2ddf56dda6dae54 StaticDependenciesID=3c625e26646b7228663e0de2b2c1d69b 
+Importing 'GUID: 5a2a534753fbdb44e96c3c78b5a6999d - Path: Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/DynamicGI/DynamicGISkyOcclusion.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: 5a2a534753fbdb44e96c3c78b5a6999d' -> (Import Result ID: 'e12d7039e75131e19877f44c74f170e9') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2a3fe383e2bcf70fb57c5fbec2d60886 DependenciesID=a648301300ff6cbc7179413df6d6f34f StaticDependenciesID=72ee5fda06862b709c15f6cbb7db6f05 
+Importing 'GUID: 5bbebdef5916845478fcef13fa10d89f - Path: Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapDirectStochasticLightIntegration.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: 5bbebdef5916845478fcef13fa10d89f' -> (Import Result ID: 'ca2d5856e49707131f0cad8d9214a3d3') in 0.007 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=37b9ca496a8413540dce653e7e80527a DependenciesID=9961062f6c2a7dd5e30fb2deb36538f4 StaticDependenciesID=471ca71b6b19c4611a46691a7356c8a6 
+Importing 'GUID: 1c410815c01ce1d4d82c645c0cd45747 - Path: Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapAOIntegration.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: 1c410815c01ce1d4d82c645c0cd45747' -> (Import Result ID: '8576b80141c644fd9f35885dfddf1d33') in 0.007 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d8e69d91195f002a5cbc6b7f6b3cc6ea DependenciesID=963154162cc567b6c165ff7c38491f9e StaticDependenciesID=219d1b7269d01f2442d424f53e04d073 
+Importing 'GUID: 2c32233d92a2d0745930664c087c5c9a - Path: Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationValidity.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: 2c32233d92a2d0745930664c087c5c9a' -> (Import Result ID: '9e62c1073bf79e7a2849383db988d100') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=edab256cc2e0953aac43f2947952b70c DependenciesID=24772d6de0ee58ca852430f62a84d818 StaticDependenciesID=89ce6b5e76d568c473e42bb2e82d857d 
+Importing 'GUID: ace95ac84e213794891b4bd7c9b3c158 - Path: Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/LightmapValidityIntegration.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: ace95ac84e213794891b4bd7c9b3c158' -> (Import Result ID: '6d09434cc2176ae49edb338d716929af') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d7439b52fe0f6604ae096ce40ace76e9 DependenciesID=20ae5c10154cfd180787e4d35bed845e StaticDependenciesID=af3a8789fbe725883be9c99ebb7cf5e2 
+Importing 'GUID: 5ecdabd800f05984696f22ba95284516 - Path: Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationIndirect.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: 5ecdabd800f05984696f22ba95284516' -> (Import Result ID: 'd0699a9d2e1a591fc23c13de591a9746') in 0.007 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=827f8ae80632f0cb63ff4dbae355be90 DependenciesID=f8203999e6ab3a8571ac601f5b5d9581 StaticDependenciesID=1ad901001e2e557153e1de5753d25220 
+Importing 'GUID: 6e0b547bab30a804c8123974120d583f - Path: Packages/com.unity.render-pipelines.core/Tests/Runtime/PathTracing/PathIteratorTest.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: 6e0b547bab30a804c8123974120d583f' -> (Import Result ID: '809a94d85da16880a2859f0652555c5d') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f21e8cdae957ed44f2d12532dab91965 DependenciesID=a13abbd05e7491bb9f7ab84178b33a24 StaticDependenciesID=e24ea404bb4dabe55ffbcaa7b840b299 
+Importing 'GUID: de3013e16d99f2746ab1735ec06a660b - Path: Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationOcclusion.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: de3013e16d99f2746ab1735ec06a660b' -> (Import Result ID: '23c3f9f4c2dc235d6858e9f8094b7e06') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=87cfd710b8f9a0c49111006f2b17a94c DependenciesID=3d896ea80a811e79819c7118c63fd53c StaticDependenciesID=d23a0c4a2896e547ad436f2fd232bb27 
+Importing 'GUID: fe7f1a959d1d3f544a208b7e8805e6cd - Path: Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationDirectDirectionalAndEnvironment.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: fe7f1a959d1d3f544a208b7e8805e6cd' -> (Import Result ID: '92a3587440931ef3021e2260c54e8f59') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ddb988606d334fa6924fb0bdc3da16d0 DependenciesID=b7d10ceceb123d68805d0bfeffb17cd0 StaticDependenciesID=b8525778ccd6bf87644fae631483c773 
+Importing 'GUID: 1f9bfe60b4ad75943a5281839c1a4e5c - Path: Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/ProbeIntegrationDirectStochasticLight.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: 1f9bfe60b4ad75943a5281839c1a4e5c' -> (Import Result ID: '4f8a5c08cbac5296e28e55ccd4f0d415') in 0.007 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2d7ef19dcacbe8b41069179c33e7356a DependenciesID=561352cb54eaa397a2525c001a666a1e StaticDependenciesID=bb23e9aed0fe8778db1283cad6c57003 
+Importing 'GUID: ff2cbab5da58bf04d82c5f34037ed123 - Path: Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/VirtualOffset/TraceVirtualOffset.urtshader' with importer (ScriptedImporter : Unity.Rendering.LightTransport.Editor:UnityEditor.Rendering.UnifiedRayTracing:UnifiedRTShaderImporter)
+Imported 'GUID: ff2cbab5da58bf04d82c5f34037ed123' -> (Import Result ID: 'b33bfc0922e3af35f128ce8a36ffc637') in 0.007 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f03d20e971d892abe30b30f63c89b50d DependenciesID=b6411f7533937a5a10a37f9e9c1d5da0 StaticDependenciesID=577fb2ca56f9c9cef1dba593cc7f61b6 
+
+Asset Pipeline Refresh (id=d92e947a883151a40829a0580e9ae411): Total: 3.224 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=22 (actual=22, local cache=0, cache server=0)
+		Asset DB Process Time: managed=2 ms, native=1292 ms
+		Asset DB Callback time: managed=174 ms, native=241 ms
+		Scripting: domain reloads=1, domain reload time=827 ms, compile time=637 ms, other=47 ms
+		Project Asset Count: scripts=1092, non-scripts=2591
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 26.766ms
+	ApplyChangesToAssetFolders: 0.692ms
+	Scan: 155.663ms
+	Collect global state as custom dependencies: 18.480ms
+	CategorizeScriptCompilationAssets: 17.986ms
+	ProcessAssetsWithTransientArtifactChanges: 41.829ms
+	CategorizeAssets: 39.044ms
+	CompileScripts: 637.405ms
+	ImportOutOfDateAssets: 895.064ms (689.679ms without children)
+		ImportManagerImport: 191.888ms (1.700ms without children)
+			UpdateCategorizedAssets: 1.126ms
+		ReloadNativeAssets: 0.057ms
+		UnloadImportedAssets: 1.898ms
+		ReloadImportedAssets: 0.619ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.459ms
+		ImportSchedulerStart: 11.071ms
+	PostProcessAllAssets: 390.717ms
+		RaytracingShaderImportPostprocess 112.196ms
+		ComputeShaderImportPostprocess 99.664ms
+		VCAutoAddAssetPostprocess 1.071ms
+		XRBuildSystem.XRAssetImported 0.116ms
+		MonoPostProcessAllAssets: 174.747ms
+			AssetPostprocessor.OnPostprocessAllAssets 85.678ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 20.497ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 17.823ms
+			SyncVS.PostprocessSyncProject 8.785ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 7.349ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 2.373ms
+			SpriteSlicePostprocessor.OnPostprocessAllAssets 2.192ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.888ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.552ms
+			AssetChangedListener.OnPostprocessAllAssets 1.521ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.153ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 1.093ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.846ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.753ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.699ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.573ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.464ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.445ms
+			PostProcessor.OnPostprocessAllAssets 0.402ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.395ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.393ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.363ms
+			AssetEvents.OnPostprocessAllAssets 0.351ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.350ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.315ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.254ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.250ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.225ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.194ms
+			AssetProcessor.OnPostprocessAllAssets 0.188ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.179ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.138ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.136ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.127ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.083ms
+	PostAssetChangesProfiler: 1.015ms
+	UnloadStreamsBegin: 1.224ms
+	PersistCurrentRevisions: 0.230ms
+	GenerateScriptTypeHashes: 1.411ms
+	GenerateScriptTypeSerializationHashes: 2.572ms
+	Untracked: 992.468ms
+
+Application.AssetDatabase Initial Refresh End
+Scanning for USB devices : 12.758ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Curl error 6: Could not resolve host: cdp.cloud.unity3d.com
+[MODES] Loading mode Default (0) for mode-current-id-Robot Rescue
+Curl error 6: Could not resolve host: config.uca.cloud.unity3d.com
+Unloading 84 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4514 unused Assets / (12.9 MB). Loaded Objects now: 5441.
+Memory consumption went from 362.1 MB to 349.2 MB.
+Total: 13.850500 ms (FindLiveObjects: 0.428800 ms CreateObjectMapping: 0.185700 ms MarkObjects: 8.831800 ms  DeleteObjects: 4.253800 ms)
+
+Opening scene 'Assets/_Project/Scenes/Ch8_Call01_StageFright.unity'
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/Ch8_Call01_StageFright.unity'
+	Deserialize:            30.907 ms
+	Integration:            135.462 ms
+	Integration of assets:  0.126 ms
+	Thread Wait Time:       0.007 ms
+	Total Operation Time:   166.502 ms
+Unloading 4 unused Assets / (64.6 KB). Loaded Objects now: 7168.
+Memory consumption went from 350.3 MB to 350.3 MB.
+Total: 7.196800 ms (FindLiveObjects: 0.436900 ms CreateObjectMapping: 0.059700 ms MarkObjects: 6.473700 ms  DeleteObjects: 0.080700 ms)
+
+[Project] Loading completed in 5.925 seconds
+	Project init time: 				5.383 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		0.223 seconds
+		Asset Database init time: 		0.209 seconds
+		Global illumination init time: 	0.002 seconds
+		Assemblies load time: 			1.066 seconds
+		Unity extensions init time: 	0.010 seconds
+		Asset Database refresh time: 	3.225 seconds
+	Scene opening time: 			0.331 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1792303105272,"processId":28300,"projectLoad":5.924597,"projectInit":5.3830155,"templateInit":0.0,"packageManagerInit":0.2227278,"assetDatabaseInit":0.2091902,"globalIlluminationInit":0.002117,"assembliesLoad":1.0656409,"unityExtensionsInit":0.0096226,"assetDatabaseRefresh":3.2245592,"sceneOpening":0.3311797}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1792303105272,"processId":28300,"editorVersion":"6000.6.5f1 (3ff58d469c8a)","branch":"6000.6/staging","buildType":"Release","platform":"Windows"}
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Entering Playmode with Reload Scene disabled. If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+[Gameplay] Playing Ch8_Call01_StageFright
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.GameplayCapture/Driver:Begin () (at Assets/_Project/Editor/Media/GameplayCapture.cs:138)
+RobotRescue.EditorTools.Media.GameplayCapture/Driver:Start (string) (at Assets/_Project/Editor/Media/GameplayCapture.cs:123)
+RobotRescue.EditorTools.Media.GameplayCapture:OnPlayMode (UnityEditor.PlayModeStateChange) (at Assets/_Project/Editor/Media/GameplayCapture.cs:91)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/_Project/Editor/Media/GameplayCapture.cs Line: 138)
+
+Curl error 6: Could not resolve host: cdp.cloud.unity3d.com
+[Licensing::Client] Successfully resolved entitlement details
+Start Indexing on Editor startup
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+  at System.Collections.Generic.List`1[T].get_Item (System.Int32 index) [0x00009] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 
+  at UnityEditor.Search.SearchDatabase+<EnumerateAll>d__78.MoveNext () [0x00089] in <60f2bd518b604435bcf930e6d229f684>:0 
+  at System.Linq.Enumerable.TryGetFirst[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Boolean& found) [0x00045] in <f1b392d8fe224ca2b1f9fab1000b77eb>:0 
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <f1b392d8fe224ca2b1f9fab1000b77eb>:0 
+  at UnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () [0x00005] in <60f2bd518b604435bcf930e6d229f684>:0 
+  at UnityEditor.Search.SearchInit.IndexationOnStartup () [0x0000a] in <60f2bd518b604435bcf930e6d229f684>:0 
+  at UnityEditor.EditorApplication.Internal_CallDelayFunctions () [0x00029] in <27ff15fd79c54f5eb7060fd0f507d441>:0 
+UnityEngine.StackTraceUtility:ExtractStringFromExceptionInternal(Object, String&, String&)
+
+Created GICache directory at C:/Users/aleks/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.019s, timestamps: [6.151 - 6.170]
+[Licensing::Client] Successfully resolved entitlement details
+Worker ready: AssetImportWorkerHW0 0
+Curl error 6: Could not resolve host: cdp.cloud.unity3d.com
+Curl error 6: Could not resolve host: cdp.cloud.unity3d.com
+[Gameplay] Ch8_Call01_StageFright: 3 stills + gif
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.GameplayCapture/Driver:End () (at Assets/_Project/Editor/Media/GameplayCapture.cs:149)
+RobotRescue.EditorTools.Media.GameplayCapture/Driver:Tick () (at Assets/_Project/Editor/Media/GameplayCapture.cs:179)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/_Project/Editor/Media/GameplayCapture.cs Line: 149)
+
+Unloading 70 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            4.389 ms
+	Integration:            10.593 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.008 ms
+	Total Operation Time:   14.992 ms
+Unloading 2 unused Assets / (85.8 KB). Loaded Objects now: 7382.
+Memory consumption went from 398.6 MB to 398.5 MB.
+Total: 8.300400 ms (FindLiveObjects: 0.390400 ms CreateObjectMapping: 0.048200 ms MarkObjects: 7.614900 ms  DeleteObjects: 0.104100 ms)
+
+[UnityConnectServicesConfig] config is NOT valid, switching to default
+Opening scene 'Assets/_Project/Scenes/Ch8_Boss_TheFoundersSong.unity'
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/Ch8_Boss_TheFoundersSong.unity'
+	Deserialize:            13.488 ms
+	Integration:            65.948 ms
+	Integration of assets:  0.019 ms
+	Thread Wait Time:       0.018 ms
+	Total Operation Time:   79.473 ms
+Unloading 25 unused Assets / (261.7 KB). Loaded Objects now: 7361.
+Memory consumption went from 399.2 MB to 399.0 MB.
+Total: 8.181100 ms (FindLiveObjects: 0.396200 ms CreateObjectMapping: 0.067300 ms MarkObjects: 7.475300 ms  DeleteObjects: 0.098200 ms)
+
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Entering Playmode with Reload Scene disabled. If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+[Gameplay] Playing Ch8_Boss_TheFoundersSong
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.GameplayCapture/Driver:Begin () (at Assets/_Project/Editor/Media/GameplayCapture.cs:138)
+RobotRescue.EditorTools.Media.GameplayCapture/Driver:Start (string) (at Assets/_Project/Editor/Media/GameplayCapture.cs:123)
+RobotRescue.EditorTools.Media.GameplayCapture:OnPlayMode (UnityEditor.PlayModeStateChange) (at Assets/_Project/Editor/Media/GameplayCapture.cs:91)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/_Project/Editor/Media/GameplayCapture.cs Line: 138)
+
+[Gameplay] Ch8_Boss_TheFoundersSong: 3 stills + gif
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.GameplayCapture/Driver:End () (at Assets/_Project/Editor/Media/GameplayCapture.cs:149)
+RobotRescue.EditorTools.Media.GameplayCapture/Driver:Tick () (at Assets/_Project/Editor/Media/GameplayCapture.cs:179)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/_Project/Editor/Media/GameplayCapture.cs Line: 149)
+
+Unloading 15 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            3.272 ms
+	Integration:            9.464 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.009 ms
+	Total Operation Time:   12.746 ms
+Unloading 0 unused Assets / (Unknown). Loaded Objects now: 7373.
+Memory consumption went from 399.2 MB to 399.2 MB.
+Total: 8.197700 ms (FindLiveObjects: 0.367700 ms CreateObjectMapping: 0.063000 ms MarkObjects: 7.617500 ms  DeleteObjects: 0.007800 ms)
+
+[Gameplay] Wrote gameplay captures to C:\Users\aleks\Desktop\Robot Rescue\docs\media\gameplay
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.GameplayCapture:Next () (at Assets/_Project/Editor/Media/GameplayCapture.cs:73)
+UnityEditor.EditorApplication:Internal_CallDelayFunctions ()
+
+(Filename: Assets/_Project/Editor/Media/GameplayCapture.cs Line: 73)
+
+MonoPathRemapper: Attempts to remap: 8748; Successful remaps: 0
+Serialized file version minimum: 23, current 23
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-aleks-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-aleks channel disconnected successfully.
+Shut down.
+Lingering sessions upon destruction of worker manager
+Unity Data Store service was successfully shut down
+UDS shutting down local client system
+Shut down UDS service system complete
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+abort_threads: Failed aborting id: 00000000000046B8, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 00000000000097C0, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 00000000000046B8, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 00000000000097C0, mono_thread_manage will ignore it
+
+debugger-agent: Unable to listen on 4116
+VBCSCompilerPreWarmer: requested VBCSCompiler shutdown
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1792303131706,"processId":28300,"allocatedMemory":15949135,"memoryLabels":[{"Default":201408},{"Permanent":15516},{"NewDelete":71807},{"Thread":4197944},{"Manager":821373},{"VertexData":728},{"Geometry":816},{"Texture":24},{"Shader":849156},{"Material":132},{"GfxDevice":56400},{"Animation":952},{"FreeType":8},{"FontEngine":736},{"Physics":1970},{"Physics2D":16},{"Serialization":39744},{"Input":42840},{"JobScheduler":256},{"TextLib":336},{"Mono":48},{"MonoCode":64},{"ScriptingNativeRuntime":1271576},{"BaseObject":48784},{"Resource":1444},{"Renderer":2504},{"Transform":4685},{"File":10386},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":469989},{"StaticString":3808},{"Utility":2674806},{"Curl":2559},{"PoolAlloc":2312},{"AI":80},{"TypeTree":17165},{"ScriptManager":12656},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":7152},{"WebRequest":552},{"VR":49650},{"SceneManager":608},{"Video":208},{"LazyScriptCache":32},{"Camera":729},{"Secure":2377},{"SerializationCache":9256},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":592},{"Hierarchy":1188},{"UIElements":40},{"CoreStats":14456},{"Identifiers":7152},{"Gui":128},{"EditorUtility":123885},{"VersionControl":8},{"Undo":931},{"AssetDatabase":4492597},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":40465},{"Upm":1912},{"UpmDiagnostics":8},{"AssetCompliance":96},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3600},{"Windowing":456},{"Licensing":1264},{"AssetReference":32},{"IPCStream":32}]}

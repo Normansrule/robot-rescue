@@ -2,7 +2,10 @@
     "name": "RobotRescue.Editor",
     "rootNamespace": "RobotRescue.EditorTools",
     "references": [
-        "RobotRescue.Runtime"
+        "RobotRescue.Runtime",
+        "Unity.InputSystem",
+        "Unity.RenderPipelines.Core.Runtime",
+        "Unity.RenderPipelines.Universal.Runtime"
     ],
     "includePlatforms": [
         "Editor"

@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976006531153724f8306a1fd441aa0c, type: 3}
+  m_Name: Dispatch_Ch6_Boss
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Narrative.DispatchScript
+  lines:
+  - cue: intro
+    text: BIG RESCUE! The Ferris wheel froze with Grandpa Sal and the twins right at the top. Tighten the hub up the service tower, Magnet the counterweight onto the brake plate, then plug in at the control booth and bring them down.
+    duration: 11
+    repeatable: 0
+  - cue: hub_tight
+    text: Hub's tight!
+    duration: 3
+    repeatable: 0
+  - cue: brake_off
+    text: Brake's off!
+    duration: 3
+    repeatable: 0
+  - cue: brake_light
+    text: 'The brake wants the counterweight. It''s metal: Magnet it.'
+    duration: 3
+    repeatable: 1
+  - cue: see_rig
+    text: PIP, look out to sea. That dark shape under the water... that's the Old Rig. And something's blinking down there.
+    duration: 7
+    repeatable: 0
+  - cue: wheel_on
+    text: It's turning! Stay plugged in!
+    duration: 3
+    repeatable: 1
+  - cue: wheel_off
+    text: The wheel stopped! Plug back in!
+    duration: 3
+    repeatable: 1
+  - cue: wheel_jammed
+    text: The hum jammed it! Hang on, it'll shake loose.
+    duration: 3
+    repeatable: 1
+  - cue: wheel_down
+    text: They're down! Grandpa Sal says it was the best ride of his life. The twins want to go again.
+    duration: 6
+    repeatable: 0
+  - cue: hum_tremor_first
+    text: Hum! Hold on tight up there!
+    duration: 3
+    repeatable: 0
+  - cue: hum_tremor
+    text: Another hum.
+    duration: 2
+    repeatable: 1
+  - cue: fell
+    text: Oof. Back to the pier.
+    duration: 3
+    repeatable: 1
+  - cue: exit
+    text: 'Everybody''s safe! And now we know exactly where the Old Rig is. Next stop: down there.'
+    duration: 6
+    repeatable: 0

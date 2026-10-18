@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976006531153724f8306a1fd441aa0c, type: 3}
+  m_Name: Dispatch_Side_PumpHouse
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Narrative.DispatchScript
+  lines:
+  - cue: intro
+    text: 'PIP, the Brightwater pump house flooded and Pebble, the little tide-gauge bot, is stuck across the sump. Three rooms. Take your time: your battery only drains while you move. Stuck? Press H for a hint. Messed up a room? Stand on its red reset pad.'
+    duration: 12
+    repeatable: 0
+  - cue: cell_grabbed
+    text: Power cell! It's heavy, it's portable, and it keeps whatever charge you give it.
+    duration: 4
+    repeatable: 0
+  - cue: cell_full
+    text: All four bars! That cell's full.
+    duration: 3
+    repeatable: 1
+  - cue: cell_not_full
+    text: 'That cradle wants a FULL cell. Count the bars: this one isn''t full yet.'
+    duration: 4
+    repeatable: 1
+  - cue: door1_open
+    text: The cradle's powering the door. You moved power further than your cable reaches. That's the whole trick.
+    duration: 6
+    repeatable: 0
+  - cue: gate_partial
+    text: The gate moved! A bit. The needle shows how much weight is in the pan. It wants more.
+    duration: 5
+    repeatable: 0
+  - cue: gate_open
+    text: Gate's up, and it stays up while the weight stays in. You don't have to hold it.
+    duration: 5
+    repeatable: 0
+  - cue: bridge_partial
+    text: The drawbridge is coming down... and stopping halfway. Not enough weight yet.
+    duration: 5
+    repeatable: 0
+  - cue: bridge_open
+    text: Bridge is down! Go get Pebble.
+    duration: 3
+    repeatable: 0
+  - cue: pebble_grabbed
+    text: Pebble's clinging on. Gently, gently. The tide gauge is by the exit.
+    duration: 4
+    repeatable: 0
+  - cue: pebble_home
+    text: Pebble's home! Listen to those pumps. The water's going down already.
+    duration: 6
+    repeatable: 0
+  - cue: room_reset
+    text: Room reset. Everything in here is back where it started. Nothing else changed.
+    duration: 4
+    repeatable: 1
+  - cue: hint_available
+    text: Hmm, tricky one. If you want a nudge, press H. Each press tells you a little more.
+    duration: 5
+    repeatable: 0
+  - cue: hint_solved
+    text: You've already solved this room! Head through the open door.
+    duration: 3
+    repeatable: 1
+  - cue: fell
+    text: Splash! Sump water is not a spa. Out you come.
+    duration: 3
+    repeatable: 1
+  - cue: exit
+    text: Pumps running, floor drying, Pebble ticking happily on the gauge. Lovely work, PIP.
+    duration: 6
+    repeatable: 0
+  - cue: r1_hint_1
+    text: 'Hint 1 of 4, the goal: open the door to the Gate Room. Its power comes from the cradle next to it, not from a socket.'
+    duration: 7
+    repeatable: 1
+  - cue: r1_hint_2
+    text: 'Hint 2 of 4, the system: cradles take power cells. A cell only powers its cradle when all four bars are lit.'
+    duration: 7
+    repeatable: 1
+  - cue: r1_hint_3
+    text: 'Hint 3 of 4, how they connect: you''re a power supply. Plug your Tether into the charge station and the cell in the station''s cradle fills up.'
+    duration: 8
+    repeatable: 1
+  - cue: r1_hint_4
+    text: 'Hint 4 of 4, the action: plug in (right mouse / LT) until every bar glows green, unplug, carry the cell (E / X) to the door''s cradle and set it down.'
+    duration: 9
+    repeatable: 1
+  - cue: r2_hint_1
+    text: 'Hint 1 of 4, the goal: open the gate and keep it open long enough to walk through.'
+    duration: 6
+    repeatable: 1
+  - cue: r2_hint_2
+    text: 'Hint 2 of 4, the system: the gate hangs on a pulley. Weight in the pan lifts it, and the needle shows how much is in.'
+    duration: 7
+    repeatable: 1
+  - cue: r2_hint_3
+    text: 'Hint 3 of 4, how they connect: anything you''re holding weighs nothing, and if you stand in the pan you''re not at the gate. It has to stay up without you.'
+    duration: 8
+    repeatable: 1
+  - cue: r2_hint_4
+    text: 'Hint 4 of 4, the action: put both crates in the pan. The one on the high shelf comes down with a Tether pull.'
+    duration: 7
+    repeatable: 1
+  - cue: r3_hint_1
+    text: 'Hint 1 of 4, the goal: lower the drawbridge, fetch Pebble from the far side, and carry Pebble to the tide gauge by the exit.'
+    duration: 8
+    repeatable: 1
+  - cue: r3_hint_2
+    text: 'Hint 2 of 4, the system: the bridge works like the gate, with a pan. It also has a winch, and the winch cradle is a motor when it holds a full cell.'
+    duration: 8
+    repeatable: 1
+  - cue: r3_hint_3
+    text: 'Hint 3 of 4, how they connect: there are two answers. A full cell in the winch cradle, or enough weight in the pan. The two crates alone aren''t quite enough. What else in here is heavy?'
+    duration: 9
+    repeatable: 1
+  - cue: r3_hint_4
+    text: 'Hint 4 of 4, the action: either charge the cell at the station and set it in the winch cradle, or put both crates AND the cell in the pan. Then cross, pick Pebble up, and set Pebble on the gauge.'
+    duration: 10
+    repeatable: 1

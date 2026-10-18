@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976006531153724f8306a1fd441aa0c, type: 3}
+  m_Name: Dispatch_Ch7_Boss
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Narrative.DispatchScript
+  lines:
+  - cue: intro
+    text: BIG RESCUE! PIP, the S.O.S. is coming from right here, by the anchor engine. Find him.
+    duration: 6
+    repeatable: 0
+  - cue: found_zero
+    text: 'It''s him. Unit Zero. His battery''s almost gone. His charging line''s broken: the junction box is up the pipe tower. Fix it, then plug in next to him.'
+    duration: 9
+    repeatable: 0
+  - cue: line_fixed
+    text: Line's fixed! Now plug in by Zero and share some power.
+    duration: 4
+    repeatable: 0
+  - cue: zero_charging
+    text: He's charging! Stay plugged in!
+    duration: 3
+    repeatable: 1
+  - cue: zero_unplugged
+    text: You unplugged! His battery's draining again!
+    duration: 3
+    repeatable: 1
+  - cue: zero_sos
+    text: Every hum is Zero calling for help. It costs him power each time. Hurry!
+    duration: 4
+    repeatable: 1
+  - cue: zero_low
+    text: His battery's nearly gone, PIP!
+    duration: 3
+    repeatable: 0
+  - cue: zero_awake
+    text: His eyes are on! Zero's awake! Carry him across the catwalk to the rescue lift. Gently.
+    duration: 6
+    repeatable: 0
+  - cue: zero_flat
+    text: Oh no. His battery ran out.
+    duration: 4
+    repeatable: 0
+  - cue: zero_safe
+    text: Zero's in the lift! He says... 'Hello. Is the coffee machine still broken?' PIP, we did it.
+    duration: 7
+    repeatable: 0
+  - cue: hum_tremor_first
+    text: Hum! Hold on!
+    duration: 2.5
+    repeatable: 0
+  - cue: hum_tremor
+    text: Another hum.
+    duration: 2
+    repeatable: 1
+  - cue: fell
+    text: Splash! Careful on that catwalk.
+    duration: 3
+    repeatable: 1
+  - cue: exit
+    text: 'Unit Zero is coming home. But if he leaves, who keeps the anchor engine running? The whole Reach needs it. Back to the Bureau: we need a plan.'
+    duration: 8
+    repeatable: 0

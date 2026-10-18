@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976006531153724f8306a1fd441aa0c, type: 3}
+  m_Name: Dispatch_Ch4_Call01
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Narrative.DispatchScript
+  lines:
+  - cue: intro
+    text: PIP, welcome to the Brightwater School science fair! Priya built a real seismograph and wants to catch the hum on paper. Fix its wobbly stand, power it up, and wait for the next hum. The robotics club's drones can help.
+    duration: 10
+    repeatable: 0
+  - cue: stand_fixed
+    text: Stand's steady! Now it needs power. That plate on the stage wants a little weight on it.
+    duration: 5
+    repeatable: 0
+  - cue: seismo_power
+    text: Plate's down, power's flowing.
+    duration: 3
+    repeatable: 0
+  - cue: seismo_armed
+    text: Seismograph armed, light's green! Now we wait for the hum. Any second. Any... second.
+    duration: 6
+    repeatable: 0
+  - cue: hum_tremor_first
+    text: Here it comes! Feel that?
+    duration: 3
+    repeatable: 0
+  - cue: hum_tremor
+    text: There's the hum again.
+    duration: 3
+    repeatable: 1
+  - cue: hum_recorded
+    text: Got it on paper! Short short short, long long long. Priya's comparing it with the school's other sensors...
+    duration: 7
+    repeatable: 0
+  - cue: drone_grabbed
+    text: The robotics club says be gentle. That one's called 'Professor'. They're all called 'Professor'.
+    duration: 5
+    repeatable: 0
+  - cue: plate_too_light
+    text: Too light! Give that plate a drone.
+    duration: 3
+    repeatable: 1
+  - cue: exit
+    text: Priya says the wobbles always arrive from the north-west first. That's where the Old Rig sank. PIP... something's down there.
+    duration: 7
+    repeatable: 0

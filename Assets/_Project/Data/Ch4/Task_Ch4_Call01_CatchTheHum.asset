@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fc3bbfe2d08f84aaa4a0203272180c, type: 3}
+  m_Name: Task_Ch4_Call01_CatchTheHum
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Tasks.TaskDefinition
+  taskId: ch4_call01
+  title: 'Call 4-1: Catch the Hum'
+  rescuee: Priya (and her seismograph)
+  description: Priya built a real seismograph for the science fair. Help her catch the hum on paper.
+  timeLimit: 0
+  boltsReward: 45
+  steps:
+  - id: fix_stand
+    label: Tighten the seismograph's stand (2 screws)
+  - id: power_seismo
+    label: 'Power it: weigh down the plate on the stage'
+  - id: record_hum
+    label: Wait for the hum to come through

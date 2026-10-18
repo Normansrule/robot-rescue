@@ -19,7 +19,7 @@ namespace RobotRescue.Tasks.Cooking
     /// Ticket rail for timed cooking (Pasta Panic, and Rescue Rush waves later). Tickets arrive one after another;
     /// each has a patience timer. Serve every ticket you can; too many expired tickets and the critic storms out.
     /// </summary>
-    public class OrderBoard : MonoBehaviour, IBossMeter
+    public class OrderBoard : MonoBehaviour, IBossMeter, IAreaGated
     {
         public string criticName = "Mr. Grumbleton";
         public OrderSpec[] orders = Array.Empty<OrderSpec>();

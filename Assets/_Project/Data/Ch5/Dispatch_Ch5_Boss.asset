@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976006531153724f8306a1fd441aa0c, type: 3}
+  m_Name: Dispatch_Ch5_Boss
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Narrative.DispatchScript
+  lines:
+  - cue: intro
+    text: 'BIG RESCUE! Captain Mo''s fishing boat is lost in the fog and the lighthouse is dark. Fuel the generator (the tank''s metal: Magnet it), fix the lamp''s lens up top, then plug in and BE the lighthouse until she''s home.'
+    duration: 11
+    repeatable: 0
+  - cue: generator_on
+    text: Generator's running! Now the lamp.
+    duration: 3
+    repeatable: 0
+  - cue: lens_fixed
+    text: Lens fixed! Plug into the socket up there and light her up.
+    duration: 4
+    repeatable: 0
+  - cue: beacon_on
+    text: Beacon's lit! She's turning toward us!
+    duration: 3
+    repeatable: 1
+  - cue: beacon_off
+    text: Beacon's dark! She's drifting! Plug back in!
+    duration: 3
+    repeatable: 1
+  - cue: beacon_morse
+    text: Wait, the beacon's flickering on its own... dash dash dot dot. Dot. Dot dash dot. Dash dash dash. Z. E. R. O. ...Zero?
+    duration: 8
+    repeatable: 0
+  - cue: boat_home
+    text: She's in! Captain Mo's tied up at the pier and waving at the lighthouse. That's you. She's waving at you.
+    duration: 6
+    repeatable: 0
+  - cue: ballast_light
+    text: That plate wants something heavy. The fuel tank, say.
+    duration: 3
+    repeatable: 1
+  - cue: hum_tremor_first
+    text: Hum! Hold that ladder!
+    duration: 3
+    repeatable: 0
+  - cue: hum_tremor
+    text: Another hum. Hang on.
+    duration: 2.5
+    repeatable: 1
+  - cue: fell
+    text: Ooh. Long way down. Back to the bottom.
+    duration: 3
+    repeatable: 1
+  - cue: exit
+    text: Captain Mo's home safe. And PIP... the lighthouse spelled ZERO. Unit Zero, the Bureau's very first bot. He's under the Old Rig, and he's calling for help.
+    duration: 8
+    repeatable: 0

@@ -6,12 +6,12 @@ namespace RobotRescue.Bots
     /// <summary>
     /// Keyboard/mouse + gamepad bindings, built in code so the prototype has no asset dependencies.
     /// Swap for a generated .inputactions asset when remapping UI lands.
-    /// Default layout (pad): A jump, X grab/drop, RT throw, LT tether, RB/LB reel in/out, B use tool, Y swap tool.
+    /// Default layout (pad): A jump, X grab/drop, RT throw, LT tether, RB/LB reel in/out, B use tool, Y swap tool, D-pad up wave.
     /// </summary>
     public class BotInput : MonoBehaviour
     {
         InputActionMap map;
-        InputAction move, lookMouse, lookStick, jump, interact, throwAction, tether, reel, useTool, cycleTool;
+        InputAction move, lookMouse, lookStick, jump, interact, throwAction, tether, reel, useTool, cycleTool, emote;
 
         public Vector2 Move => move.ReadValue<Vector2>();
         /// <summary>Mouse look in pixels this frame.</summary>
@@ -28,6 +28,11 @@ namespace RobotRescue.Bots
         /// <summary>Tool Arm: hold to use the equipped tool (whisk, screwdriver...).</summary>
         public bool UseToolHeld => useTool.IsPressed();
         public bool CycleToolPressed => cycleTool.WasPressedThisFrame();
+        /// <summary>Wave hello (G / D-pad up). Drones nearby wave back.</summary>
+        public bool EmotePressed => emote.WasPressedThisFrame();
+        /// <summary>True when any gameplay input is in use this frame (resets PIP's idle timer).</summary>
+        public bool AnyActivity => Move.sqrMagnitude > 0.01f || LookMouse.sqrMagnitude > 4f || LookStick.sqrMagnitude > 0.04f
+                                   || jump.IsPressed() || interact.IsPressed() || throwAction.IsPressed() || tether.IsPressed() || useTool.IsPressed();
 
         void Awake()
         {
@@ -66,6 +71,9 @@ namespace RobotRescue.Bots
 
             cycleTool = map.AddAction("CycleTool", InputActionType.Button, "<Keyboard>/tab");
             cycleTool.AddBinding("<Gamepad>/buttonNorth");
+
+            emote = map.AddAction("Emote", InputActionType.Button, "<Keyboard>/g");
+            emote.AddBinding("<Gamepad>/dpad/up");
         }
 
         void OnEnable() => map.Enable();

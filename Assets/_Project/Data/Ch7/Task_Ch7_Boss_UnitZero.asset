@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fc3bbfe2d08f84aaa4a0203272180c, type: 3}
+  m_Name: Task_Ch7_Boss_UnitZero
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Tasks.TaskDefinition
+  taskId: ch7_boss
+  title: 'BIG RESCUE: Unit Zero'
+  rescuee: Unit Zero, the Bureau's first bot
+  description: Unit Zero has been minding the anchor engine for years, and his battery is almost gone. Charge him and bring him out.
+  timeLimit: 0
+  boltsReward: 150
+  steps:
+  - id: find_zero
+    label: Find Unit Zero by the anchor engine
+  - id: line
+    label: Climb to the junction box and fix Zero's charging line (2 screws)
+  - id: charged
+    label: Plug in and charge Zero all the way
+  - id: zero_safe
+    label: Carry Zero across the catwalk to the rescue lift

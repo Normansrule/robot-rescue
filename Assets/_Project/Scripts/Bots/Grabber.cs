@@ -76,7 +76,7 @@ namespace RobotRescue.Bots
             for (int i = 0; i < n; i++)
             {
                 var rb = overlap[i].attachedRigidbody;
-                if (!rb || !rb.TryGetComponent(out Carryable c) || c.IsHeld || c.Body.mass > maxCarryMass) continue;
+                if (!rb || !rb.TryGetComponent(out Carryable c) || c.IsHeld || !c.CanPickUp || c.Body.mass > maxCarryMass) continue;
                 // Don't pick up the thing PIP is standing on.
                 if (bot.GroundCollider && bot.GroundCollider.attachedRigidbody == rb) continue;
                 float d = (rb.position - center).sqrMagnitude;
@@ -87,7 +87,7 @@ namespace RobotRescue.Bots
 
         public bool TryGrab(Carryable c)
         {
-            if (Held || !c || c.IsHeld || c.Body.mass > maxCarryMass) return false;
+            if (!isActiveAndEnabled || Held || !c || c.IsHeld || !c.CanPickUp || c.Body.mass > maxCarryMass) return false;
             Held = c;
             c.OnPickedUp(this, botColliders);
             bot.Squash(-0.12f);

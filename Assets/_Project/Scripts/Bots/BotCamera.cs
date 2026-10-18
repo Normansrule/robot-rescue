@@ -51,7 +51,36 @@ namespace RobotRescue.Bots
             if (Physics.SphereCast(smoothedPivot, collisionRadius, back, out RaycastHit hit, distance, mask, QueryTriggerInteraction.Ignore))
                 dist = Mathf.Max(0.5f, hit.distance);
 
-            transform.SetPositionAndRotation(smoothedPivot + back * dist, rot);
+            Vector3 shakeOffset = Vector3.zero;
+            if (shake > 0f)
+            {
+                shake = Mathf.Max(0f, shake - Time.deltaTime * 1.5f);
+                float t = Time.time * 28f;
+                shakeOffset = new Vector3(Mathf.PerlinNoise(t, 0f) - 0.5f, Mathf.PerlinNoise(0f, t) - 0.5f, 0f) * (shake * 0.5f);
+            }
+            transform.SetPositionAndRotation(smoothedPivot + back * dist + rot * shakeOffset, rot);
+        }
+
+        float shake;
+
+        /// <summary>Rattle the camera (a rumble, the Hum). Amount is roughly metres of jitter.</summary>
+        public void Shake(float amount) => shake = Mathf.Max(shake, amount);
+
+        /// <summary>Jump straight behind the target (after a teleport) instead of gliding there.</summary>
+        public void Snap()
+        {
+            if (!target) return;
+            yaw = target.eulerAngles.y;
+            pitch = 18f;
+            smoothedPivot = target.position + targetOffset;
+            transform.SetPositionAndRotation(smoothedPivot + Quaternion.Euler(pitch, yaw, 0f) * Vector3.back * distance, Quaternion.Euler(pitch, yaw, 0f));
+        }
+
+        void OnEnable()
+        {
+            if (!target) return;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
 
         /// <summary>Flat forward/right for camera-relative movement.</summary>

@@ -58,6 +58,7 @@ namespace RobotRescue.Bots
         State state;
         TetherTarget target;
         float fireTravel;
+        BotBattery battery;
         float ropeLength;
         bool tautCueSent;
 
@@ -71,6 +72,7 @@ namespace RobotRescue.Bots
             bot = GetComponent<BotController>();
             input = GetComponent<BotInput>();
             grabber = GetComponent<Grabber>();
+            battery = GetComponent<BotBattery>();
             if (cameraRig) cam = cameraRig.GetComponent<Camera>();
 
             line = gameObject.AddComponent<LineRenderer>();
@@ -146,6 +148,8 @@ namespace RobotRescue.Bots
         {
             if (!t.CanAttach) return false;
             if (t is Carryable c && c.IsHeld) return false;
+            // On reserve PIP can only plug into chargers: it has no power to give.
+            if (battery && battery.OnReserve && t.Mode == TetherMode.Power && !(t is ChargerSocket)) return false;
             Vector3 from = PortPosition, to = t.AttachPosition;
             if (Vector3.Distance(from, to) > maxRange) return false;
             // Line of sight from the bot (not the camera) to the target. Grazing whatever the target

@@ -1,0 +1,1288 @@
+VBCSCompilerPreWarmer: watching VBCSCompiler (PID 33504)
+VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 42448)
+VBCSCompiler prewarm took 17.34 ms
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.6/staging' branch; Version is '6000.6.5f1 (3ff58d469c8a) revision 4191629'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Channel LicenseClient-aleks doesn't exist
+OS: 'Windows 11  (10.0.26200) Core' Language: 'en' Physical Memory: 32371 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-18T05:55:30Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 10956)
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Unity.exe
+-batchmode
+-quit
+-projectPath
+C:\Users\aleks\Desktop\Robot Rescue
+-executeMethod
+RobotRescue.EditorTools.Media.SignCheck.Run
+-logFile
+C:\Users\aleks\Desktop\Robot Rescue\signcheck.log
+Successfully changed project path to: C:\Users\aleks\Desktop\Robot Rescue
+C:/Users/aleks/Desktop/Robot Rescue
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-remapper-allocator-initial-capacity=32768"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=1"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.
+Player connection [40644]  Target information:
+
+Player connection [40644]  * "[IP] 192.168.1.60 [Port] 55504 [Flags] 2 [Guid] 3344911936 [EditorId] 3344911936 [Version] 1048832 [Id] WindowsEditor(7,Aleksander-Desk) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [40644]  * "[IP] 172.27.208.1 [Port] 55504 [Flags] 2 [Guid] 3344911936 [EditorId] 3344911936 [Version] 1048832 [Id] WindowsEditor(7,Aleksander-Desk) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [40644]  * "[IP] 100.107.128.19 [Port] 55504 [Flags] 2 [Guid] 3344911936 [EditorId] 3344911936 [Version] 1048832 [Id] WindowsEditor(7,Aleksander-Desk) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [40644] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [40644] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Starting IPC server.
+Waiting for clients to connect on \\.\pipe\Unity-LicenseClient-aleks, press Ctrl-C to exit.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-aleks" at "2026-10-18T05:55:30.5740607Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 10956, path: "C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.3+d7ffd15
+  Session Id:              0893395b9a88407abf18fb35fbca14ec
+  Correlation Id:          95cc1176c360a93bf6e14186e2ba90bf
+  External correlation Id: 4181906018693465396
+  Machine Id:              9KTbQbfQiacTFiXz9Xs8CiyUqog=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-aleks" (connect: 0.24s, validation: 0.18s, handshake: 0.04s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-aleks-notifications" at "2026-10-18T05:55:30.7900245Z"
+[Licensing::Module] Connected to LicensingClient (PId: 10956, launch time: 0.00, total connection time: 0.46s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 20067664221254-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 0.50s
+[Package Manager] Connected to IPC stream "Upm-14940" after 0.3 seconds.
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+Initialising UDS system complete:
+  - System type: Client
+  - Resource namespace: eaecb6437470f5705b6fe808acdc8ac2
+  - Shared memory size: 1073741824
+  - Command buffer id: 1052576
+  - Command buffer size: 8192
+  - Hashmap size: 4194304
+  - Service connected: false
+Launching Unity Data Store - C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/Tools/Unity.DataStore.exe 
+Unity Data Store artifact dir = Library/DataStore, working dir = C:/Users/aleks/Desktop/Robot RescueUnity Data Store running and initialised
+[Physics::Module] Selected backend (deferred post-plugins).
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.6.5f1 (3ff58d469c8a)
+[EntityIdStore] init: VM path (explicit commit), pageSize=4096, blockCount=1048576, entitiesPerBlock=256, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/aleks/Desktop/Robot Rescue/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 5060 Ti (ID=0x2d04)
+    Vendor:   NVIDIA
+    VRAM:     16050 MB
+    Driver:   32.0.16.1088
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56940
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002126 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  0.556 seconds
+Domain Reload Profiling: 1015ms
+	BeginReloadAssembly (125ms)
+		CreateAndSetChildDomain (22ms)
+	RebuildCommonClasses (4ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (57ms)
+	LoadAllAssembliesAndSetupDomain (257ms)
+		LoadAssemblies (100ms)
+		TypeCache.Refresh (169ms)
+			TypeCache.ScanAssembly (158ms)
+		AnalyzeDomain (1ms)
+	FinalizeReload (557ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (81ms)
+			ProcessInitializeOnLoadAttributes (88ms)
+			ProcessInitializeOnLoadMethodAttributes (201ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 60 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.ai.navigation@2.0.15 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ai.navigation@a9c5744fc1de)
+    com.unity.ide.rider@3.0.38 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ide.rider@1f60b3138684)
+    com.unity.ide.visualstudio@2.0.26 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ide.visualstudio@a99d56dec63f)
+    com.unity.inputsystem@1.20.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.inputsystem@7a4e1a2a8194)
+    com.unity.searcher@4.9.5 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.searcher@a463122f2c00)
+    com.unity.profiling.core@1.0.3 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.profiling.core@8a49f7027d06)
+    com.unity.nuget.mono-cecil@1.11.6 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+  Built-in packages:
+    com.unity.2d.sprite@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.2d.sprite@752945c75a6f)
+    com.unity.2d.tilemap@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.2d.tilemap@f4c7bd71ac8a)
+    com.unity.multiplayer.center@2.0.1 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.multiplayer.center@01ba5271095b)
+    com.unity.render-pipelines.universal@17.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.render-pipelines.universal@2309ae255609)
+    com.unity.test-framework@1.8.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.test-framework@80f691d4262b)
+    com.unity.timeline@6.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.timeline@4891807c6bd8)
+    com.unity.ugui@2.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ugui@42f0bd825000)
+    com.unity.modules.accessibility@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.physicscore2d@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.physicscore2d)
+    com.unity.modules.screencapture@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tetgen@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.tetgen)
+    com.unity.modules.tilemap@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.timelinefoundation@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.timelinefoundation)
+    com.unity.modules.ui@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.wind@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.1.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ext.nunit@0198eae3b53e)
+    com.unity.render-pipelines.core@17.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.render-pipelines.core@285af6b8c83f)
+    com.unity.shadergraph@17.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.shadergraph@58bcb150677d)
+    com.unity.render-pipelines.universal-config@17.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.render-pipelines.universal-config@561422b74439)
+    com.unity.graph-authoring@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.graph-authoring@cfd2588851ee)
+    com.unity.burst@2.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.burst@626e66ab421b)
+    com.unity.collections@6.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.collections@10fff0607388)
+    com.unity.test-framework.performance@6.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.test-framework.performance@54c5bd86aedb)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Starting: C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/2000b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/aleks/Desktop/Robot Rescue
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.runtime.interopservices.windowsruntime has duplicate hint path. Ignoring "C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.WindowsRuntime.dll" in favor of "C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Data\NetStandard\Extensions\2.0.0\System.Runtime.InteropServices.WindowsRuntime.dll"
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.componentmodel.composition has duplicate hint path. Ignoring "C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.ComponentModel.Composition.dll" in favor of "C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.ComponentModel.Composition.dll"
+DisplayProgressbar: Compiling Scripts
+ExitCode: 4 Duration: 0s233ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/2000b0aE-inputdata.json
+[661/848    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+*** Tundra requires additional run (0.20 seconds), 1 items updated, 660 evaluated
+Starting: C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Data\DotNetSdk\dotnet.exe "C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/2000b0aE.dag.json" "Library/Bee/2000b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: C:/Users/aleks/Desktop/Robot Rescue
+ExitCode: 0 Duration: 0s785ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/2000b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\2000b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/aleks/Desktop/Robot Rescue
+ExitCode: 0 Duration: 1s111ms
+Finished compiling graph: 851 nodes, 15311 flattened edges (13325 ToBuild, 130 ToUse), maximum node priority 874
+[488/848    0s] WriteText Library/Bee/artifacts/2000b0aE.dag/RobotRescue.Editor.rsp
+[660/848    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[844/848    0s] Csc Library/Bee/artifacts/2000b0aE.dag/RobotRescue.Editor.dll (+2 others)
+[845/848    0s] ILPostProcess Library/Bee/artifacts/2000b0aE.dag/post-processed/RobotRescue.Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/2000b0aE.dag/RobotRescue.Editor.dll, with 122 defines and 308 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[846/848    0s] CopyFiles Library/ScriptAssemblies/RobotRescue.Editor.dll
+[847/848    0s] CopyFiles Library/ScriptAssemblies/RobotRescue.Editor.pdb
+*** Tundra build success (1.09 seconds), 6 items updated, 848 evaluated
+AssetDatabase: script compilation time: 2.571627s
+Begin MonoManager ReloadAssembly
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  0.715 seconds
+Domain Reload Profiling: 1559ms
+	BeginReloadAssembly (327ms)
+		DisableScriptedObjects (19ms)
+		CreateAndSetChildDomain (158ms)
+	RebuildCommonClasses (9ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (52ms)
+	LoadAllAssembliesAndSetupDomain (441ms)
+		LoadAssemblies (271ms)
+		TypeCache.Refresh (84ms)
+			TypeCache.ScanAssembly (77ms)
+		AnalyzeDomain (57ms)
+			BuildScriptInfoCaches (48ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (715ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (91ms)
+			ProcessInitializeOnLoadAttributes (162ms)
+			ProcessInitializeOnLoadMethodAttributes (67ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (3ms)
+		AwakeInstancesAfterBackupRestoration (30ms)
+Starting new worker id: 0 with log in C:/Users/aleks/Desktop/Robot Rescue/Logs/AssetImportWorkerHW0.log
+
+Asset Pipeline Refresh (id=3a83ff3eb9ad2974f9c616bac8729339): Total: 4.955 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1104 ms
+		Asset DB Callback time: managed=304 ms, native=27 ms
+		Scripting: domain reloads=1, domain reload time=892 ms, compile time=2574 ms, other=52 ms
+		Project Asset Count: scripts=1092, non-scripts=2591
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 26.991ms
+	ApplyChangesToAssetFolders: 0.579ms
+	Scan: 133.168ms
+	Collect global state as custom dependencies: 17.745ms
+	OnSourceAssetsModified: 0.543ms
+	CategorizeScriptCompilationAssets: 16.827ms
+	ProcessAssetsWithTransientArtifactChanges: 47.940ms
+	CategorizeAssets: 39.062ms
+	CompileScripts: 2573.550ms
+	ImportOutOfDateAssets: 730.832ms (718.293ms without children)
+		UnloadImportedAssets: 1.688ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.430ms
+		ImportSchedulerStart: 10.379ms
+	PostProcessAllAssets: 304.367ms
+		VCAutoAddAssetPostprocess 1.014ms
+		XRBuildSystem.XRAssetImported 0.111ms
+		VersionControlSettings.HiddenFilePostprocess 0.101ms
+		MonoPostProcessAllAssets: 302.698ms
+			SyncVS.PostprocessSyncProject 163.693ms
+			AssetPostprocessor.OnPostprocessAllAssets 80.554ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 12.310ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 12.261ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 4.999ms
+			SpriteSlicePostprocessor.OnPostprocessAllAssets 1.844ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.693ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.449ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.341ms
+			AssetChangedListener.OnPostprocessAllAssets 1.337ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.266ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.734ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.714ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.647ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.534ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.422ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.411ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.303ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.292ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.289ms
+			PostProcessor.OnPostprocessAllAssets 0.257ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.247ms
+			AssetEvents.OnPostprocessAllAssets 0.219ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.210ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.208ms
+			AssetProcessor.OnPostprocessAllAssets 0.173ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.160ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.146ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.135ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.129ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.123ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.120ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.118ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.113ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.064ms
+	PostAssetChangesProfiler: 1.669ms
+	UnloadStreamsBegin: 1.228ms
+	PersistCurrentRevisions: 0.073ms
+	GenerateScriptTypeHashes: 1.324ms
+	GenerateScriptTypeSerializationHashes: 2.406ms
+	Untracked: 1054.707ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Scanning for USB devices : 7.265ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Robot Rescue
+Unloading 65 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4476 unused Assets / (10.9 MB). Loaded Objects now: 5439.
+Memory consumption went from 356.1 MB to 345.2 MB.
+Total: 8.354700 ms (FindLiveObjects: 0.353200 ms CreateObjectMapping: 0.116600 ms MarkObjects: 5.287000 ms  DeleteObjects: 2.454200 ms)
+
+Opening scene 'Assets/_Project/Scenes/World_Station.unity'
+Curl error 6: Could not resolve host: cdp.cloud.unity3d.com
+Curl error 6: Could not resolve host: config.uca.cloud.unity3d.com
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/World_Station.unity'
+	Deserialize:            81.286 ms
+	Integration:            191.066 ms
+	Integration of assets:  0.198 ms
+	Thread Wait Time:       0.035 ms
+	Total Operation Time:   272.585 ms
+Unloading 4 unused Assets / (65.6 KB). Loaded Objects now: 13074.
+Memory consumption went from 357.5 MB to 357.4 MB.
+Total: 8.105200 ms (FindLiveObjects: 1.084800 ms CreateObjectMapping: 0.087000 ms MarkObjects: 6.653000 ms  DeleteObjects: 0.095500 ms)
+
+[SignCheck] ok Station_Test01_StackEmUp_0.png (15 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Station_Test01_StackEmUp_1.png (0 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Station_Test01_StackEmUp_2.png (0 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Station_Test01_StackEmUp_3.png (0 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Station_Test02_ConveyorCaper_0.png (13 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Station_Test02_ConveyorCaper_1.png (0 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Station_Test02_ConveyorCaper_2.png (4 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Station_Test02_ConveyorCaper_3.png (0 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Station_Test03_SwingShift_0.png (10 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Station_Test03_SwingShift_1.png (0 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Station_Test03_SwingShift_2.png (7 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Station_Test03_SwingShift_3.png (4 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+Worker ready: AssetImportWorkerHW0 0
+[SignCheck] ok Station_Ch1_Boss_CoffeeCrisis_0.png (6 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Station_Ch1_Boss_CoffeeCrisis_1.png (5 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Station_Ch1_Boss_CoffeeCrisis_2.png (10 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Station_Ch1_Boss_CoffeeCrisis_3.png (1 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+Opening scene 'Assets/_Project/Scenes/World_Brightwater.unity'
+Unloading 154 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/World_Brightwater.unity'
+	Deserialize:            221.806 ms
+	Integration:            210.888 ms
+	Integration of assets:  0.181 ms
+	Thread Wait Time:       0.010 ms
+	Total Operation Time:   432.885 ms
+Unloading 185 unused Assets / (200.8 KB). Loaded Objects now: 32611.
+Memory consumption went from 431.2 MB to 431.0 MB.
+Total: 10.160700 ms (FindLiveObjects: 2.854500 ms CreateObjectMapping: 0.124700 ms MarkObjects: 6.486700 ms  DeleteObjects: 0.406300 ms)
+
+[SignCheck] ok Brightwater_Ch5_Boss_LightsOut_0.png (80 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch5_Boss_LightsOut_1.png (2 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch5_Boss_LightsOut_2.png (66 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch5_Boss_LightsOut_3.png (22 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch6_Boss_StuckAtTheTop_0.png (97 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch6_Boss_StuckAtTheTop_1.png (12 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch6_Boss_StuckAtTheTop_2.png (45 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch6_Boss_StuckAtTheTop_3.png (2 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch7_Call01_GoingDown_0.png (105 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch7_Call01_GoingDown_1.png (7 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch7_Call01_GoingDown_2.png (37 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch7_Call01_GoingDown_3.png (7 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch4_Boss_SlightlyTooBig_0.png (63 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch4_Boss_SlightlyTooBig_1.png (13 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch4_Boss_SlightlyTooBig_2.png (81 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch4_Boss_SlightlyTooBig_3.png (16 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch7_Boss_UnitZero_0.png (112 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch7_Boss_UnitZero_1.png (1 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch7_Boss_UnitZero_2.png (30 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch7_Boss_UnitZero_3.png (8 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch2_Call01_PastaEmergency_0.png (3 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch2_Call01_PastaEmergency_1.png (22 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch2_Call01_PastaEmergency_2.png (113 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch2_Call01_PastaEmergency_3.png (3 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch8_Boss_TheFoundersSong_0.png (104 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch8_Boss_TheFoundersSong_1.png (7 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch8_Boss_TheFoundersSong_2.png (10 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch8_Boss_TheFoundersSong_3.png (9 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch2_Boss_PastaPanic_0.png (30 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch2_Boss_PastaPanic_1.png (12 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch2_Boss_PastaPanic_2.png (109 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch2_Boss_PastaPanic_3.png (19 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch8_Call01_StageFright_0.png (108 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch8_Call01_StageFright_1.png (6 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch8_Call01_StageFright_2.png (24 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch8_Call01_StageFright_3.png (7 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch3_Call01_LooseScrews_0.png (36 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch3_Call01_LooseScrews_1.png (2 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch3_Call01_LooseScrews_2.png (110 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch3_Call01_LooseScrews_3.png (2 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch5_Call01_HeavyLifting_0.png (74 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch5_Call01_HeavyLifting_1.png (8 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch5_Call01_HeavyLifting_2.png (73 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch5_Call01_HeavyLifting_3.png (18 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch2_Call02_WhiskBusiness_0.png (16 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch2_Call02_WhiskBusiness_1.png (17 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch2_Call02_WhiskBusiness_2.png (119 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch2_Call02_WhiskBusiness_3.png (10 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch6_Call01_CarouselChaos_0.png (90 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch6_Call01_CarouselChaos_1.png (5 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch6_Call01_CarouselChaos_2.png (58 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch6_Call01_CarouselChaos_3.png (5 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch4_Call01_CatchTheHum_0.png (52 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch4_Call01_CatchTheHum_1.png (17 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch4_Call01_CatchTheHum_2.png (93 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch4_Call01_CatchTheHum_3.png (8 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch3_Boss_UpATree_0.png (43 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch3_Boss_UpATree_1.png (15 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch3_Boss_UpATree_2.png (103 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] ok Brightwater_Ch3_Boss_UpATree_3.png (3 signs behind walls, 0 px changed)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:86)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 86)
+
+[SignCheck] 76 views, 0 with signs showing through walls. Stills in C:\Users\aleks\Desktop\Robot Rescue\docs\media\signcheck
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.SignCheck:Run () (at Assets/_Project/Editor/Media/SignCheck.cs:92)
+
+(Filename: Assets/_Project/Editor/Media/SignCheck.cs Line: 92)
+
+Batchmode quit successfully invoked - shutting down!
+Importing 'GUID: 00000000000000009000000000000000 - Path: ProjectSettings/QualitySettings.asset' with importer (LibraryAssetImporter)
+Imported 'GUID: 00000000000000009000000000000000' -> (Import Result ID: '8151b601d05d3e12de314c2aa1f82962') in 0.004 seconds [static dependencies only]. Details - ImportResultOutputID=2a108b3da874f726c62fbe5f12be4a8a DependenciesID=6180c49ef29638684367d2893c04e070 StaticDependenciesID=5b19720d9149525484b40148944c8e26 
+Asset Pipeline Refresh (id=3df7c9b07f433c34eb2b19decd516bc0): Total: 0.050 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-aleks-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-aleks channel disconnected successfully.
+Shut down.
+Lingering sessions upon destruction of worker manager
+Unity Data Store service was successfully shut down
+UDS shutting down local client system
+Shut down UDS service system complete
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+abort_threads: Failed aborting id: 0000000000004E94, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 00000000000089E0, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000004E94, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 00000000000089E0, mono_thread_manage will ignore it
+
+debugger-agent: Unable to listen on 4108
+Exiting batchmode successfully now!
+[ExitDontLaunchBugReporter] Exiting without the bug reporter. Application will exit with return code 0

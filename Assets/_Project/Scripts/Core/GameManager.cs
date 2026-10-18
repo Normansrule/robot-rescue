@@ -1,4 +1,5 @@
 using RobotRescue.Campaign;
+using RobotRescue.World;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -61,16 +62,34 @@ namespace RobotRescue.Core
             if (Instance == this) Instance = null;
         }
 
-        void Start() => EventBus<NarrationCue>.Raise(new NarrationCue("intro"));
+        /// <summary>True in the open-world scene, where calls flow into each other without loading screens.</summary>
+        public static bool InWorld => WorldDirector.Instance;
+
+        void Start()
+        {
+            // In the world each area says its own intro when PIP walks in.
+            if (!InWorld) EventBus<NarrationCue>.Raise(new NarrationCue("intro"));
+        }
 
         void Update()
         {
+            if (InWorld && WorldDirector.Instance.InTitle) return;
             if (restartAction.WasPressedThisFrame()) Restart();
             if (pauseAction.WasPressedThisFrame() && !LevelComplete) SetPaused(!Paused);
             if (LevelComplete && continueAction.WasPressedThisFrame()) CampaignProgress.LoadNext();
         }
 
-        public void Restart() => CampaignProgress.Load(SceneManager.GetActiveScene().name);
+        public void Restart()
+        {
+            if (InWorld) WorldDirector.Instance.RestartArea();
+            else CampaignProgress.Load(SceneManager.GetActiveScene().name);
+        }
+
+        public void QuitToMenu()
+        {
+            if (InWorld) WorldDirector.Instance.ReturnToTitle();
+            else CampaignProgress.LoadMenu();
+        }
 
         public void SetPaused(bool paused)
         {
@@ -82,9 +101,16 @@ namespace RobotRescue.Core
 
         void OnLevelCompleted(LevelCompleted _)
         {
+            if (InWorld)
+            {
+                WorldDirector.Instance.CompleteActive();
+                return;
+            }
             if (LevelComplete) return;
             LevelComplete = true;
-            CampaignProgress.MarkComplete(SceneManager.GetActiveScene().name);
+            string scene = SceneManager.GetActiveScene().name;
+            if (CampaignProgress.IsSideCall(scene)) CampaignProgress.MarkSideCallComplete(scene);
+            else CampaignProgress.MarkComplete(scene);
             EventBus<NarrationCue>.Raise(new NarrationCue("exit"));
         }
     }

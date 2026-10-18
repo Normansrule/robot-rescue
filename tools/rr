@@ -165,7 +165,11 @@ cmd_progress() {
   printf '\nLevels (scene files):\n'
   local s
   for s in MainMenu TestChambers/Test01_StackEmUp TestChambers/Test02_ConveyorCaper TestChambers/Test03_SwingShift \
-           Ch1_Boss_CoffeeCrisis Ch2_Call01_PastaEmergency Ch2_Call02_WhiskBusiness Ch2_Boss_PastaPanic; do
+           Ch1_Boss_CoffeeCrisis Ch2_Call01_PastaEmergency Ch2_Call02_WhiskBusiness Ch2_Boss_PastaPanic \
+           Ch3_Call01_LooseScrews Ch3_Boss_UpATree Ch4_Call01_CatchTheHum Ch4_Boss_SlightlyTooBig \
+           Ch5_Call01_HeavyLifting Ch5_Boss_LightsOut Ch6_Call01_CarouselChaos Ch6_Boss_StuckAtTheTop \
+           Ch7_Call01_GoingDown Ch7_Boss_UnitZero Ch8_Call01_StageFright Ch8_Boss_TheFoundersSong \
+           World_Station World_Brightwater; do
     if [[ -f "Assets/_Project/Scenes/$s.unity" ]]; then printf '  \033[32m✔\033[0m %s\n' "$s"; else printf '  \033[31m✘\033[0m %s   (run: rr levels)\n' "$s"; fi
   done
   printf '\nREADME media:   %s PNG, %s GIF in docs/media\n' "$(ls docs/media/*.png 2>/dev/null | wc -l)" "$(ls docs/media/*.gif 2>/dev/null | wc -l)"

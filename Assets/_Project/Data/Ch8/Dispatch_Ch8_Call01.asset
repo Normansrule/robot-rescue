@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976006531153724f8306a1fd441aa0c, type: 3}
+  m_Name: Dispatch_Ch8_Call01
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Narrative.DispatchScript
+  lines:
+  - cue: intro
+    text: PIP! The Founders' Festival is tonight and the stage is a mess. The speakers need a drone on each plate, the curtain motor's loose, and the banner's tangled at the top of the flagpole.
+    duration: 9
+    repeatable: 0
+  - cue: drone_grabbed
+    text: Got a drone. Onto a speaker plate with it.
+    duration: 3
+    repeatable: 0
+  - cue: speakers_on
+    text: Speakers on! Testing, testing... the drones are dancing.
+    duration: 4
+    repeatable: 0
+  - cue: curtain_open
+    text: Curtain's open!
+    duration: 3
+    repeatable: 0
+  - cue: banner_free
+    text: Banner's free! 'Happy Founders' Day!'
+    duration: 4
+    repeatable: 0
+  - cue: stage_ready
+    text: The stage is ready! Lights, music, everything!
+    duration: 4
+    repeatable: 0
+  - cue: hum_tremor_first
+    text: Hear that? It's the anchor engine's beat. Now that Zero's safe, it just sounds like a drum.
+    duration: 6
+    repeatable: 0
+  - cue: hum_tremor
+    text: Boom!
+    duration: 2
+    repeatable: 1
+  - cue: fell
+    text: Whoops! Back you go.
+    duration: 3
+    repeatable: 1
+  - cue: exit
+    text: 'Stage is set. One last job: the anchor engine still needs a keeper, and Zero has an idea.'
+    duration: 6
+    repeatable: 0

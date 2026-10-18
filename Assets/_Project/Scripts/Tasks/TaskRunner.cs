@@ -8,7 +8,7 @@ namespace RobotRescue.Tasks
     /// Tracks one TaskDefinition in the scene. Puzzle pieces raise <see cref="TaskStepCompleted"/>
     /// and this marks steps done, then raises <see cref="TaskCompleted"/> when all are done.
     /// </summary>
-    public class TaskRunner : MonoBehaviour
+    public class TaskRunner : MonoBehaviour, IAreaGated
     {
         public TaskDefinition task;
 

@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976006531153724f8306a1fd441aa0c, type: 3}
+  m_Name: Dispatch_Ch4_Boss
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Narrative.DispatchScript
+  lines:
+  - cue: intro
+    text: BIG RESCUE! Theo's volcano is slightly too big, and every hum sets it off. The gym is filling with foam! Screw its three valves shut (one's up the scaffold) and park a drone on each drain plate. Watch the foam meter.
+    duration: 11
+    repeatable: 0
+  - cue: valves_shut
+    text: All three valves shut! The volcano's just burping now.
+    duration: 4
+    repeatable: 0
+  - cue: drains_open
+    text: Both drains open! Glug glug glug.
+    duration: 4
+    repeatable: 0
+  - cue: foam_surge
+    text: The hum's shaking the volcano! More foam!
+    duration: 3
+    repeatable: 1
+  - cue: foam_high
+    text: It's up to my... well, I don't have knees. It's HIGH, PIP!
+    duration: 4
+    repeatable: 0
+  - cue: foam_overflow
+    text: ...and the gym is a bubble bath. Theo says 'cool'. Let's try that again.
+    duration: 5
+    repeatable: 1
+  - cue: foam_cleared
+    text: Foam's gone! The floor's never been cleaner. Theo wants to do it again. Theo is NOT doing it again.
+    duration: 6
+    repeatable: 0
+  - cue: hum_tremor_first
+    text: Hum incoming! Hold on to that scaffold!
+    duration: 3
+    repeatable: 0
+  - cue: hum_tremor
+    text: Another hum!
+    duration: 2.5
+    repeatable: 1
+  - cue: tether_pull
+    text: Yoink! Bring that drone down.
+    duration: 3
+    repeatable: 0
+  - cue: plate_too_light
+    text: That drain plate wants a drone on it.
+    duration: 3
+    repeatable: 1
+  - cue: exit
+    text: Science fair saved! And PIP, Priya's seismograph says every hum is a little weaker than the last. Whoever's calling for help is running out of battery. We need to hurry.
+    duration: 8
+    repeatable: 0

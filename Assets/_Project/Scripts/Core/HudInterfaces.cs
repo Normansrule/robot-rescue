@@ -23,3 +23,13 @@ namespace RobotRescue.Core
         string FailureText { get; }
     }
 }
+
+namespace RobotRescue.Core
+{
+    /// <summary>
+    /// Marks behaviours that should only run while the player is in their area of the open world (boss timers,
+    /// order boards, task runners, narrators). <see cref="World.Area"/> switches them on and off.
+    /// Outside the world (a single level scene) they simply run.
+    /// </summary>
+    public interface IAreaGated { }
+}

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976006531153724f8306a1fd441aa0c, type: 3}
+  m_Name: Dispatch_Ch7_Call01
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Narrative.DispatchScript
+  lines:
+  - cue: intro
+    text: 'This is it, PIP: the Old Rig. The hall''s flooded, but there are crane hooks overhead. Fire the Tether at a hook to swing. The outpost door''s on the far side.'
+    duration: 9
+    repeatable: 0
+  - cue: crossed
+    text: Made it! Now that door. It looks Bureau-made. Very old Bureau-made.
+    duration: 4
+    repeatable: 0
+  - cue: door_open
+    text: Door's open, and the gangway came down too. That's our way back.
+    duration: 5
+    repeatable: 0
+  - cue: outpost_inside
+    text: 'An outpost. A real Bureau outpost, under the sea. Look at the photo board: that''s Unit Zero on his first day. The hum''s coming from below us.'
+    duration: 8
+    repeatable: 0
+  - cue: hum_tremor_first
+    text: The hum! It's so loud down here.
+    duration: 3
+    repeatable: 0
+  - cue: hum_tremor
+    text: Hum!
+    duration: 2
+    repeatable: 1
+  - cue: fell
+    text: Splash! Back to the entry deck.
+    duration: 3
+    repeatable: 1
+  - cue: exit
+    text: There's a hatch to the engine room below the outpost. That's where the S.O.S. is coming from. Get ready.
+    duration: 6
+    repeatable: 0

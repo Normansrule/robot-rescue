@@ -1,0 +1,855 @@
+VBCSCompilerPreWarmer: watching VBCSCompiler (PID 45256)
+VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 27264)
+VBCSCompiler prewarm took 16.54 ms
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.6/staging' branch; Version is '6000.6.5f1 (3ff58d469c8a) revision 4191629'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Channel LicenseClient-aleks doesn't exist
+OS: 'Windows 11  (10.0.26200) Core' Language: 'en' Physical Memory: 32371 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-18T05:52:26Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 39724)
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Unity.exe
+-batchmode
+-projectPath
+C:\Users\aleks\Desktop\Robot Rescue
+-executeMethod
+RobotRescue.EditorTools.PumpHouseSelfTestRunner.RunFromCommandLine
+-logFile
+C:\Users\aleks\Desktop\Robot Rescue\pumphouse.log
+Successfully changed project path to: C:\Users\aleks\Desktop\Robot Rescue
+C:/Users/aleks/Desktop/Robot Rescue
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-remapper-allocator-initial-capacity=32768"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=1"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.
+Player connection [40128]  Target information:
+
+Player connection [40128]  * "[IP] 192.168.1.60 [Port] 55504 [Flags] 2 [Guid] 4001897507 [EditorId] 4001897507 [Version] 1048832 [Id] WindowsEditor(7,Aleksander-Desk) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [40128]  * "[IP] 172.27.208.1 [Port] 55504 [Flags] 2 [Guid] 4001897507 [EditorId] 4001897507 [Version] 1048832 [Id] WindowsEditor(7,Aleksander-Desk) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [40128]  * "[IP] 100.107.128.19 [Port] 55504 [Flags] 2 [Guid] 4001897507 [EditorId] 4001897507 [Version] 1048832 [Id] WindowsEditor(7,Aleksander-Desk) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [40128] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [40128] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-aleks" at "2026-10-18T05:52:26.3610217Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 39724, path: "C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.3+d7ffd15
+  Session Id:              7b320a0d759543c398876e2de94040e6
+  Correlation Id:          7f00d421337e275775a77fe38c4d7c05
+  External correlation Id: 5717908585521511341
+  Machine Id:              9KTbQbfQiacTFiXz9Xs8CiyUqog=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-aleks" (connect: 0.25s, validation: 0.17s, handshake: 0.04s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-aleks-notifications" at "2026-10-18T05:52:26.5670891Z"
+[Licensing::Module] Connected to LicensingClient (PId: 39724, launch time: 0.00, total connection time: 0.45s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 20067664221254-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 0.49s
+[Package Manager] Connected to IPC stream "Upm-6528" after 0.2 seconds.
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+Launching Unity Data Store - C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/Tools/Unity.DataStore.exe 
+Unity Data Store artifact dir = Library/DataStore, working dir = C:/Users/aleks/Desktop/Robot RescueUnity Data Store running and initialised
+[Physics::Module] Selected backend (deferred post-plugins).
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.6.5f1 (3ff58d469c8a)
+[EntityIdStore] init: VM path (explicit commit), pageSize=4096, blockCount=1048576, entitiesPerBlock=256, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/aleks/Desktop/Robot Rescue/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 5060 Ti (ID=0x2d04)
+    Vendor:   NVIDIA
+    VRAM:     16050 MB
+    Driver:   32.0.16.1088
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56528
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002994 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  0.555 seconds
+Domain Reload Profiling: 1033ms
+	BeginReloadAssembly (139ms)
+		CreateAndSetChildDomain (37ms)
+	RebuildCommonClasses (5ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (58ms)
+	LoadAllAssembliesAndSetupDomain (262ms)
+		LoadAssemblies (98ms)
+		TypeCache.Refresh (177ms)
+			TypeCache.ScanAssembly (166ms)
+		AnalyzeDomain (1ms)
+	FinalizeReload (556ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (85ms)
+			ProcessInitializeOnLoadAttributes (85ms)
+			ProcessInitializeOnLoadMethodAttributes (201ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 60 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.ai.navigation@2.0.15 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ai.navigation@a9c5744fc1de)
+    com.unity.ide.rider@3.0.38 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ide.rider@1f60b3138684)
+    com.unity.ide.visualstudio@2.0.26 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ide.visualstudio@a99d56dec63f)
+    com.unity.inputsystem@1.20.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.inputsystem@7a4e1a2a8194)
+    com.unity.searcher@4.9.5 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.searcher@a463122f2c00)
+    com.unity.profiling.core@1.0.3 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.profiling.core@8a49f7027d06)
+    com.unity.nuget.mono-cecil@1.11.6 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+  Built-in packages:
+    com.unity.2d.sprite@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.2d.sprite@752945c75a6f)
+    com.unity.2d.tilemap@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.2d.tilemap@f4c7bd71ac8a)
+    com.unity.multiplayer.center@2.0.1 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.multiplayer.center@01ba5271095b)
+    com.unity.render-pipelines.universal@17.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.render-pipelines.universal@2309ae255609)
+    com.unity.test-framework@1.8.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.test-framework@80f691d4262b)
+    com.unity.timeline@6.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.timeline@4891807c6bd8)
+    com.unity.ugui@2.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ugui@42f0bd825000)
+    com.unity.modules.accessibility@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.physicscore2d@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.physicscore2d)
+    com.unity.modules.screencapture@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tetgen@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.tetgen)
+    com.unity.modules.tilemap@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.timelinefoundation@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.timelinefoundation)
+    com.unity.modules.ui@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.wind@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.1.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ext.nunit@0198eae3b53e)
+    com.unity.render-pipelines.core@17.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.render-pipelines.core@285af6b8c83f)
+    com.unity.shadergraph@17.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.shadergraph@58bcb150677d)
+    com.unity.render-pipelines.universal-config@17.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.render-pipelines.universal-config@561422b74439)
+    com.unity.graph-authoring@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.graph-authoring@cfd2588851ee)
+    com.unity.burst@2.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.burst@626e66ab421b)
+    com.unity.collections@6.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.collections@10fff0607388)
+    com.unity.test-framework.performance@6.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.test-framework.performance@54c5bd86aedb)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.03 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Starting: C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/2000b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/aleks/Desktop/Robot Rescue
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 1s7ms
+[660/848    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[844/848    0s] Csc Library/Bee/artifacts/2000b0aE.dag/RobotRescue.Editor.dll (+2 others)
+[845/848    0s] ILPostProcess Library/Bee/artifacts/2000b0aE.dag/post-processed/RobotRescue.Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/2000b0aE.dag/RobotRescue.Editor.dll, with 122 defines and 308 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[846/848    0s] CopyFiles Library/ScriptAssemblies/RobotRescue.Editor.pdb
+[847/848    0s] CopyFiles Library/ScriptAssemblies/RobotRescue.Editor.dll
+*** Tundra build success (0.98 seconds), 5 items updated, 848 evaluated
+AssetDatabase: script compilation time: 1.433467s
+Begin MonoManager ReloadAssembly
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  0.730 seconds
+Domain Reload Profiling: 1549ms
+	BeginReloadAssembly (324ms)
+		DisableScriptedObjects (22ms)
+		CreateAndSetChildDomain (163ms)
+	RebuildCommonClasses (8ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (422ms)
+		LoadAssemblies (259ms)
+		TypeCache.Refresh (80ms)
+			TypeCache.ScanAssembly (73ms)
+		AnalyzeDomain (45ms)
+			BuildScriptInfoCaches (37ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (731ms)
+		SetupLoadedEditorAssemblies (0ms)
+			LogAssemblyErrors (3ms)
+			BeforeProcessingInitializeOnLoad (92ms)
+			ProcessInitializeOnLoadAttributes (181ms)
+			ProcessInitializeOnLoadMethodAttributes (74ms)
+			AfterProcessingInitializeOnLoad (11ms)
+			EditorAssembliesLoaded (4ms)
+		AwakeInstancesAfterBackupRestoration (28ms)
+Starting new worker id: 0 with log in C:/Users/aleks/Desktop/Robot Rescue/Logs/AssetImportWorkerHW0.log
+
+Asset Pipeline Refresh (id=21e67e564a17d724695ef7b204b8a9cb): Total: 3.682 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1130 ms
+		Asset DB Callback time: managed=171 ms, native=31 ms
+		Scripting: domain reloads=1, domain reload time=866 ms, compile time=1436 ms, other=46 ms
+		Project Asset Count: scripts=1092, non-scripts=2591
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 31.022ms
+	ApplyChangesToAssetFolders: 0.780ms
+	Scan: 127.014ms
+	Collect global state as custom dependencies: 20.976ms
+	OnSourceAssetsModified: 0.657ms
+	CategorizeScriptCompilationAssets: 18.675ms
+	ProcessAssetsWithTransientArtifactChanges: 54.451ms
+	CategorizeAssets: 43.426ms
+	CompileScripts: 1435.535ms
+	ImportOutOfDateAssets: 746.575ms (733.100ms without children)
+		UnloadImportedAssets: 1.766ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.506ms
+		ImportSchedulerStart: 11.156ms
+	PostProcessAllAssets: 172.918ms
+		VCAutoAddAssetPostprocess 1.064ms
+		XRBuildSystem.XRAssetImported 0.121ms
+		MonoPostProcessAllAssets: 171.074ms
+			AssetPostprocessor.OnPostprocessAllAssets 95.347ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 17.588ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 14.353ms
+			SyncVS.PostprocessSyncProject 9.144ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 5.422ms
+			SpriteSlicePostprocessor.OnPostprocessAllAssets 2.623ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.582ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.481ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.423ms
+			AssetChangedListener.OnPostprocessAllAssets 1.379ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.159ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.870ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.738ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.676ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.589ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.470ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.465ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.392ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.310ms
+			PostProcessor.OnPostprocessAllAssets 0.298ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.295ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.280ms
+			AssetEvents.OnPostprocessAllAssets 0.234ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.228ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.221ms
+			AssetProcessor.OnPostprocessAllAssets 0.211ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.176ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.171ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.167ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.140ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.131ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.131ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.124ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.101ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.096ms
+	PostAssetChangesProfiler: 0.959ms
+	UnloadStreamsBegin: 1.331ms
+	PersistCurrentRevisions: 0.094ms
+	GenerateScriptTypeHashes: 1.390ms
+	GenerateScriptTypeSerializationHashes: 2.517ms
+	Untracked: 1022.313ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Scanning for USB devices : 11.984ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Robot Rescue
+Curl error 6: Could not resolve host: cdp.cloud.unity3d.com
+Curl error 6: Could not resolve host: config.uca.cloud.unity3d.com
+Unloading 65 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4475 unused Assets / (11.2 MB). Loaded Objects now: 5438.
+Memory consumption went from 354.3 MB to 343.1 MB.
+Total: 9.583500 ms (FindLiveObjects: 0.363000 ms CreateObjectMapping: 0.107700 ms MarkObjects: 6.035900 ms  DeleteObjects: 2.926000 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (18.3 KB). Loaded Objects now: 5440.
+Memory consumption went from 341.1 MB to 341.1 MB.
+Total: 6.352200 ms (FindLiveObjects: 0.263400 ms CreateObjectMapping: 0.058900 ms MarkObjects: 5.869000 ms  DeleteObjects: 0.022300 ms)
+
+Importing 'GUID: 10feac6d4b967ff448a9732826d2a06b - Path: Assets/_Project/Art/Materials/Pump_Warning.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 10feac6d4b967ff448a9732826d2a06b' -> (Import Result ID: 'bedb2cb39ba2b6cdf0471319550c96cf') in 0.007 seconds [static dependencies only]. Details - ImportResultOutputID=63380d59b208a520fe85dc1618db5d83 DependenciesID=fc35f056fd79f3df85a93ac5bb5689c7 StaticDependenciesID=5a7f545bc0daa94599a310ba9c40afad 
+Importing 'GUID: 80ac1052a5144c04d83f09e76973cc18 - Path: Assets/_Project/Art/Materials/SignText.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 80ac1052a5144c04d83f09e76973cc18' -> (Import Result ID: 'b511b5524696a0789d48d6120e61b06b') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=7907c5a769969a1920ae71478f47a73d DependenciesID=42f52f462446d3ebc44def90eaaaaca7 StaticDependenciesID=192c831c3dc180cb0f4c99812f183427 
+Importing 'GUID: f094bf258610d2942ab19920f569aea0 - Path: Assets/_Project/Art/Materials/Cell_Body.mat' with importer (NativeFormatImporter)
+Imported 'GUID: f094bf258610d2942ab19920f569aea0' -> (Import Result ID: 'fba1406b58cd86ac22f9723d8c7a0540') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=9db6b91896d1a041382c368fce893a1e DependenciesID=b8aed0ea03ad5cc3fc3ddc4b5306f721 StaticDependenciesID=f5673b1698535805dd2116979a456f0e 
+Importing 'GUID: 817ee7f1b2af9674dbf5e461da82bf4d - Path: Assets/_Project/Art/Materials/Pump_Water.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 817ee7f1b2af9674dbf5e461da82bf4d' -> (Import Result ID: 'b94b16e48151501ce0bef7819fcc9d60') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=ad7b17cd21672fede37a0fe0cc250b3a DependenciesID=8501cc394b1012a21b6050fb8d9ddac0 StaticDependenciesID=f50b0f322f6f4eff2c5a9d1da2fcfcd7 
+Importing 'GUID: b1482e945122e7645972957f8224df4d - Path: Assets/_Project/Art/Materials/Boot_Brown.mat' with importer (NativeFormatImporter)
+Imported 'GUID: b1482e945122e7645972957f8224df4d' -> (Import Result ID: '5b09e065eb980a747730d9acb500fb45') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=d63e2414baf0b218f3f84379608030f4 DependenciesID=a930c17cb8530398619a791dee90525f StaticDependenciesID=577685c6f401ace34e151baf2c01e813 
+Importing 'GUID: f1d53a8b6a153574888a2d6f1baab0f2 - Path: Assets/_Project/Art/Materials/Pump_Wall.mat' with importer (NativeFormatImporter)
+Imported 'GUID: f1d53a8b6a153574888a2d6f1baab0f2' -> (Import Result ID: 'a76cb3d5a6443568391c206e7990917b') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=ef85e9b84fbd345e9f08cd009ff75e7b DependenciesID=c0860a3e6f7440301640accacd9ddbe0 StaticDependenciesID=c23575fe4bfa564fc0e295f00da69d02 
+Importing 'GUID: 12813a52638983648ab3afa1a50d029a - Path: Assets/_Project/Art/Materials/Bot_White.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 12813a52638983648ab3afa1a50d029a' -> (Import Result ID: '1b100ea2bc28078ff02b1260a4f39435') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=88221af8b6edb70e49af599e54c3f4f3 DependenciesID=d61933272a1744177993f4b28c05e3b2 StaticDependenciesID=c43347dee2cc2a173ebf808e5c6fcfce 
+Importing 'GUID: 2293fb8db7616da45af10d1408a590c5 - Path: Assets/_Project/Art/Materials/Steel.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 2293fb8db7616da45af10d1408a590c5' -> (Import Result ID: 'e478f6092938a9b1225a87f12a242ea0') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=dc3063072840ab06eae638b4b4c6aa2c DependenciesID=f35ed3ba9d29d21980dfa1f054e6478f StaticDependenciesID=ff817284d1631d27a5e2f5a286228683 
+Importing 'GUID: 62879ae4cafc23f4183ba43ec85603a8 - Path: Assets/_Project/Art/Materials/Bot_Screen.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 62879ae4cafc23f4183ba43ec85603a8' -> (Import Result ID: 'f28451f9aec77b39be9bbf9712d6c8e2') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=d586336f0df35791324fff40c9fa2ec8 DependenciesID=094d5501df58112d108068312e6a90e6 StaticDependenciesID=84a0ea271713e9da4ffb2692288905c4 
+Importing 'GUID: 62d85596dfbd4d949929039362f70585 - Path: Assets/_Project/Art/Materials/Socket.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 62d85596dfbd4d949929039362f70585' -> (Import Result ID: '29b4c47ec35af0a5d611a9a9a710004f') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=f54f85f9eed01324c2aabc6cb98481d1 DependenciesID=23d504b6666c292c2cc9baa8f0d65c33 StaticDependenciesID=d79f9769561fba224194a85f9d2e0053 
+Importing 'GUID: c229d847e3f704c4e9c3487d9cec9f11 - Path: Assets/_Project/Art/Materials/Wire_F28059.mat' with importer (NativeFormatImporter)
+Imported 'GUID: c229d847e3f704c4e9c3487d9cec9f11' -> (Import Result ID: '14aed1cd345ae453d9d2f2eafbb19d36') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=319eb879d479311c8a61f215e74381a9 DependenciesID=236fb20ace3b9c14133019ca960526d4 StaticDependenciesID=ca3043d1e7411e566179493a5c305ef2 
+Importing 'GUID: c21a77be57e27ab4e9f349ff57d7957d - Path: Assets/_Project/Art/Materials/Socket_Post.mat' with importer (NativeFormatImporter)
+Imported 'GUID: c21a77be57e27ab4e9f349ff57d7957d' -> (Import Result ID: '0407c58b40c0c9083a250c07147e791d') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=0813cb5893c902b3eef19aa720a16a74 DependenciesID=27be930e8112dd442114de2f1ede0a01 StaticDependenciesID=126546419d252cedd29049da6d177852 
+Importing 'GUID: e257d592c82fa844c9347b61a5c20aca - Path: Assets/_Project/Art/Materials/Reset_Red.mat' with importer (NativeFormatImporter)
+Imported 'GUID: e257d592c82fa844c9347b61a5c20aca' -> (Import Result ID: '3ee59fdac9afbd6ba8a86ae3a1c6b9fe') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=68fdbc7990272eac327e5336c22efd10 DependenciesID=9832dd1697450d370fbad15b8868077e StaticDependenciesID=8a05cb515367040c52a03364183259db 
+Importing 'GUID: f2563e292b8a01b44b17dd36c67031fb - Path: Assets/_Project/Art/Materials/Wire_59B2FF.mat' with importer (NativeFormatImporter)
+Imported 'GUID: f2563e292b8a01b44b17dd36c67031fb' -> (Import Result ID: '7c9c7ef355602e2c735f23796ba115da') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=bab0a90831ebcc360280e3c513376955 DependenciesID=3ff59d0d942c8ad1c957b3f9bfb58f9d StaticDependenciesID=83f5e9033d887a0abd01c9215b032b1f 
+Importing 'GUID: 53ecad349abf38e418eabb903f86fe5b - Path: Assets/_Project/Art/Materials/Pump_Dark.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 53ecad349abf38e418eabb903f86fe5b' -> (Import Result ID: '276bf16c97dfadcc39cb5cf5db3f5af5') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=4793d61e463ff4ebc6288285bb422d53 DependenciesID=357761f67c4eb24ef093caace6ab549a StaticDependenciesID=c8838ac2a46e8df308b8a882137d9f25 
+Importing 'GUID: 638e1490ca692cc49860ed6f2e73ab7b - Path: Assets/_Project/Art/Materials/Bot_Grey.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 638e1490ca692cc49860ed6f2e73ab7b' -> (Import Result ID: '90ae8d34acd5ddb6fdc1302d11acf961') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=b16a9879f49e7a4ebca7530d7684eb65 DependenciesID=9e54e1b43d8cb5bdbe689b32fd7096e4 StaticDependenciesID=8a806aae17b2bb33b808fdabaa5ef602 
+Importing 'GUID: 243c8aeffc4d9be409a26667a6263e5c - Path: Assets/_Project/Art/Materials/Crate_Orange.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 243c8aeffc4d9be409a26667a6263e5c' -> (Import Result ID: '160e347c1e053e087de6cc9f2d044557') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=03a8c9a75571d70cb2d79f9642b73990 DependenciesID=39a9fc90a7a95dcf3da503d608a966fa StaticDependenciesID=083a154e3c14b3d8a7191d05bcbeda13 
+Importing 'GUID: b4aadc3f849dd4c4fbc86daf3bc7db11 - Path: Assets/_Project/Art/Materials/Bot_Leaf.mat' with importer (NativeFormatImporter)
+Imported 'GUID: b4aadc3f849dd4c4fbc86daf3bc7db11' -> (Import Result ID: 'd5ff2f66c161e9a721b9f4221339312f') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=92a1d8c9f6751359f696d655ac315dc7 DependenciesID=4324aeb268f2695257f8b4e95b22c76a StaticDependenciesID=767736b7a22abc75b6a5fafa07a82f14 
+Importing 'GUID: f46b1ac40a8a4ba4198558249d126a30 - Path: Assets/_Project/Art/Materials/Person_Marlow_Outfit.mat' with importer (NativeFormatImporter)
+Imported 'GUID: f46b1ac40a8a4ba4198558249d126a30' -> (Import Result ID: '60220b627b7131958434a6af530e7907') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=9e36d91bcdaf87740508daab2358220e DependenciesID=d1cc50d65e970d1047398f5d6505603f StaticDependenciesID=675c8092c2d261d421b9933311de072b 
+Importing 'GUID: 55f54026eee4d514c9437596533222ab - Path: Assets/_Project/Art/Materials/Person_Marlow_Top.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 55f54026eee4d514c9437596533222ab' -> (Import Result ID: '5605f7d15c86aa16f3fb5ff21483bed3') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=1d49a3d0b798e4b2963b065f5ddbb267 DependenciesID=18dc5a1287186196bce345b6304ed1e2 StaticDependenciesID=71a381253aeea2232e38eb358da49c44 
+Importing 'GUID: 751d65a0c34ec6845aa55bec4031fb23 - Path: Assets/_Project/Art/Materials/Eye_Black.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 751d65a0c34ec6845aa55bec4031fb23' -> (Import Result ID: '89f4c3d93fe70851637ebbdbb9d29e3b') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=193f4b3322e89ec14d1dcfda64b5e618 DependenciesID=afb781f004bea5d9cd14198b1ec3cca1 StaticDependenciesID=f1c7cfaf77b725d2d0e3c5f963b4ebf8 
+Importing 'GUID: b6fb870e78f581d4fb75771e82f1a9f5 - Path: Assets/_Project/Art/Materials/Cell_Bar.mat' with importer (NativeFormatImporter)
+Imported 'GUID: b6fb870e78f581d4fb75771e82f1a9f5' -> (Import Result ID: '014100588d5a6ed1a06aeca66bc72fbd') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=eb1a1d23906da494789bd391245a2625 DependenciesID=797a83713a555743c85dfd36893506d2 StaticDependenciesID=c5836112d45cb562f438f8fa80c6c54e 
+Importing 'GUID: d643b6b6f2eb29443893e2dd801a88ed - Path: Assets/_Project/Art/Materials/Gauge_Full.mat' with importer (NativeFormatImporter)
+Imported 'GUID: d643b6b6f2eb29443893e2dd801a88ed' -> (Import Result ID: '3b46d85f716259e98af61b3c5130607d') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=adbd60a5bae51c8685b456ecef1df51b DependenciesID=e9f07a29427399036d5116b7bbe1927b StaticDependenciesID=6f0a68c0466b3f4342892e841dca2790 
+Importing 'GUID: 87d0d08e647f34d44965c221816b560f - Path: Assets/_Project/Art/Materials/Crate_Stripe.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 87d0d08e647f34d44965c221816b560f' -> (Import Result ID: '21f7de6c4bafcdaa1bfbd7cf78f87e90') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=43f4133465d87937bdcc401b258662f7 DependenciesID=e674c563d8edfd8810a9be59171560e1 StaticDependenciesID=a55fe5a81cee97d80f90ab20bd4e8266 
+Importing 'GUID: 971bdae2cb5831946855c04705036700 - Path: Assets/_Project/Art/Materials/Drone_8CD9F2.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 971bdae2cb5831946855c04705036700' -> (Import Result ID: '53d44055406127149d27ac19827de15c') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=acf0526048dc22bb93be7263ee823548 DependenciesID=d681c0ce0bb4f0a3c0736db6466f2f79 StaticDependenciesID=3c22bfc1bee40fe3bf0f9a4c60901f83 
+Importing 'GUID: a7ccf864c2ac830409307ae61d1a760a - Path: Assets/_Project/Art/Materials/Pump_Brass.mat' with importer (NativeFormatImporter)
+Imported 'GUID: a7ccf864c2ac830409307ae61d1a760a' -> (Import Result ID: '3f0cffcf05087dea5c8ec41a4f0358e4') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=78f0a89b02bdd3d82fc1644e6e1e49c1 DependenciesID=48629e51e64ecc503d11b72ac7670ee6 StaticDependenciesID=8381bcad1955f04cf3317883f786315e 
+Importing 'GUID: c71110e6a1e311744a594319ddb7b75a - Path: Assets/_Project/Art/Materials/Flag_Green.mat' with importer (NativeFormatImporter)
+Imported 'GUID: c71110e6a1e311744a594319ddb7b75a' -> (Import Result ID: '8635ff5357f078326f3a08d3caa9505f') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=1b00538d8a6ff3cd449d6917d0f2da8e DependenciesID=60a066c1a60ca04c3bd1d71e82c14b13 StaticDependenciesID=b17a510cb9da60d95dc71ccf5a3d5c01 
+Importing 'GUID: 08366fab3d9d50049994dc752bf9e2f3 - Path: Assets/_Project/Art/Materials/LED.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 08366fab3d9d50049994dc752bf9e2f3' -> (Import Result ID: '6865579635ff76c0aedccf101a75ca9b') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=66f389979fb472756f6eabbeebf86ce7 DependenciesID=39d8b21710d98d3d7ab28bb49097e89f StaticDependenciesID=175217856964352db3c57eb1b1bce2ed 
+Importing 'GUID: 181af6049966725448cf4b9f39c340f9 - Path: Assets/_Project/Art/Materials/Tether_Cable.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 181af6049966725448cf4b9f39c340f9' -> (Import Result ID: '671f0157fc02a08e80fa9444cdd486ec') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=bbb40ff6f76de79cfce34a3a81222ea8 DependenciesID=43e2f62f0d9e64866792064cd879687b StaticDependenciesID=cb908e4847860f3389f4303540ad0347 
+Importing 'GUID: 28658dbeacc41624a9b979f078bca572 - Path: Assets/_Project/Art/Materials/Pump_Trim.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 28658dbeacc41624a9b979f078bca572' -> (Import Result ID: '1780a59e89a8aa6e5fae1e5059d3e4c7') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=8f2124cda26b2616e4ef95eecb313e5c DependenciesID=aed9cf576074b88faebc98dec6563f96 StaticDependenciesID=36028e83b4277f6e296cb0c6c42fef0e 
+Importing 'GUID: a8d0bbc02e2bec140a9cbbd9bae30b71 - Path: Assets/_Project/Art/Materials/Bay_Inner.mat' with importer (NativeFormatImporter)
+Imported 'GUID: a8d0bbc02e2bec140a9cbbd9bae30b71' -> (Import Result ID: '6d3d0e1e2675cad9bd62cc7f49a1845b') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=d2074f658d2ebbe93bf353441c9e90c8 DependenciesID=f4bf91a74cc144e598f6ae8c5120eda9 StaticDependenciesID=8fe54ee5f40971386e79002e5f5cb133 
+Importing 'GUID: e8f212fd147c5f4418f1f8ef8c337644 - Path: Assets/_Project/Art/Materials/Pump_Gate.mat' with importer (NativeFormatImporter)
+Imported 'GUID: e8f212fd147c5f4418f1f8ef8c337644' -> (Import Result ID: '7b1fc71f2166f80396554589481169a3') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=39dd9115d5f132d9be3a679550cb53a2 DependenciesID=2f0bfe32fcac9c52ec0443dcf6a71a88 StaticDependenciesID=b099ea10323dc5fa1896b9218f205908 
+Importing 'GUID: d93cc390c627fd545b6c65ce3c5e4ece - Path: Assets/_Project/Art/Materials/Bot_Face.mat' with importer (NativeFormatImporter)
+Imported 'GUID: d93cc390c627fd545b6c65ce3c5e4ece' -> (Import Result ID: 'befbc5ad166875522fdccbb48ec6ac7a') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=9e60a0eb6c45ca9fba38553c5ae24839 DependenciesID=3658f34328fbcad030648c48334bfe92 StaticDependenciesID=0c0a24f02e8de10a3c9fa67d4e962f93 
+Importing 'GUID: ea09fcff503e3194491f6cd21cc47f7e - Path: Assets/_Project/Art/Materials/Pump_Floor.mat' with importer (NativeFormatImporter)
+Imported 'GUID: ea09fcff503e3194491f6cd21cc47f7e' -> (Import Result ID: '9d0e369f0d60f926d22f742d8ebe80b9') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=8d4f3d14ee6a2ef2b720e0afed3837f8 DependenciesID=862f8dd07352d537c63ff82cfb0baf60 StaticDependenciesID=8383cd1b71c7f89d47a61e0b6d65d55f 
+Importing 'GUID: fa5aa558fc1226e4c88b30ceb7e2e806 - Path: Assets/_Project/Art/Materials/Pump_LampGlow.mat' with importer (NativeFormatImporter)
+Imported 'GUID: fa5aa558fc1226e4c88b30ceb7e2e806' -> (Import Result ID: '493d9bcf84e9dba53bfb98cc5d93ed48') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=270a535870087329b6d8e526de57827d DependenciesID=24f1fd7af6e691c2f890c15e49dd5341 StaticDependenciesID=2fab1356759d6a8a0b351b7649659312 
+Importing 'GUID: 1b925a3d57219334ba8a57465197493c - Path: Assets/_Project/Art/Materials/Pump_Wainscot.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 1b925a3d57219334ba8a57465197493c' -> (Import Result ID: 'd15f2fa5f4691c2c2acc805c4a1be3a7') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=b7382dca2a563f2abcf9fcc2f90b60c3 DependenciesID=09d9cc51dbf56e530e1f951047d68089 StaticDependenciesID=50b759d5429a93afb5f6ab994754aedb 
+Importing 'GUID: 3bb3e078253c8524bbce7f8663c8a978 - Path: Assets/_Project/Art/Materials/Person_Marlow_Hair.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 3bb3e078253c8524bbce7f8663c8a978' -> (Import Result ID: '4ae746c00a686c5f96e4dee2ae432d22') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=41740109395f3155554f101b130bbeaf DependenciesID=a5f393802cdb14e75eae40976e3db303 StaticDependenciesID=5ee017df452e8cf8581daacd6fb54f87 
+Importing 'GUID: 5b7b569cde303c04aa0d239a95c1d5cb - Path: Assets/_Project/Art/Materials/Bot_AntennaGlow.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 5b7b569cde303c04aa0d239a95c1d5cb' -> (Import Result ID: 'f3b6c03581a99b3b818aaa0462a85ee5') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=b0eb6b40d3a819eae2fc5170b287041b DependenciesID=ef71a6ab34dcdd14bc350c151190d579 StaticDependenciesID=1c7a933a3c144e8619b2a4cf86dd6a3d 
+Importing 'GUID: ebed585866baec1499b4a5c5b5f21323 - Path: Assets/_Project/Art/Materials/Person_Marlow_Skin.mat' with importer (NativeFormatImporter)
+Imported 'GUID: ebed585866baec1499b4a5c5b5f21323' -> (Import Result ID: 'fb37ebaea620dacd5f555658f6f5b388') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=0f777dc1753a3fe106e7aab13913b9af DependenciesID=3bb20010a76d1a1535ffb3effee9c074 StaticDependenciesID=ccc90f6f1d1aba4ef8ace9d0e63d3d4e 
+Importing 'GUID: 2c7a10159e8e0f84aa79ef9622df6c7d - Path: Assets/_Project/Art/Materials/Cradle_Lamp.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 2c7a10159e8e0f84aa79ef9622df6c7d' -> (Import Result ID: '5c32533ba88bbc0414945d328ca5e9d2') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=19948203f4c076f9fbc386e7d4d140d7 DependenciesID=31af7b30cf31e9b7795ac2b7c5c66ff2 StaticDependenciesID=93e8f28519bf089cad528fecf6ac42df 
+Importing 'GUID: 5ce4c6d4857d0014d986227c1b53155b - Path: Assets/_Project/Art/Materials/Trim_Coral.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 5ce4c6d4857d0014d986227c1b53155b' -> (Import Result ID: 'a9125599504da8122ae7292dc2bac4f3') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=848e3cf0037b3bef6e583d769e467ede DependenciesID=36b7fbd08cff2d5042b2edc7dcaffcc3 StaticDependenciesID=6deefb77bf6a1923bac07e5a32f33ef4 
+Importing 'GUID: 8c61ca4bda1214745bb588d049b3d9bf - Path: Assets/_Project/Art/Materials/Bay_Glow.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 8c61ca4bda1214745bb588d049b3d9bf' -> (Import Result ID: '751ae6fa22f3e8a65705343dff895194') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=8cb6f890a8657c94d5ec527701f1a417 DependenciesID=f9264a1d0c580bbf5e318259c5be13b3 StaticDependenciesID=706fdef7b12601cae2f6040c7e9dfaab 
+Importing 'GUID: 8c7aaeb3158b4c148a3bf70d08dfcd60 - Path: Assets/_Project/Art/Materials/Cheek.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 8c7aaeb3158b4c148a3bf70d08dfcd60' -> (Import Result ID: '917eb00279ac20f7b11568bfb7ebe961') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=f53eecf09fe3e88b6b7e81907caa9fb6 DependenciesID=86fc11bc36f57ea2bc052585c3574ab1 StaticDependenciesID=85d3fd56c8269f881a3b238084626d38 
+Importing 'GUID: cc601602f00f03f4eb4efb5eca9f4211 - Path: Assets/_Project/Art/Materials/Sky.mat' with importer (NativeFormatImporter)
+Imported 'GUID: cc601602f00f03f4eb4efb5eca9f4211' -> (Import Result ID: 'e8bba7d550840bd9b3ae24f929a5e4f7') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=dc15db1c3673ed459362a9a5eeaef105 DependenciesID=d124dd7c323d98b7a476d082b7e9b95c StaticDependenciesID=79c9cd7cf3dac73689d1be786781f29f 
+Importing 'GUID: fd6168729ec9cb649877a763963b74d9 - Path: Assets/_Project/Art/Materials/Bot_Cream.mat' with importer (NativeFormatImporter)
+Imported 'GUID: fd6168729ec9cb649877a763963b74d9' -> (Import Result ID: 'fc72f97a13e795f1052cad848f4bf2be') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=b602aa61a17cce2ff155c205cf44a598 DependenciesID=663539b23144f4c926556e5f088af1f5 StaticDependenciesID=8e797d14240c016c848d1a38c3183c90 
+Importing 'GUID: be01efc332f7a444a8823a2c994b630f - Path: Assets/_Project/Art/Materials/Pump_Pipe.mat' with importer (NativeFormatImporter)
+Imported 'GUID: be01efc332f7a444a8823a2c994b630f' -> (Import Result ID: '6249c29ab2cff8adf54fff3a9adc21ae') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=052adc6f1490ce44a14d5cba97fd0727 DependenciesID=bfb442f75e1b808d8be2e1548cbce72a StaticDependenciesID=b576705fd726fea98de26083f63bdb01 
+Importing 'GUID: 4f326fcd7797dad47a1bd5e59901d8cb - Path: Assets/_Project/Art/Materials/Bay_Base.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 4f326fcd7797dad47a1bd5e59901d8cb' -> (Import Result ID: '2bbfc696f8257d31e898f11693849f2a') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=ae04b0936d15b8f6b2afd0d5dc348bfd DependenciesID=582afbeee2ba0b61239d4109da5f40ee StaticDependenciesID=86cea161cad9070b361bed56c840e8ad 
+Importing 'GUID: af261302c2dd66d4cad49d4314bf29fc - Path: Assets/_Project/Art/Materials/Bay_Bulb.mat' with importer (NativeFormatImporter)
+Imported 'GUID: af261302c2dd66d4cad49d4314bf29fc' -> (Import Result ID: '3277d6919170e1b66a02cf675f2f6374') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=0b0cb4ef9ec272152f5f1f033c12132e DependenciesID=15681be9b6e6cf0a0c120e61d68ee3f5 StaticDependenciesID=cbf61627e362d31e5e78b8d96b5d1f19 
+Importing 'GUID: cff6968d0f150fb4c8ef8efd75880588 - Path: Assets/_Project/Art/Materials/Bot_Orange.mat' with importer (NativeFormatImporter)
+Imported 'GUID: cff6968d0f150fb4c8ef8efd75880588' -> (Import Result ID: '199258a6687a0faddcb4f8480171cd9c') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=a4106699eb6dc554080bead49fc8af7c DependenciesID=924cf42dafcff36a749a558c1df5f63f StaticDependenciesID=dd29db74741b5660036dede5912c7e89 
+Importing 'GUID: 80f53de6721e907448b6530e8655f484 - Path: Assets/_Project/Art/Rendering/RobotRescue_PostFX.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 80f53de6721e907448b6530e8655f484' -> (Import Result ID: '74c11f796ca57e8bdbc81e7980a6efe4') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=3bc044dd473c7e30f0f3571c426a18f0 DependenciesID=a60bfa96bef2dc6f296949ceb27cbfba StaticDependenciesID=f7b94246a53b82c173e08a5acdcd52b9 
+Importing 'GUID: 81c6179675435b7408cb10bd62966719 - Path: Assets/_Project/Data/Side/Dispatch_Side_PumpHouse.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 81c6179675435b7408cb10bd62966719' -> (Import Result ID: '7208fcf1eb6c0a9a494b02c96caf7e95') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=d6a49786fd24940c2494249b090baa0d DependenciesID=aff5d7ae8f6ee040585da4ca3ecbe0d7 StaticDependenciesID=8e0036ab709d937b075ab498ad506651 
+Importing 'GUID: e11b995dd1dfa9e41aace1ab9dfe773b - Path: Assets/_Project/Data/Tools/Tool_Magnet.asset' with importer (NativeFormatImporter)
+Imported 'GUID: e11b995dd1dfa9e41aace1ab9dfe773b' -> (Import Result ID: '2d191a3c3c614e18a214fb9ec7fa5056') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=517d5e1ac6c17de413e3a3063b68bba6 DependenciesID=76784a3ac4160786d9cf19ad5213b8bb StaticDependenciesID=b7d92d1e79fe3d7c28dc0e1e07075841 
+Importing 'GUID: 224ceb72fab1911439128612f2e918dc - Path: Assets/_Project/Data/Side/Task_Side_PumpHouse.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 224ceb72fab1911439128612f2e918dc' -> (Import Result ID: '80fad601983b8f9968222bcb85f4c73e') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=d5bcb341aec202f33d28b0fdb44b15e7 DependenciesID=de52449d14c369fc8b38ed1ba98ba3ba StaticDependenciesID=20c6d14889cc498c8e9f3c09de84985b 
+Importing 'GUID: 42e446d48181fe447a62e88d0c4e15e8 - Path: Assets/_Project/Art/Materials/Phys_Bot.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 42e446d48181fe447a62e88d0c4e15e8' -> (Import Result ID: 'ea4f1a823ecc0bc4a843d1c70e88d22f') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=c6994bd13d33b9f67db185d6738ff29c DependenciesID=fdf93728721bf0f06a262c472dee400a StaticDependenciesID=b77b6e02dcd0ece4560bd31e3116f43b 
+Importing 'GUID: 82fa487f253fcd2458d5f6e1b57b1fb7 - Path: Assets/_Project/Art/Materials/Phys_Drone.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 82fa487f253fcd2458d5f6e1b57b1fb7' -> (Import Result ID: '2566dc0e4b24514501aebdde39709bee') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=df7ffb64e0f91b65bd201d0962ca7cf3 DependenciesID=1b4f8d872c7b855c873ed1a78c99233b StaticDependenciesID=196aa502b038b348478ae5cc5d624f97 
+Importing 'GUID: f2c2c7a96709bb64d9a91f6b046b2024 - Path: Assets/_Project/Data/Tools/Tool_Grabber.asset' with importer (NativeFormatImporter)
+Imported 'GUID: f2c2c7a96709bb64d9a91f6b046b2024' -> (Import Result ID: 'dea023ca94733051778c532a1cc65bfe') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=c4ddb12946fbac22431d8e1de8dd4165 DependenciesID=f90c87fcf5c6961994622936b74c7d55 StaticDependenciesID=3a1724260ea2da3f66f715d9c2537e04 
+Importing 'GUID: f74cdb478d4168d4fab41a02cb783c24 - Path: Assets/_Project/Data/Dispatch_Common.asset' with importer (NativeFormatImporter)
+Imported 'GUID: f74cdb478d4168d4fab41a02cb783c24' -> (Import Result ID: 'e79a5dc5431ba9325dbb5134689026c4') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=8e3ce48600d8d019bba45eadcd3668fe DependenciesID=688b2023c136a21179ef3b02811498e5 StaticDependenciesID=783de2cd2746d0dc7fb359b0afd022d7 
+Importing 'GUID: da3d958d2b20c1b419533345e69e3e18 - Path: Assets/_Project/Data/Tools/Tool_Screwdriver.asset' with importer (NativeFormatImporter)
+Imported 'GUID: da3d958d2b20c1b419533345e69e3e18' -> (Import Result ID: '19c9f6fbe969862e410956cc2dd0b49e') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=2a26e413b348e2bf5dc9d0a5ebed2c69 DependenciesID=643b1f7175da605e0324a256b8798769 StaticDependenciesID=45717f724fe133d593815560b6548025 
+Importing 'GUID: 3b93247c9a779014a8f29e38af3f4cf8 - Path: Assets/_Project/Data/Tools/Tool_Whisk.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 3b93247c9a779014a8f29e38af3f4cf8' -> (Import Result ID: 'a0c9a2ba52a467750dd996dc52011a7c') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=201aeaf10a9f305208fd6fb7674fab54 DependenciesID=0e4ad704a3ff2df3383586d09d8b12bb StaticDependenciesID=fc1eb4cb2ff3ac1ce1dd0efd7a17804a 
+Importing 'GUID: 7e42385777243b84a81094bfd12db4e4 - Path: Assets/_Project/Art/Materials/Phys_Crate.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 7e42385777243b84a81094bfd12db4e4' -> (Import Result ID: '4a28a7600660cc25f2407745767e2b2d') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=18f8cea26e57383d1b1b0f5e9d3af76d DependenciesID=ae9df92b9648106a1b37d147f83e1271 StaticDependenciesID=4f6bb807170d2daac17ec0fc484b7347 
+Asset Pipeline Refresh (id=6548ae5fd73819e4ea46bf7a07cf5e57): Total: 0.129 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: a630f573c6434e84caef6d1495605628 - Path: Assets/_Project/Scenes/Side_PumpHouse.unity' with importer (DefaultImporter)
+Imported 'GUID: a630f573c6434e84caef6d1495605628' -> (Import Result ID: '214a04ebf1d288ed04359b25275b3b28') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=e7cd930dc3183d69b67bb36c25d5c938 DependenciesID=cdc5ba5e6af6aaf1c78a9855097ae5f0 StaticDependenciesID=131e576552233d7ead08aeff84a33a89 
+Asset Pipeline Refresh (id=f2a8c52832c624241b3924e8724dfc12): Total: 0.027 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Robot Rescue] Built Assets/_Project/Scenes/Side_PumpHouse.unity. Press Play!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.ChamberKit:FinishScene (UnityEngine.SceneManagement.Scene,string,RobotRescue.Bots.BotController) (at Assets/_Project/Editor/ChamberKit.Puzzles.cs:40)
+RobotRescue.EditorTools.PumpHouseBuilder:Build () (at Assets/_Project/Editor/PumpHouseBuilder.cs:107)
+RobotRescue.EditorTools.PumpHouseSelfTestRunner:RunFromCommandLine () (at Assets/_Project/Editor/PumpHouseSelfTestRunner.cs:35)
+
+(Filename: Assets/_Project/Editor/ChamberKit.Puzzles.cs Line: 40)
+
+Opening scene 'Assets/_Project/Scenes/Side_PumpHouse.unity'
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/Side_PumpHouse.unity'
+	Deserialize:            26.548 ms
+	Integration:            14.549 ms
+	Integration of assets:  0.004 ms
+	Thread Wait Time:       0.059 ms
+	Total Operation Time:   41.160 ms
+Unloading 169 unused Assets / (1.2 MB). Loaded Objects now: 8512.
+Memory consumption went from 373.5 MB to 372.4 MB.
+Total: 7.898900 ms (FindLiveObjects: 0.548100 ms CreateObjectMapping: 0.095400 ms MarkObjects: 6.681700 ms  DeleteObjects: 0.395300 ms)
+
+[Project] Loading completed in 7.146 seconds
+	Project init time: 				5.928 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		0.243 seconds
+		Asset Database init time: 		0.212 seconds
+		Global illumination init time: 	0.002 seconds
+		Assemblies load time: 			1.071 seconds
+		Unity extensions init time: 	0.012 seconds
+		Asset Database refresh time: 	3.682 seconds
+	Scene opening time: 			0.934 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1792302753234,"processId":6528,"projectLoad":7.146407,"projectInit":5.927691,"templateInit":0.0,"packageManagerInit":0.242661,"assetDatabaseInit":0.2121265,"globalIlluminationInit":0.0022597,"assembliesLoad":1.0710359,"unityExtensionsInit":0.01202,"assetDatabaseRefresh":3.6824292,"sceneOpening":0.9343023}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1792302753234,"processId":6528,"editorVersion":"6000.6.5f1 (3ff58d469c8a)","branch":"6000.6/staging","buildType":"Release","platform":"Windows"}
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Entering Playmode with Reload Scene disabled. If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Curl error 6: Could not resolve host: cdp.cloud.unity3d.com
+[Licensing::Client] Successfully resolved entitlement details
+Worker ready: AssetImportWorkerHW0 0
+Start Indexing on Editor startup
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+  at System.Collections.Generic.List`1[T].get_Item (System.Int32 index) [0x00009] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 
+  at UnityEditor.Search.SearchDatabase+<EnumerateAll>d__78.MoveNext () [0x00089] in <60f2bd518b604435bcf930e6d229f684>:0 
+  at System.Linq.Enumerable.TryGetFirst[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Boolean& found) [0x00045] in <f1b392d8fe224ca2b1f9fab1000b77eb>:0 
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <f1b392d8fe224ca2b1f9fab1000b77eb>:0 
+  at UnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () [0x00005] in <60f2bd518b604435bcf930e6d229f684>:0 
+  at UnityEditor.Search.SearchInit.IndexationOnStartup () [0x0000a] in <60f2bd518b604435bcf930e6d229f684>:0 
+  at UnityEditor.EditorApplication.Internal_CallDelayFunctions () [0x00029] in <27ff15fd79c54f5eb7060fd0f507d441>:0 
+UnityEngine.StackTraceUtility:ExtractStringFromExceptionInternal(Object, String&, String&)
+
+Created GICache directory at C:/Users/aleks/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.015s, timestamps: [7.303 - 7.318]
+[Licensing::Client] Successfully resolved entitlement details
+[SelfTest] PASS clean start: door shut, gate down, bridge up, 5 steps open
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+Curl error 6: Could not resolve host: cdp.cloud.unity3d.com
+Curl error 6: Could not resolve host: cdp.cloud.unity3d.com
+[SelfTest] PASS idle bot keeps its charge (1.000 -> 1.000)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:85)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+[SelfTest] PASS hints arrive goal first, then the system (r1_hint_1, r1_hint_2)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:89)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+[SelfTest] PASS empty cell in the door cradle: cradle sees it, door stays shut
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:94)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+[SelfTest] PASS plugging in fills the cell and completes 'charge a cell'
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:102)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+[SelfTest] PASS full cell in the door cradle powers the door
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:106)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+[SelfTest] PASS taking the cell back out: door stays open (latched, no softlock)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:110)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+[SelfTest] PASS room 1 reset: cell home and empty, door and finished steps untouched
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:114)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+[SelfTest] PASS one crate: gate moves a bit but not enough (0.25)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:121)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+[SelfTest] PASS two crates: gate fully open, 'gate' step done
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:124)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+[SelfTest] PASS gate stays open with nobody touching anything (held state)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:126)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+[SelfTest] PASS something under the gate: it won't come down (1.00)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:131)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+[SelfTest] PASS room 2 reset: crates home, gate closes, other rooms untouched
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:135)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+[SelfTest] PASS two crates: bridge comes partway down (0.44)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:142)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+[SelfTest] PASS two crates + the (empty) cell: bridge fully down
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:145)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+TrimDiskCacheJob: Current cache size 0mb
+[SelfTest] PASS room 3 reset: bridge back up, cell home
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:149)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+Curl error 6: Could not resolve host: cdp.cloud.unity3d.com
+[SelfTest] PASS full cell in the winch cradle: bridge fully down (second answer)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:158)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+[SelfTest] PASS before the rescue: exit shut, pumps still
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:161)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+[SelfTest] PASS Pebble on the tide gauge: last step done, task complete
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:165)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+[SelfTest] PASS after the rescue: exit opens, pumps run
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:166)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+[SelfTest] PASS room 3 reset after the rescue: Pebble stays home
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Check (bool,string) (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:180)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:170)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 180)
+
+[SelfTest] ALL PASSED
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.Dev.PumpHouseSelfTest:Finish () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:198)
+RobotRescue.Dev.PumpHouseSelfTest/<Start>d__8:MoveNext () (at Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs:172)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/_Project/Scripts/Dev/PumpHouseSelfTest.cs Line: 198)
+
+MonoPathRemapper: Attempts to remap: 8037; Successful remaps: 0
+Serialized file version minimum: 22, current 23
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-aleks-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-aleks channel disconnected successfully.
+Lingering sessions upon destruction of worker manager
+Unity Data Store service was successfully shut down
+UDS shutting down local client system
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+VBCSCompilerPreWarmer: requested VBCSCompiler shutdown
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1792302795558,"processId":6528,"allocatedMemory":15205635,"memoryLabels":[{"Default":200264},{"Permanent":15516},{"NewDelete":71807},{"Thread":4197944},{"Manager":34397},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":849028},{"Material":132},{"GfxDevice":55968},{"Animation":952},{"FreeType":8},{"FontEngine":736},{"Physics":1970},{"Physics2D":16},{"Serialization":20640},{"Input":42840},{"JobScheduler":256},{"TextLib":336},{"Mono":48},{"MonoCode":64},{"ScriptingNativeRuntime":1259880},{"BaseObject":52720},{"Resource":1444},{"Renderer":2504},{"Transform":4685},{"File":16300},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":513543},{"StaticString":3808},{"Utility":2674806},{"Curl":2559},{"PoolAlloc":2168},{"AI":80},{"TypeTree":17165},{"ScriptManager":12656},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":7152},{"WebRequest":552},{"VR":49650},{"SceneManager":608},{"Video":208},{"LazyScriptCache":32},{"Camera":729},{"Secure":2377},{"SerializationCache":9256},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":592},{"Hierarchy":1188},{"UIElements":40},{"CoreStats":14456},{"Identifiers":7152},{"Gui":128},{"EditorUtility":132077},{"VersionControl":8},{"Undo":931},{"AssetDatabase":4492677},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":40465},{"Upm":1912},{"UpmDiagnostics":8},{"AssetCompliance":96},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3600},{"Windowing":456},{"Licensing":1264},{"AssetReference":32},{"IPCStream":32}]}

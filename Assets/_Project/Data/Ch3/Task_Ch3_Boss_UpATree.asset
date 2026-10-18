@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fc3bbfe2d08f84aaa4a0203272180c, type: 3}
+  m_Name: Task_Ch3_Boss_UpATree
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Tasks.TaskDefinition
+  taskId: ch3_boss
+  title: 'BIG RESCUE: Up a Tree'
+  rescuee: Mittens the cat (and Rosa)
+  description: Mittens is up the giant oak, and every hum scares her higher. Bring her home.
+  timeLimit: 0
+  boltsReward: 90
+  steps:
+  - id: ladder
+    label: Screw the fallen ladder's brackets back on
+  - id: got_cat
+    label: Climb the oak and catch Mittens
+  - id: cat_home
+    label: Bring Mittens down to her basket

@@ -57,4 +57,18 @@ namespace RobotRescue.Core
     }
 
     public struct LevelCompleted { }
+
+    /// <summary>PIP waved (G / D-pad up). Nearby drones wave back.</summary>
+    public struct BotEmoted
+    {
+        public UnityEngine.Vector3 Position;
+        public BotEmoted(UnityEngine.Vector3 position) { Position = position; }
+    }
+
+    /// <summary>A golden bolt was picked up.</summary>
+    public struct BoltCollected
+    {
+        public string Id;
+        public BoltCollected(string id) { Id = id; }
+    }
 }

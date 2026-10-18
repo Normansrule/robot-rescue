@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fc3bbfe2d08f84aaa4a0203272180c, type: 3}
+  m_Name: Task_Side_PumpHouse
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Tasks.TaskDefinition
+  taskId: side_pumphouse
+  title: 'Side Call: The Pump House'
+  rescuee: Pebble, the tide-gauge bot
+  description: The Brightwater pump house flooded and its little tide-gauge bot is stranded across the sump. Get the pumps going.
+  timeLimit: 0
+  boltsReward: 30
+  steps:
+  - id: cell_charged
+    label: Charge a power cell from your Tether
+  - id: door1
+    label: Power the Gate Room door with a full cell
+  - id: gate
+    label: Hold the gate open with the counterweight
+  - id: bridge
+    label: Lower the drawbridge (weight or winch)
+  - id: pebble
+    label: Carry Pebble home to the tide gauge

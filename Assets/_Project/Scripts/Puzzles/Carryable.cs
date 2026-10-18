@@ -17,13 +17,18 @@ namespace RobotRescue.Puzzles
         public string displayName = "Thing";
         [Tooltip("Optional DISPATCH cue raised the first time this is picked up.")]
         public string firstPickupCue;
+        [Tooltip("Off for things the Tether shouldn't yank across a room (a frightened rescuee).")]
+        public bool tetherPull = true;
 
         public Rigidbody Body { get; private set; }
         public bool IsHeld => Holder != null;
         public Grabber Holder { get; private set; }
 
+        /// <summary>False while something (a fleeing cat, a parked prop) shouldn't be grabbed yet.</summary>
+        public virtual bool CanPickUp => isActiveAndEnabled;
+
         public override TetherMode Mode => TetherMode.Pull;
-        public override bool CanAttach => base.CanAttach && !IsHeld;
+        public override bool CanAttach => base.CanAttach && tetherPull && !IsHeld;
         public override string PromptVerb => "Pull " + displayName;
 
         const int IgnoreRaycastLayer = 2;

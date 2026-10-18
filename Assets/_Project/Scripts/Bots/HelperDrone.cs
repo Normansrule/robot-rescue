@@ -7,17 +7,28 @@ namespace RobotRescue.Bots
     /// Single-player Bot Stack: a wind-up Helper Drone. Carry it, throw it, Tether-pull it, stand on it,
     /// stack drones into stairs, or park one on a pressure plate as a counterweight.
     /// Drones stay upright and snap onto a drone below them so stacks are easy to build.
+    /// They also carry a little battery: while PIP carries one, it shares its charge (a friend's jump-start).
     /// </summary>
     [RequireComponent(typeof(Carryable))]
-    public class HelperDrone : MonoBehaviour
+    public class HelperDrone : MonoBehaviour, IChargeSource
     {
         public float halfHeight = 0.5f;
         [Tooltip("How hard a drone slides to centre itself on the drone below.")]
         public float stackSnap = 10f;
 
+        [Header("Charge sharing")]
+        public float shareRate = 0.08f;
+        [Tooltip("Drone charge lost per unit given (drones are a little inefficient).")]
+        public float shareCost = 1.4f;
+
         [Header("Visuals")]
         public Transform windUpKey;
+        [Tooltip("Legacy box eyes (drones built before the LED face). Blink if set.")]
         public Transform[] eyes;
+
+        public float Charge01 { get; private set; } = 1f;
+        public string SourceName => GetComponent<Carryable>().displayName;
+        public bool IsSharing { get; private set; }
 
         Carryable carryable;
         Rigidbody body;
@@ -31,9 +42,19 @@ namespace RobotRescue.Bots
             carryable = GetComponent<Carryable>();
             body = GetComponent<Rigidbody>();
             body.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-            if (eyes != null && eyes.Length > 0) eyeScale = eyes[0].localScale;
+            if (eyes != null && eyes.Length > 0 && eyes[0]) eyeScale = eyes[0].localScale;
             nextBlink = Time.time + Random.Range(1f, 4f);
         }
+
+        public float ChargeRate(BotBattery battery)
+        {
+            IsSharing = Charge01 > 0.02f && battery.Charge01 < 0.995f && carryable.IsHeld;
+            if (!IsSharing) return 0f;
+            Charge01 = Mathf.Max(0f, Charge01 - shareRate * shareCost * Time.deltaTime);
+            return shareRate;
+        }
+
+        public void Recharge(float amount) => Charge01 = Mathf.Min(1f, Charge01 + amount);
 
         void FixedUpdate()
         {
@@ -51,8 +72,10 @@ namespace RobotRescue.Bots
 
         void Update()
         {
-            // The key spins faster while PIP is carrying it: it's excited to help.
-            if (windUpKey) windUpKey.Rotate(0f, 0f, (carryable.IsHeld ? 360f : 60f) * Time.deltaTime, Space.Self);
+            if (!carryable.IsHeld) IsSharing = false;
+            // The key spins faster while PIP is carrying it: it's excited to help. A flat drone's key barely turns.
+            float keySpeed = (carryable.IsHeld ? 360f : 60f) * Mathf.Lerp(0.15f, 1f, Charge01);
+            if (windUpKey) windUpKey.Rotate(0f, 0f, keySpeed * Time.deltaTime, Space.Self);
 
             if (eyes == null || eyes.Length == 0) return;
             bool blinking = Time.time > nextBlink;

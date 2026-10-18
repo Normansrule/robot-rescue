@@ -31,6 +31,12 @@ namespace RobotRescue.Campaign
 
         public static bool IsUnlocked(int levelIndex) => levelIndex < UnlockedCount;
 
+        /// <summary>Finished in this or an earlier session (the level after it is unlocked).</summary>
+        public static bool IsComplete(int levelIndex) => levelIndex >= 0 && levelIndex < UnlockedCount - 1;
+
+        /// <summary>Index of the first level not yet finished.</summary>
+        public static int Frontier => Mathf.Clamp(UnlockedCount - 1, 0, Mathf.Max(0, Levels.Count - 1));
+
         public static void MarkComplete(string scene)
         {
             int i = IndexOf(scene);
@@ -39,9 +45,27 @@ namespace RobotRescue.Campaign
             PlayerPrefs.Save();
         }
 
+        const string SideKey = "rr.side.";
+
+        public static bool IsSideCall(string scene) =>
+            Campaign && System.Array.Exists(Campaign.sideCalls ?? new LevelEntry[0], l => l.scene == scene);
+
+        /// <summary>Side calls are remembered one by one and never touch the campaign unlock count.</summary>
+        public static bool IsSideCallComplete(string scene) => PlayerPrefs.GetInt(SideKey + scene, 0) == 1;
+
+        public static void MarkSideCallComplete(string scene)
+        {
+            PlayerPrefs.SetInt(SideKey + scene, 1);
+            PlayerPrefs.Save();
+        }
+
         public static void ResetProgress()
         {
+            if (Campaign && Campaign.sideCalls != null)
+                foreach (var s in Campaign.sideCalls) PlayerPrefs.DeleteKey(SideKey + s.scene);
             PlayerPrefs.DeleteKey(UnlockedKey);
+            Collectible.ResetAll();
+            Bots.ToolArm.ResetSaved();
             PlayerPrefs.Save();
         }
 

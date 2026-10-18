@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976006531153724f8306a1fd441aa0c, type: 3}
+  m_Name: Dispatch_Ch6_Call01
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Narrative.DispatchScript
+  lines:
+  - cue: intro
+    text: Funland Pier! Benny says the hum shook the carousel animals right off their poles. The horse is on the ticket booth roof, the swan's floated out to sea, and the seal's stuck in the prize stall behind a big metal crate.
+    duration: 10
+    repeatable: 0
+  - cue: got_magnet
+    text: Got the Magnet. Hold F (or B) next to metal and it floats along with you.
+    duration: 4
+    repeatable: 0
+  - cue: animal_home
+    text: Back on its pole!
+    duration: 2.5
+    repeatable: 1
+  - cue: animals_home
+    text: All three animals home! Now tighten the motor by the gate.
+    duration: 4
+    repeatable: 0
+  - cue: motor_tight
+    text: Motor's tight!
+    duration: 2.5
+    repeatable: 0
+  - cue: hum_tremor_first
+    text: Hum! Grab something!
+    duration: 3
+    repeatable: 0
+  - cue: hum_tremor
+    text: Hum!
+    duration: 2
+    repeatable: 1
+  - cue: fell
+    text: Splash! Back to the pier you go.
+    duration: 3
+    repeatable: 1
+  - cue: exit
+    text: The carousel's turning and the music's playing! Benny says the Ferris wheel's been acting up too. He'd better check on it.
+    duration: 6
+    repeatable: 0

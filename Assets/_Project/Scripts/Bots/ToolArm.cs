@@ -12,6 +12,8 @@ namespace RobotRescue.Bots
     public class ToolArm : MonoBehaviour
     {
         public ToolDefinition[] startingTools;
+        [Tooltip("Every tool head in the game, so tools unlocked in earlier sessions come back (saved by id).")]
+        public ToolDefinition[] allTools;
         [Tooltip("Tool head on the arm; tinted and spun to show the current tool.")]
         public Renderer toolHead;
         public float reach = 0.9f;
@@ -26,14 +28,25 @@ namespace RobotRescue.Bots
         readonly List<ToolDefinition> unlocked = new List<ToolDefinition>();
         readonly Collider[] overlap = new Collider[16];
         BotInput input;
+        BotBattery battery;
         int index;
+
+        const string SavedKey = "rr.tools";
+
+        /// <summary>Forget saved tool unlocks (new game).</summary>
+        public static void ResetSaved() => PlayerPrefs.DeleteKey(SavedKey);
 
         void Awake()
         {
             input = GetComponent<BotInput>();
+            battery = GetComponent<BotBattery>();
             if (startingTools != null)
                 foreach (var t in startingTools)
                     if (t && !unlocked.Contains(t)) unlocked.Add(t);
+            string saved = "," + PlayerPrefs.GetString(SavedKey, "") + ",";
+            if (allTools != null)
+                foreach (var t in allTools)
+                    if (t && !unlocked.Contains(t) && saved.Contains("," + t.id + ",")) unlocked.Add(t);
             ApplyVisual();
         }
 
@@ -42,6 +55,12 @@ namespace RobotRescue.Bots
             if (!tool) return;
             if (!unlocked.Contains(tool)) unlocked.Add(tool);
             index = unlocked.IndexOf(tool);
+            string saved = PlayerPrefs.GetString(SavedKey, "");
+            if (!("," + saved + ",").Contains("," + tool.id + ","))
+            {
+                PlayerPrefs.SetString(SavedKey, string.IsNullOrEmpty(saved) ? tool.id : saved + "," + tool.id);
+                PlayerPrefs.Save();
+            }
             ApplyVisual();
         }
 
@@ -54,7 +73,7 @@ namespace RobotRescue.Bots
             }
 
             Focus = FindUsable();
-            IsUsing = Focus != null && input.UseToolHeld;
+            IsUsing = Focus != null && input.UseToolHeld && (!battery || battery.CanDoPoweredWork);
             if (IsUsing) Focus.UseTool(this, Time.deltaTime);
 
             if (toolHead && IsUsing) toolHead.transform.Rotate(0f, 0f, 900f * Time.deltaTime, Space.Self);

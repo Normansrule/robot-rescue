@@ -8,7 +8,7 @@ namespace RobotRescue.Tasks.Rescue
     /// <see cref="SteamVent"/> bleeds some off. Hold all the vents open at once long enough to stabilise it.
     /// Let the pressure hit 100% and... KABOOM (restart).
     /// </summary>
-    public class CoffeeMachine : MonoBehaviour, IBossMeter
+    public class CoffeeMachine : MonoBehaviour, IBossMeter, IAreaGated
     {
         public int ventCount = 3;
         [Range(0f, 100f)] public float startPressure = 25f;

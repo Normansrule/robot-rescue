@@ -9,6 +9,8 @@ namespace RobotRescue.Campaign
     {
         public string mainMenuScene = "MainMenu";
         public ChapterEntry[] chapters = Array.Empty<ChapterEntry>();
+        [Tooltip("Stand-alone calls, always open, outside the chapter order (they never unlock or skip campaign levels).")]
+        public LevelEntry[] sideCalls = Array.Empty<LevelEntry>();
     }
 
     [Serializable]

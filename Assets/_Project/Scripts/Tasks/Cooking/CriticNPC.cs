@@ -3,7 +3,7 @@ using UnityEngine;
 namespace RobotRescue.Tasks.Cooking
 {
     /// <summary>Mr. Grumbleton: sways while he waits, fidgets as his mood sours, and bounces if you win him over.</summary>
-    public class CriticNPC : MonoBehaviour
+    public class CriticNPC : MonoBehaviour, Core.IAreaGated
     {
         public OrderBoard board;
         public Renderer face;

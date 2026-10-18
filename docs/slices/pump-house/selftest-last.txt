@@ -1,0 +1,24 @@
+The Pump House self-test
+Unity 6000.6.5f1 · Windows 11  (10.0.26200) · 2026-10-17 22:53
+PASS  clean start: door shut, gate down, bridge up, 5 steps open
+PASS  idle bot keeps its charge (1.000 -> 1.000)
+PASS  hints arrive goal first, then the system (r1_hint_1, r1_hint_2)
+PASS  empty cell in the door cradle: cradle sees it, door stays shut
+PASS  plugging in fills the cell and completes 'charge a cell'
+PASS  full cell in the door cradle powers the door
+PASS  taking the cell back out: door stays open (latched, no softlock)
+PASS  room 1 reset: cell home and empty, door and finished steps untouched
+PASS  one crate: gate moves a bit but not enough (0.25)
+PASS  two crates: gate fully open, 'gate' step done
+PASS  gate stays open with nobody touching anything (held state)
+PASS  something under the gate: it won't come down (1.00)
+PASS  room 2 reset: crates home, gate closes, other rooms untouched
+PASS  two crates: bridge comes partway down (0.44)
+PASS  two crates + the (empty) cell: bridge fully down
+PASS  room 3 reset: bridge back up, cell home
+PASS  full cell in the winch cradle: bridge fully down (second answer)
+PASS  before the rescue: exit shut, pumps still
+PASS  Pebble on the tide gauge: last step done, task complete
+PASS  after the rescue: exit opens, pumps run
+PASS  room 3 reset after the rescue: Pebble stays home
+ALL 21 CHECKS PASSED

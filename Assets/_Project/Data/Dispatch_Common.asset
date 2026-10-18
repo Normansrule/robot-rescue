@@ -1,0 +1,223 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976006531153724f8306a1fd441aa0c, type: 3}
+  m_Name: Dispatch_Common
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Narrative.DispatchScript
+  lines:
+  - cue: battery_low
+    text: PIP, your battery's down to a quarter. Find a glowing charge ring, a green charger post, or hug a Helper Drone.
+    duration: 5
+    repeatable: 1
+  - cue: battery_critical
+    text: Ten percent! You're running on fumes and good intentions. Charger. Now.
+    duration: 4
+    repeatable: 1
+  - cue: battery_dead
+    text: ...PIP? PIP! Okay. Okay. Sending the tow truck. It's a very small tow truck.
+    duration: 4
+    repeatable: 1
+  - cue: battery_towed
+    text: Towed back to the last charger and topped up halfway. Let's keep an eye on that meter.
+    duration: 4
+    repeatable: 1
+  - cue: charging
+    text: Ahh, charging. That's the good stuff. Stand on any ring like this to top up.
+    duration: 4
+    repeatable: 0
+  - cue: part_lost_arml
+    text: Your left arm just went for a walk! Bump into it to click it back on.
+    duration: 4
+    repeatable: 1
+  - cue: part_lost_armr
+    text: There goes your tool arm! No tools until you pick it back up.
+    duration: 4
+    repeatable: 1
+  - cue: part_lost_antenna
+    text: Antenna's off! You're getting me all crackly. Grab it before you lose signal.
+    duration: 4
+    repeatable: 1
+  - cue: part_lost_footl
+    text: You've lost a foot. Hop to it. Literally. Go get it.
+    duration: 4
+    repeatable: 1
+  - cue: part_lost_footr
+    text: Foot's off! Walking will be wobbly until you snap it back on.
+    duration: 4
+    repeatable: 1
+  - cue: part_fixed
+    text: Click! Good as new. Well, good as slightly used.
+    duration: 3
+    repeatable: 1
+  - cue: parts_repaired
+    text: The service bay patched you up. Every part present and accounted for.
+    duration: 4
+    repeatable: 1
+  - cue: bolt_first
+    text: A golden bolt! Wait, it's humming. That's a memory bolt. Hold still, I'm reading it.
+    duration: 4
+    repeatable: 0
+  - cue: screw_first
+    text: Righty-tighty! Keep holding Use until the screw sinks all the way in.
+    duration: 4
+    repeatable: 0
+  - cue: screw_done
+    text: Screw's tight!
+    duration: 2.5
+    repeatable: 1
+  - cue: magnet_first
+    text: Hold Use and it floats along in front of you. Let go to drop it.
+    duration: 4
+    repeatable: 0
+  - cue: grip
+    text: You can climb anything with chunky yellow handholds. Watch your grip meter though!
+    duration: 5
+    repeatable: 0
+  - cue: fell
+    text: Whoops. Back you go.
+    duration: 3
+    repeatable: 1
+  - cue: next_area
+    text: The bridge to the next platform is powered up! Follow it to the gate.
+    duration: 4
+    repeatable: 1
+  - cue: pod_launch
+    text: Strap in! Mission pods are perfectly safe. Mostly. Pretty much. Have fun!
+    duration: 4
+    repeatable: 1
+  - cue: mission_unlocked
+    text: New mission! Brightwater Reach needs the Bureau. Head for the Launch Bay at the end of the walkway.
+    duration: 5
+    repeatable: 1
+  - cue: hum_1
+    text: Did... the station just hum? Probably the vending machine. Probably.
+    duration: 4
+    repeatable: 0
+  - cue: hum_2
+    text: There it is again. A low hum on the long-range radio. It's coming from the planet.
+    duration: 5
+    repeatable: 0
+  - cue: hum_3
+    text: The hum has a pattern. Short, short, short. Long, long, long. Hmm.
+    duration: 5
+    repeatable: 0
+  - cue: hum_4
+    text: That coffee machine only blew because of a power surge, right when the hum spiked. It's coming from Brightwater Reach. Mission pod's unlocked. Go see.
+    duration: 7
+    repeatable: 0
+  - cue: hum_5
+    text: The fuses popped during the hum again. Nonna says it's been happening for weeks, always from under the sea.
+    duration: 6
+    repeatable: 0
+  - cue: hum_6
+    text: It's louder out here, near the Old Rig. Nobody goes near the Old Rig. It sank before you were built.
+    duration: 6
+    repeatable: 0
+  - cue: hum_7
+    text: Kitchen saved! And PIP, I decoded the hum. Short short short, long long long... it's an S.O.S. Somebody down there needs rescuing.
+    duration: 7
+    repeatable: 0
+  - cue: hum_8
+    text: 'Rosa says the park''s screws always work loose in the same direction: toward the sea. The hum is shaking the whole Reach apart, one screw at a time.'
+    duration: 7
+    repeatable: 0
+  - cue: hum_9
+    text: The school's science fair has a real seismograph. If we record the hum, we can work out exactly where it's coming from. That's the next call. The school's just over the bridge.
+    duration: 8
+    repeatable: 0
+  - cue: hum_10
+    text: 'Priya ran the numbers: the hum always comes from the north-west, right where the Old Rig went down. That''s where we''re headed, once the bridges reach it.'
+    duration: 8
+    repeatable: 0
+  - cue: hum_11
+    text: Weaker every time. If that's a bot down there, its battery's nearly flat. PIP, the Bureau has never left anyone behind. We're not starting now.
+    duration: 8
+    repeatable: 0
+  - cue: hum_12
+    text: Ines found an old Bureau cable on the harbour floor. It runs north-west, all the way to the Old Rig. Someone from the Bureau was down there.
+    duration: 8
+    repeatable: 0
+  - cue: hum_13
+    text: 'Captain Mo''s chart had blueprints tucked inside: Unit Zero, the Bureau''s first bot. His battery was only meant to last a week. PIP... he''s been down there for years.'
+    duration: 9
+    repeatable: 0
+  - cue: hum_14
+    text: Benny remembers the Old Rig going down. Everyone got off safe, he says, except the little Bureau bot who stayed to keep the anchor engine running.
+    duration: 8
+    repeatable: 0
+  - cue: hum_15
+    text: 'We saw it from the top of the wheel: the Old Rig, and a light blinking under it. PIP, it''s time to bring Unit Zero home.'
+    duration: 8
+    repeatable: 0
+  - cue: hum_16
+    text: The outpost logs say Zero volunteered to stay. 'Someone has to keep the anchor engine running,' he wrote. 'Back in a week.'
+    duration: 8
+    repeatable: 0
+  - cue: hum_17
+    text: The hum stopped. For the first time in years, it's quiet. Zero's safe, but the anchor engine still needs a keeper. The Founders' Festival is tomorrow. Maybe the whole Reach can help.
+    duration: 9
+    repeatable: 0
+  - cue: hum_18
+    text: Stage's ready. Tonight the whole Reach plays the Founders' Song, and every beat goes into the anchor engine. Zero says it only needs one good link.
+    duration: 8
+    repeatable: 0
+  - cue: hum_19
+    text: Listen. No hum, just music. The anchor's linked, the Reach is steady, and Unit Zero is home. Welcome back to the Bureau, Zero.
+    duration: 10
+    repeatable: 0
+  - cue: lore_1
+    text: 'Memory bolt, log one: ''Unit Zero. First day at the Robot Rescue Bureau. Everybody is so nice.'' Unit ZERO? That''s the Bureau''s very first bot!'
+    duration: 7
+    repeatable: 0
+  - cue: lore_2
+    text: 'Log two: ''Built my first bridge today. Brightwater Reach is three platforms and a lot of hope.'''
+    duration: 6
+    repeatable: 0
+  - cue: lore_3
+    text: 'Log three: ''The anchor engine under the Old Rig keeps the whole Reach from drifting off. Somebody has to mind it.'''
+    duration: 6
+    repeatable: 0
+  - cue: lore_4
+    text: 'Log four: ''Storm coming. The Old Rig is leaning. Getting everyone off.'''
+    duration: 5
+    repeatable: 0
+  - cue: lore_5
+    text: 'Log five: ''Everyone''s safe. I stayed to hold the engine steady. Water''s rising.'' ...PIP, I never knew.'
+    duration: 6
+    repeatable: 0
+  - cue: lore_6
+    text: 'Log six: ''The rig sank halfway. The engine''s still turning. So am I. Just slower.'''
+    duration: 6
+    repeatable: 0
+  - cue: lore_7
+    text: 'Log seven: ''I hum when my battery runs low. I hope someone hears.'' ...The Hum. PIP, the Hum is HIM.'
+    duration: 7
+    repeatable: 0
+  - cue: lore_8
+    text: 'Log eight: ''I''ve been sending memory bolts up the old cables. If you''re reading this: hello, new friend.'''
+    duration: 6
+    repeatable: 0
+  - cue: lore_9
+    text: 'Log nine: ''The power grid shakes when I hum. Sorry about the coffee machines.'''
+    duration: 5
+    repeatable: 0
+  - cue: lore_10
+    text: 'Log ten: ''You can see the station''s lights from down here, through the water. I miss it.'''
+    duration: 6
+    repeatable: 0
+  - cue: lore_11
+    text: 'Log eleven: ''Find all my bolts and you''ll know the way down.'''
+    duration: 5
+    repeatable: 0
+  - cue: lore_12
+    text: 'Log twelve: ''Unit Zero. Still on duty.'' ...PIP. We''re bringing Zero home.'
+    duration: 6
+    repeatable: 0

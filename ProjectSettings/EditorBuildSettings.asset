@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Project/Scenes/World_Station.unity
+    guid: 80b576d59ec81624ca8f6a4ea4dbcbf9
+  - enabled: 1
+    path: Assets/_Project/Scenes/World_Brightwater.unity
+    guid: 868d3a58351faff4aae63719ab884fb4
+  - enabled: 1
     path: Assets/_Project/Scenes/MainMenu.unity
-    guid: 00000000000000000000000000000000
+    guid: 9c86cdda928128f49a2a837b26eb96d0
   - enabled: 1
     path: Assets/_Project/Scenes/TestChambers/Test01_StackEmUp.unity
     guid: 33eb1f2dd68e44a4fa516ee9f0ba7b16
@@ -29,5 +35,44 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/Ch2_Boss_PastaPanic.unity
     guid: 3ed148dd1cbe0334e8710b38dd6e8098
+  - enabled: 1
+    path: Assets/_Project/Scenes/Ch3_Call01_LooseScrews.unity
+    guid: 7009c2259a36f524ca4a71dbf56bd169
+  - enabled: 1
+    path: Assets/_Project/Scenes/Ch3_Boss_UpATree.unity
+    guid: a5a7e8c2dccf5f0499caca939014c369
+  - enabled: 1
+    path: Assets/_Project/Scenes/Ch4_Call01_CatchTheHum.unity
+    guid: c469de45bf0ac0a4687070831743c83f
+  - enabled: 1
+    path: Assets/_Project/Scenes/Ch4_Boss_SlightlyTooBig.unity
+    guid: 22e9472ab1deb2745bbb33614be2294d
+  - enabled: 1
+    path: Assets/_Project/Scenes/Ch5_Call01_HeavyLifting.unity
+    guid: a5fb26db993596c499a48e40a1844ce2
+  - enabled: 1
+    path: Assets/_Project/Scenes/Ch5_Boss_LightsOut.unity
+    guid: 9fa38082148cb2340a079802775a2c88
+  - enabled: 1
+    path: Assets/_Project/Scenes/Ch6_Call01_CarouselChaos.unity
+    guid: 7608eff505ca7564f965709d39e5053a
+  - enabled: 1
+    path: Assets/_Project/Scenes/Ch6_Boss_StuckAtTheTop.unity
+    guid: 71801ff98e0d19c40a75c74f88a45205
+  - enabled: 1
+    path: Assets/_Project/Scenes/Ch7_Call01_GoingDown.unity
+    guid: 779d6436d09bdaa44a42949eb2df4cff
+  - enabled: 1
+    path: Assets/_Project/Scenes/Ch7_Boss_UnitZero.unity
+    guid: 6cedac864c7cba048b8592c01612a69f
+  - enabled: 1
+    path: Assets/_Project/Scenes/Ch8_Call01_StageFright.unity
+    guid: 9e41ee777b94cb54696591507b305e59
+  - enabled: 1
+    path: Assets/_Project/Scenes/Ch8_Boss_TheFoundersSong.unity
+    guid: e8bf1adcd3fdc0a4aacc2d4613639326
+  - enabled: 1
+    path: Assets/_Project/Scenes/Side_PumpHouse.unity
+    guid: a630f573c6434e84caef6d1495605628
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

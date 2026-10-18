@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fc3bbfe2d08f84aaa4a0203272180c, type: 3}
+  m_Name: Task_Ch5_Boss_LightsOut
+  m_EditorClassIdentifier: RobotRescue.Runtime::RobotRescue.Tasks.TaskDefinition
+  taskId: ch5_boss
+  title: 'BIG RESCUE: Lights Out'
+  rescuee: Captain Mo (lost in the fog)
+  description: The lighthouse is dark and Captain Mo's boat is lost. Be the beacon that brings her home.
+  timeLimit: 0
+  boltsReward: 110
+  steps:
+  - id: generator
+    label: Magnet the fuel tank onto the generator plate
+  - id: lens
+    label: Climb the lighthouse and fix the lamp's lens (3 screws)
+  - id: boat_home
+    label: Plug in at the top and guide Captain Mo home

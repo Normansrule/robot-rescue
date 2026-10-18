@@ -4,6 +4,7 @@ using System.IO;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using RobotRescue.Bots;
 
 namespace RobotRescue.EditorTools.Media
 {
@@ -36,6 +37,7 @@ namespace RobotRescue.EditorTools.Media
             try
             {
                 Directory.CreateDirectory(OutDir);
+                CaptureWorld();
                 CaptureMenu();
                 foreach (var chapter in ProjectBuilder.Chapters)
                     foreach (var level in chapter.levels)
@@ -54,7 +56,8 @@ namespace RobotRescue.EditorTools.Media
             finally
             {
                 ShaderUtil.allowAsyncCompilation = asyncShaders;
-                if (File.Exists(ProjectBuilder.MenuScene)) EditorSceneManager.OpenScene(ProjectBuilder.MenuScene, OpenSceneMode.Single);
+                var home = File.Exists(WorldBuilder.ScenePath) ? WorldBuilder.ScenePath : ProjectBuilder.MenuScene;
+                if (File.Exists(home)) EditorSceneManager.OpenScene(home, OpenSceneMode.Single);
             }
         }
 
@@ -64,20 +67,87 @@ namespace RobotRescue.EditorTools.Media
         {
             if (!File.Exists(ProjectBuilder.MenuScene)) return;
             EditorSceneManager.OpenScene(ProjectBuilder.MenuScene, OpenSceneMode.Single);
+            Faces(Mood.Happy);
             using (var rig = new Rig(Color.clear))
             {
-                // Wide banner.
-                rig.Aim(new Vector3(0f, 1.2f, 0f), 20f, 9.5f, 2.6f, 38f);
-                SavePng(rig.Render(1600, 600), "banner.png");
-
-                // PIP turntable, close up.
-                var gif = new GifEncoder(360, 360, 6);
-                for (int i = 0; i < 48; i++)
+                // PIP's moods, one frame each (the LED face is a shader, so this works without pressing Play).
+                var pipFace = FindPipFace();
+                if (pipFace)
                 {
-                    rig.Aim(new Vector3(0f, 0.7f, 0f), 20f + i * 7.5f, 3.4f, 1.3f, 40f);
-                    gif.AddFrame(rig.Render(360, 360).GetPixels32());
+                    var moods = new[] { Mood.Neutral, Mood.Happy, Mood.Love, Mood.Surprised, Mood.Determined, Mood.Sad, Mood.Dizzy, Mood.Sleepy, Mood.Angry };
+                    var strip = new GifEncoder(360, 360, 70);
+                    foreach (var m in moods)
+                    {
+                        pipFace.Preview(m);
+                        rig.Aim(new Vector3(0f, 0.95f, 0f), 20f, 2.2f, 0.25f, 34f);
+                        strip.AddFrame(rig.Render(360, 360).GetPixels32());
+                    }
+                    strip.Save(Path.Combine(OutDir, "pip_moods.gif"));
+                    pipFace.Preview(Mood.Happy);
                 }
-                gif.Save(Path.Combine(OutDir, "pip_turntable.gif"));
+                // PIP with the drone crew.
+                rig.Aim(new Vector3(0f, 1.2f, 0f), 20f, 9.5f, 2.6f, 38f);
+                SavePng(rig.Render(1600, 600), "crew.png");
+            }
+        }
+
+        static void Faces(Mood mood)
+        {
+            foreach (var f in UnityEngine.Object.FindObjectsByType<BotFace>()) f.Preview(mood);
+        }
+
+        static BotFace FindPipFace()
+        {
+            var pip = GameObject.Find("PIP");
+            return pip ? pip.GetComponent<BotFace>() : null;
+        }
+
+        /// <summary>Each destination: a wide hero shot, an orbit, each call from outside its gate, and PIP up close.</summary>
+        static void CaptureWorld()
+        {
+            foreach (var path in WorldBuilder.ScenePaths)
+            {
+                if (!File.Exists(path)) continue;
+                EditorSceneManager.OpenScene(path, OpenSceneMode.Single);
+                string tag = Path.GetFileNameWithoutExtension(path).Replace("World_", "");
+                Faces(Mood.Happy);
+                var orbit = UnityEngine.Object.FindAnyObjectByType<RobotRescue.UI.MenuCamera>();
+                Vector3 pivot = orbit ? orbit.pivot : Vector3.zero;
+                float radius = orbit ? orbit.radius : 180f;
+                using (var rig = new Rig(Color.clear, skybox: true))
+                {
+                    rig.Aim(pivot + Vector3.up * 4f, 200f, radius, radius * 0.42f, 42f);
+                    SavePng(rig.Render(1600, 900), $"world_{tag}.png");
+                    var gif = new GifEncoder(GifW, GifH, GifDelay);
+                    for (int i = 0; i < GifFrames; i++)
+                    {
+                        rig.Aim(pivot + Vector3.up * 4f, 200f + 360f * i / GifFrames, radius, radius * 0.45f, 42f);
+                        gif.AddFrame(rig.Render(GifW, GifH).GetPixels32());
+                    }
+                    gif.Save(Path.Combine(OutDir, $"orbit_{tag}.gif"));
+
+                    foreach (var area in UnityEngine.Object.FindObjectsByType<RobotRescue.World.Area>())
+                    {
+                        if (!area.spawnPoint) continue;
+                        var s = area.spawnPoint;
+                        rig.Aim(s.position + s.forward * 4f + Vector3.up * 2f, s.eulerAngles.y + 25f, 14f, 7f, 50f);
+                        SavePng(rig.Render(ShotW, ShotH), $"world_{area.sceneId}.png");
+                    }
+                    var pip = GameObject.Find("PIP");
+                    if (pip && tag == "Station")
+                    {
+                        rig.Aim(pivot + Vector3.up * 4f, 200f, radius * 1.25f, radius * 0.75f, 42f);
+                        SavePng(rig.Render(1600, 600), "banner.png");
+                        var gif2 = new GifEncoder(360, 360, 6);
+                        for (int i = 0; i < 48; i++)
+                        {
+                            rig.Aim(pip.transform.position + Vector3.up * 0.8f, i * 7.5f, 3.6f, 1.2f, 40f);
+                            gif2.AddFrame(rig.Render(360, 360).GetPixels32());
+                        }
+                        gif2.Save(Path.Combine(OutDir, "pip_turntable.gif"));
+                    }
+                }
+                Debug.Log($"[Media] {tag}");
             }
         }
 
@@ -87,7 +157,8 @@ namespace RobotRescue.EditorTools.Media
             float size = Mathf.Max(b.size.x, b.size.z);
             Vector3 c = b.center;
             c.y = 0f;
-            using (var rig = new Rig(new Color(0.62f, 0.83f, 1f)))
+            Faces(Mood.Happy);
+            using (var rig = new Rig(new Color(0.62f, 0.83f, 1f), skybox: true))
             {
                 rig.Aim(c, 340f, size * 0.62f, size * 0.72f, 50f);
                 SavePng(rig.Render(ShotW, ShotH), $"{name}.png");
@@ -108,7 +179,7 @@ namespace RobotRescue.EditorTools.Media
         {
             bool any = false;
             var b = new Bounds();
-            foreach (var r in UnityEngine.Object.FindObjectsByType<Renderer>(FindObjectsSortMode.None))
+            foreach (var r in UnityEngine.Object.FindObjectsByType<Renderer>())
             {
                 if (!r.enabled) continue;
                 var rb = r.bounds;
@@ -134,16 +205,18 @@ namespace RobotRescue.EditorTools.Media
             readonly List<Camera> disabled = new List<Camera>();
             readonly Dictionary<long, Texture2D> outputs = new Dictionary<long, Texture2D>();
 
-            public Rig(Color background)
+            public Rig(Color background, bool skybox = true)
             {
-                foreach (var other in UnityEngine.Object.FindObjectsByType<Camera>(FindObjectsSortMode.None))
+                foreach (var other in UnityEngine.Object.FindObjectsByType<Camera>())
                     if (other.enabled) { other.enabled = false; disabled.Add(other); }
                 var go = new GameObject("MediaCaptureCamera") { hideFlags = HideFlags.HideAndDontSave };
                 cam = go.AddComponent<Camera>();
                 cam.clearFlags = CameraClearFlags.SolidColor;
                 cam.backgroundColor = background.a > 0f ? background : new Color(0.62f, 0.83f, 1f);
-                cam.nearClipPlane = 0.1f;
-                cam.farClipPlane = 500f;
+                if (skybox && RenderSettings.skybox) cam.clearFlags = CameraClearFlags.Skybox;
+                cam.nearClipPlane = 0.2f;
+                cam.farClipPlane = 2000f;
+                ChamberKit.EnablePost(cam);
                 cam.enabled = false;
             }
 

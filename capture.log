@@ -1,0 +1,687 @@
+VBCSCompilerPreWarmer: watching VBCSCompiler (PID 38236)
+VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 37216)
+VBCSCompiler prewarm took 16.60 ms
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.6/staging' branch; Version is '6000.6.5f1 (3ff58d469c8a) revision 4191629'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Channel LicenseClient-aleks doesn't exist
+OS: 'Windows 11  (10.0.26200) Core' Language: 'en' Physical Memory: 32371 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-12T22:45:16Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 32080)
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Unity.exe
+-batchmode
+-quit
+-projectPath
+C:\Users\aleks\Desktop\Robot Rescue
+-executeMethod
+RobotRescue.EditorTools.Media.MediaCapture.CaptureAll
+-logFile
+C:\Users\aleks\Desktop\Robot Rescue\capture.log
+Successfully changed project path to: C:\Users\aleks\Desktop\Robot Rescue
+C:/Users/aleks/Desktop/Robot Rescue
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-remapper-allocator-initial-capacity=32768"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=1"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.
+Player connection [26672]  Target information:
+
+Player connection [26672]  * "[IP] 192.168.86.39 [Port] 55504 [Flags] 2 [Guid] 4149211622 [EditorId] 4149211622 [Version] 1048832 [Id] WindowsEditor(7,Aleksander-Desk) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [26672]  * "[IP] 172.27.208.1 [Port] 55504 [Flags] 2 [Guid] 4149211622 [EditorId] 4149211622 [Version] 1048832 [Id] WindowsEditor(7,Aleksander-Desk) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [26672]  * "[IP] 100.107.128.19 [Port] 55504 [Flags] 2 [Guid] 4149211622 [EditorId] 4149211622 [Version] 1048832 [Id] WindowsEditor(7,Aleksander-Desk) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [26672] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [26672] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-aleks" at "2026-10-12T22:45:16.4885814Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 32080, path: "C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.3+d7ffd15
+  Session Id:              c798fd6c8d2e4e2ca679efaad266479a
+  Correlation Id:          9b60ef0b63fc1170270e1f4eb6f72df5
+  External correlation Id: 775182906510085318
+  Machine Id:              9KTbQbfQiacTFiXz9Xs8CiyUqog=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-aleks" (connect: 0.25s, validation: 0.08s, handshake: 0.04s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-aleks-notifications" at "2026-10-12T22:45:16.6039089Z"
+[Licensing::Module] Connected to LicensingClient (PId: 32080, launch time: 0.00, total connection time: 0.36s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 20067664221254-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 0.43s
+[Package Manager] Connected to IPC stream "Upm-29772" after 0.3 seconds.
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+Launching Unity Data Store - C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/Tools/Unity.DataStore.exe 
+Unity Data Store artifact dir = Library/DataStore, working dir = C:/Users/aleks/Desktop/Robot RescueUnity Data Store running and initialised
+[Physics::Module] Selected backend (deferred post-plugins).
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.6.5f1 (3ff58d469c8a)
+[EntityIdStore] init: VM path (explicit commit), pageSize=4096, blockCount=1048576, entitiesPerBlock=256, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/aleks/Desktop/Robot Rescue/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 5060 Ti (ID=0x2d04)
+    Vendor:   NVIDIA
+    VRAM:     16050 MB
+    Driver:   32.0.16.1088
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56772
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002282 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  0.570 seconds
+Domain Reload Profiling: 1038ms
+	BeginReloadAssembly (112ms)
+		CreateAndSetChildDomain (9ms)
+	RebuildCommonClasses (5ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (60ms)
+	LoadAllAssembliesAndSetupDomain (276ms)
+		LoadAssemblies (100ms)
+		TypeCache.Refresh (184ms)
+			TypeCache.ScanAssembly (173ms)
+		AnalyzeDomain (1ms)
+	FinalizeReload (571ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (86ms)
+			ProcessInitializeOnLoadAttributes (84ms)
+			ProcessInitializeOnLoadMethodAttributes (207ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 60 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.ai.navigation@2.0.15 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ai.navigation@a9c5744fc1de)
+    com.unity.ide.rider@3.0.38 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ide.rider@1f60b3138684)
+    com.unity.ide.visualstudio@2.0.26 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ide.visualstudio@a99d56dec63f)
+    com.unity.inputsystem@1.20.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.inputsystem@7a4e1a2a8194)
+    com.unity.searcher@4.9.5 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.searcher@a463122f2c00)
+    com.unity.profiling.core@1.0.3 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.profiling.core@8a49f7027d06)
+    com.unity.nuget.mono-cecil@1.11.6 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+  Built-in packages:
+    com.unity.2d.sprite@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.2d.sprite@752945c75a6f)
+    com.unity.2d.tilemap@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.2d.tilemap@f4c7bd71ac8a)
+    com.unity.multiplayer.center@2.0.1 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.multiplayer.center@01ba5271095b)
+    com.unity.render-pipelines.universal@17.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.render-pipelines.universal@2309ae255609)
+    com.unity.test-framework@1.8.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.test-framework@80f691d4262b)
+    com.unity.timeline@6.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.timeline@4891807c6bd8)
+    com.unity.ugui@2.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ugui@42f0bd825000)
+    com.unity.modules.accessibility@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.physicscore2d@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.physicscore2d)
+    com.unity.modules.screencapture@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tetgen@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.tetgen)
+    com.unity.modules.tilemap@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.timelinefoundation@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.timelinefoundation)
+    com.unity.modules.ui@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.wind@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.1.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.ext.nunit@0198eae3b53e)
+    com.unity.render-pipelines.core@17.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.render-pipelines.core@285af6b8c83f)
+    com.unity.shadergraph@17.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.shadergraph@58bcb150677d)
+    com.unity.render-pipelines.universal-config@17.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.render-pipelines.universal-config@561422b74439)
+    com.unity.graph-authoring@1.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.graph-authoring@cfd2588851ee)
+    com.unity.burst@2.0.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.burst@626e66ab421b)
+    com.unity.collections@6.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.collections@10fff0607388)
+    com.unity.test-framework.performance@6.6.0 (location: C:\Users\aleks\Desktop\Robot Rescue\Library\PackageCache\com.unity.test-framework.performance@54c5bd86aedb)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+Starting: C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/2000b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/aleks/Desktop/Robot Rescue
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 0s246ms
+[661/848    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+*** Tundra build success (0.22 seconds), 1 items updated, 848 evaluated
+AssetDatabase: script compilation time: 0.669251s
+Begin MonoManager ReloadAssembly
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  0.722 seconds
+Domain Reload Profiling: 1505ms
+	BeginReloadAssembly (301ms)
+		DisableScriptedObjects (20ms)
+		CreateAndSetChildDomain (143ms)
+	RebuildCommonClasses (8ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (411ms)
+		LoadAssemblies (258ms)
+		TypeCache.Refresh (75ms)
+			TypeCache.ScanAssembly (68ms)
+		AnalyzeDomain (42ms)
+			BuildScriptInfoCaches (35ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (723ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (89ms)
+			ProcessInitializeOnLoadAttributes (182ms)
+			ProcessInitializeOnLoadMethodAttributes (72ms)
+			AfterProcessingInitializeOnLoad (8ms)
+		AwakeInstancesAfterBackupRestoration (27ms)
+Starting new worker id: 0 with log in C:/Users/aleks/Desktop/Robot Rescue/Logs/AssetImportWorkerHW0.log
+
+Asset Pipeline Refresh (id=e07aec7f3b81a5d429a2524259c22dc8): Total: 2.704 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1086 ms
+		Asset DB Callback time: managed=40 ms, native=25 ms
+		Scripting: domain reloads=1, domain reload time=832 ms, compile time=671 ms, other=47 ms
+		Project Asset Count: scripts=1085, non-scripts=2438
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 27.200ms
+	ApplyChangesToAssetFolders: 0.596ms
+	Scan: 100.705ms
+	Collect global state as custom dependencies: 18.513ms
+	CategorizeScriptCompilationAssets: 17.147ms
+	ProcessAssetsWithTransientArtifactChanges: 50.316ms
+	CategorizeAssets: 41.021ms
+	CompileScripts: 671.197ms
+	ImportOutOfDateAssets: 739.161ms (725.409ms without children)
+		UnloadImportedAssets: 1.822ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.480ms
+		ImportSchedulerStart: 11.406ms
+	PostProcessAllAssets: 40.916ms
+		MonoPostProcessAllAssets: 40.842ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 12.511ms
+			SyncVS.PostprocessSyncProject 10.247ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.711ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.604ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.870ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.709ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.449ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.367ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.362ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.224ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.215ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.174ms
+	UnloadStreamsBegin: 1.037ms
+	PersistCurrentRevisions: 0.071ms
+	GenerateScriptTypeHashes: 1.285ms
+	GenerateScriptTypeSerializationHashes: 2.344ms
+	Untracked: 990.541ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Scanning for USB devices : 7.735ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Curl error 6: Could not resolve host: cdp.cloud.unity3d.com
+[MODES] Loading mode Default (0) for mode-current-id-Robot Rescue
+Curl error 6: Could not resolve host: config.uca.cloud.unity3d.com
+Unloading 69 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4449 unused Assets / (11.9 MB). Loaded Objects now: 5400.
+Memory consumption went from 345.6 MB to 333.7 MB.
+Total: 9.189800 ms (FindLiveObjects: 0.376800 ms CreateObjectMapping: 0.134100 ms MarkObjects: 5.769500 ms  DeleteObjects: 2.758600 ms)
+
+Opening scene 'Assets/_Project/Scenes/World_Station.unity'
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Worker ready: AssetImportWorkerHW0 0
+Loaded scene 'Assets/_Project/Scenes/World_Station.unity'
+	Deserialize:            76.491 ms
+	Integration:            2862.876 ms
+	Integration of assets:  0.858 ms
+	Thread Wait Time:       0.025 ms
+	Total Operation Time:   2940.251 ms
+Unloading 4 unused Assets / (68.4 KB). Loaded Objects now: 12397.
+Memory consumption went from 348.2 MB to 348.1 MB.
+Total: 7.595900 ms (FindLiveObjects: 0.895300 ms CreateObjectMapping: 0.095500 ms MarkObjects: 5.935700 ms  DeleteObjects: 0.494800 ms)
+
+[Media] Station
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureWorld () (at Assets/_Project/Editor/Media/MediaCapture.cs:150)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureAll () (at Assets/_Project/Editor/Media/MediaCapture.cs:40)
+
+(Filename: Assets/_Project/Editor/Media/MediaCapture.cs Line: 150)
+
+Opening scene 'Assets/_Project/Scenes/World_Brightwater.unity'
+Unloading 141 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/World_Brightwater.unity'
+	Deserialize:            129.831 ms
+	Integration:            136.231 ms
+	Integration of assets:  0.076 ms
+	Thread Wait Time:       0.003 ms
+	Total Operation Time:   266.142 ms
+Unloading 191 unused Assets / (199.4 KB). Loaded Objects now: 22117.
+Memory consumption went from 407.4 MB to 407.2 MB.
+Total: 8.724700 ms (FindLiveObjects: 1.811600 ms CreateObjectMapping: 0.143500 ms MarkObjects: 6.142300 ms  DeleteObjects: 0.401100 ms)
+
+[Media] Brightwater
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureWorld () (at Assets/_Project/Editor/Media/MediaCapture.cs:150)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureAll () (at Assets/_Project/Editor/Media/MediaCapture.cs:40)
+
+(Filename: Assets/_Project/Editor/Media/MediaCapture.cs Line: 150)
+
+Opening scene 'Assets/_Project/Scenes/MainMenu.unity'
+Unloading 177 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/MainMenu.unity'
+	Deserialize:            3.713 ms
+	Integration:            39.548 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.015 ms
+	Total Operation Time:   43.278 ms
+Unloading 587 unused Assets / (8.7 MB). Loaded Objects now: 6010.
+Memory consumption went from 390.5 MB to 381.8 MB.
+Total: 9.504800 ms (FindLiveObjects: 0.359100 ms CreateObjectMapping: 0.087300 ms MarkObjects: 5.815500 ms  DeleteObjects: 3.106600 ms)
+
+Opening scene 'Assets/_Project/Scenes/TestChambers/Test01_StackEmUp.unity'
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/TestChambers/Test01_StackEmUp.unity'
+	Deserialize:            7.156 ms
+	Integration:            45.852 ms
+	Integration of assets:  0.034 ms
+	Thread Wait Time:       0.013 ms
+	Total Operation Time:   53.055 ms
+Unloading 15 unused Assets / (40.4 KB). Loaded Objects now: 6093.
+Memory consumption went from 382.1 MB to 382.0 MB.
+Total: 5.952800 ms (FindLiveObjects: 0.299300 ms CreateObjectMapping: 0.048500 ms MarkObjects: 5.390800 ms  DeleteObjects: 0.080900 ms)
+
+[Media] Test01_StackEmUp
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureLevel (string) (at Assets/_Project/Editor/Media/MediaCapture.cs:174)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureAll () (at Assets/_Project/Editor/Media/MediaCapture.cs:47)
+
+(Filename: Assets/_Project/Editor/Media/MediaCapture.cs Line: 174)
+
+Opening scene 'Assets/_Project/Scenes/TestChambers/Test02_ConveyorCaper.unity'
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/TestChambers/Test02_ConveyorCaper.unity'
+	Deserialize:            5.098 ms
+	Integration:            43.281 ms
+	Integration of assets:  0.013 ms
+	Thread Wait Time:       0.009 ms
+	Total Operation Time:   48.401 ms
+Unloading 21 unused Assets / (41.4 KB). Loaded Objects now: 6188.
+Memory consumption went from 383.6 MB to 383.6 MB.
+Total: 6.338800 ms (FindLiveObjects: 0.297700 ms CreateObjectMapping: 0.048000 ms MarkObjects: 5.774500 ms  DeleteObjects: 0.084500 ms)
+
+[Media] Test02_ConveyorCaper
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureLevel (string) (at Assets/_Project/Editor/Media/MediaCapture.cs:174)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureAll () (at Assets/_Project/Editor/Media/MediaCapture.cs:47)
+
+(Filename: Assets/_Project/Editor/Media/MediaCapture.cs Line: 174)
+
+Opening scene 'Assets/_Project/Scenes/TestChambers/Test03_SwingShift.unity'
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/TestChambers/Test03_SwingShift.unity'
+	Deserialize:            4.154 ms
+	Integration:            44.051 ms
+	Integration of assets:  0.017 ms
+	Thread Wait Time:       0.019 ms
+	Total Operation Time:   48.242 ms
+Unloading 32 unused Assets / (54.0 KB). Loaded Objects now: 6020.
+Memory consumption went from 383.6 MB to 383.6 MB.
+Total: 6.975800 ms (FindLiveObjects: 0.309500 ms CreateObjectMapping: 0.080100 ms MarkObjects: 6.334400 ms  DeleteObjects: 0.113200 ms)
+
+[Media] Test03_SwingShift
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureLevel (string) (at Assets/_Project/Editor/Media/MediaCapture.cs:174)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureAll () (at Assets/_Project/Editor/Media/MediaCapture.cs:47)
+
+(Filename: Assets/_Project/Editor/Media/MediaCapture.cs Line: 174)
+
+Opening scene 'Assets/_Project/Scenes/Ch1_Boss_CoffeeCrisis.unity'
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/Ch1_Boss_CoffeeCrisis.unity'
+	Deserialize:            6.176 ms
+	Integration:            44.275 ms
+	Integration of assets:  0.019 ms
+	Thread Wait Time:       0.023 ms
+	Total Operation Time:   50.493 ms
+Unloading 20 unused Assets / (35.8 KB). Loaded Objects now: 6290.
+Memory consumption went from 383.9 MB to 383.8 MB.
+Total: 6.370500 ms (FindLiveObjects: 0.317900 ms CreateObjectMapping: 0.050100 ms MarkObjects: 5.776900 ms  DeleteObjects: 0.089000 ms)
+
+[Media] Ch1_Boss_CoffeeCrisis
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureLevel (string) (at Assets/_Project/Editor/Media/MediaCapture.cs:174)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureAll () (at Assets/_Project/Editor/Media/MediaCapture.cs:47)
+
+(Filename: Assets/_Project/Editor/Media/MediaCapture.cs Line: 174)
+
+Opening scene 'Assets/_Project/Scenes/Ch2_Call01_PastaEmergency.unity'
+Unloading 28 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/Ch2_Call01_PastaEmergency.unity'
+	Deserialize:            5.015 ms
+	Integration:            43.874 ms
+	Integration of assets:  0.022 ms
+	Thread Wait Time:       0.036 ms
+	Total Operation Time:   48.947 ms
+Unloading 46 unused Assets / (72.7 KB). Loaded Objects now: 6113.
+Memory consumption went from 384.2 MB to 384.1 MB.
+Total: 5.927500 ms (FindLiveObjects: 0.305800 ms CreateObjectMapping: 0.047400 ms MarkObjects: 5.306500 ms  DeleteObjects: 0.134400 ms)
+
+[Media] Ch2_Call01_PastaEmergency
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureLevel (string) (at Assets/_Project/Editor/Media/MediaCapture.cs:174)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureAll () (at Assets/_Project/Editor/Media/MediaCapture.cs:47)
+
+(Filename: Assets/_Project/Editor/Media/MediaCapture.cs Line: 174)
+
+Opening scene 'Assets/_Project/Scenes/Ch2_Call02_WhiskBusiness.unity'
+Unloading 31 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/Ch2_Call02_WhiskBusiness.unity'
+	Deserialize:            6.971 ms
+	Integration:            42.101 ms
+	Integration of assets:  0.022 ms
+	Thread Wait Time:       0.015 ms
+	Total Operation Time:   49.109 ms
+Unloading 39 unused Assets / (56.6 KB). Loaded Objects now: 6211.
+Memory consumption went from 386.3 MB to 386.2 MB.
+Total: 5.850000 ms (FindLiveObjects: 0.310400 ms CreateObjectMapping: 0.045000 ms MarkObjects: 5.241800 ms  DeleteObjects: 0.118000 ms)
+
+[Media] Ch2_Call02_WhiskBusiness
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureLevel (string) (at Assets/_Project/Editor/Media/MediaCapture.cs:174)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureAll () (at Assets/_Project/Editor/Media/MediaCapture.cs:47)
+
+(Filename: Assets/_Project/Editor/Media/MediaCapture.cs Line: 174)
+
+Opening scene 'Assets/_Project/Scenes/Ch2_Boss_PastaPanic.unity'
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/Ch2_Boss_PastaPanic.unity'
+	Deserialize:            7.373 ms
+	Integration:            43.376 ms
+	Integration of assets:  0.021 ms
+	Thread Wait Time:       0.024 ms
+	Total Operation Time:   50.793 ms
+Unloading 12 unused Assets / (108.0 KB). Loaded Objects now: 6557.
+Memory consumption went from 386.5 MB to 386.4 MB.
+Total: 6.550400 ms (FindLiveObjects: 0.345400 ms CreateObjectMapping: 0.068600 ms MarkObjects: 5.906000 ms  DeleteObjects: 0.089500 ms)
+
+[Media] Ch2_Boss_PastaPanic
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureLevel (string) (at Assets/_Project/Editor/Media/MediaCapture.cs:174)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureAll () (at Assets/_Project/Editor/Media/MediaCapture.cs:47)
+
+(Filename: Assets/_Project/Editor/Media/MediaCapture.cs Line: 174)
+
+Opening scene 'Assets/_Project/Scenes/Ch3_Call01_LooseScrews.unity'
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/Ch3_Call01_LooseScrews.unity'
+	Deserialize:            12.800 ms
+	Integration:            44.813 ms
+	Integration of assets:  0.018 ms
+	Thread Wait Time:       0.017 ms
+	Total Operation Time:   57.648 ms
+Unloading 81 unused Assets / (133.6 KB). Loaded Objects now: 7206.
+Memory consumption went from 389.5 MB to 389.4 MB.
+Total: 6.536200 ms (FindLiveObjects: 0.391000 ms CreateObjectMapping: 0.072900 ms MarkObjects: 5.719400 ms  DeleteObjects: 0.213200 ms)
+
+[Media] Ch3_Call01_LooseScrews
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureLevel (string) (at Assets/_Project/Editor/Media/MediaCapture.cs:174)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureAll () (at Assets/_Project/Editor/Media/MediaCapture.cs:47)
+
+(Filename: Assets/_Project/Editor/Media/MediaCapture.cs Line: 174)
+
+Opening scene 'Assets/_Project/Scenes/Ch3_Boss_UpATree.unity'
+Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/Ch3_Boss_UpATree.unity'
+	Deserialize:            15.471 ms
+	Integration:            43.545 ms
+	Integration of assets:  0.023 ms
+	Thread Wait Time:       0.040 ms
+	Total Operation Time:   59.079 ms
+Unloading 28 unused Assets / (165.5 KB). Loaded Objects now: 7639.
+Memory consumption went from 389.4 MB to 389.2 MB.
+Total: 6.699800 ms (FindLiveObjects: 0.447500 ms CreateObjectMapping: 0.068000 ms MarkObjects: 5.937400 ms  DeleteObjects: 0.102900 ms)
+
+[Media] Ch3_Boss_UpATree
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureLevel (string) (at Assets/_Project/Editor/Media/MediaCapture.cs:174)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureAll () (at Assets/_Project/Editor/Media/MediaCapture.cs:47)
+
+(Filename: Assets/_Project/Editor/Media/MediaCapture.cs Line: 174)
+
+Opening scene 'Assets/_Project/Scenes/Ch4_Call01_CatchTheHum.unity'
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/Ch4_Call01_CatchTheHum.unity'
+	Deserialize:            8.243 ms
+	Integration:            45.111 ms
+	Integration of assets:  0.016 ms
+	Thread Wait Time:       0.019 ms
+	Total Operation Time:   53.389 ms
+Unloading 56 unused Assets / (113.8 KB). Loaded Objects now: 6669.
+Memory consumption went from 388.7 MB to 388.6 MB.
+Total: 6.341300 ms (FindLiveObjects: 0.364400 ms CreateObjectMapping: 0.083100 ms MarkObjects: 5.586900 ms  DeleteObjects: 0.168100 ms)
+
+[Media] Ch4_Call01_CatchTheHum
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureLevel (string) (at Assets/_Project/Editor/Media/MediaCapture.cs:174)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureAll () (at Assets/_Project/Editor/Media/MediaCapture.cs:47)
+
+(Filename: Assets/_Project/Editor/Media/MediaCapture.cs Line: 174)
+
+Opening scene 'Assets/_Project/Scenes/Ch4_Boss_SlightlyTooBig.unity'
+Unloading 45 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/Ch4_Boss_SlightlyTooBig.unity'
+	Deserialize:            9.136 ms
+	Integration:            42.058 ms
+	Integration of assets:  0.018 ms
+	Thread Wait Time:       0.017 ms
+	Total Operation Time:   51.229 ms
+Unloading 27 unused Assets / (45.6 KB). Loaded Objects now: 6797.
+Memory consumption went from 388.6 MB to 388.6 MB.
+Total: 6.050100 ms (FindLiveObjects: 0.373700 ms CreateObjectMapping: 0.064200 ms MarkObjects: 5.375800 ms  DeleteObjects: 0.097600 ms)
+
+[Media] Ch4_Boss_SlightlyTooBig
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureLevel (string) (at Assets/_Project/Editor/Media/MediaCapture.cs:174)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureAll () (at Assets/_Project/Editor/Media/MediaCapture.cs:47)
+
+(Filename: Assets/_Project/Editor/Media/MediaCapture.cs Line: 174)
+
+[Media] Wrote screenshots and GIFs to C:\Users\aleks\Desktop\Robot Rescue\docs\media
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+RobotRescue.EditorTools.Media.MediaCapture:CaptureAll () (at Assets/_Project/Editor/Media/MediaCapture.cs:49)
+
+(Filename: Assets/_Project/Editor/Media/MediaCapture.cs Line: 49)
+
+Opening scene 'Assets/_Project/Scenes/World_Station.unity'
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/_Project/Scenes/World_Station.unity'
+	Deserialize:            53.546 ms
+	Integration:            90.093 ms
+	Integration of assets:  0.049 ms
+	Thread Wait Time:       0.009 ms
+	Total Operation Time:   143.696 ms
+Unloading 57 unused Assets / (137.9 KB). Loaded Objects now: 12602.
+Memory consumption went from 397.5 MB to 397.3 MB.
+Total: 7.318400 ms (FindLiveObjects: 0.993400 ms CreateObjectMapping: 0.068400 ms MarkObjects: 5.909800 ms  DeleteObjects: 0.177500 ms)
+
+Batchmode quit successfully invoked - shutting down!
+Importing 'GUID: 00000000000000009000000000000000 - Path: ProjectSettings/QualitySettings.asset' with importer (LibraryAssetImporter)
+Imported 'GUID: 00000000000000009000000000000000' -> (Import Result ID: '8151b601d05d3e12de314c2aa1f82962') in 0.005 seconds [static dependencies only]. Details - ImportResultOutputID=2a108b3da874f726c62fbe5f12be4a8a DependenciesID=6180c49ef29638684367d2893c04e070 StaticDependenciesID=5b19720d9149525484b40148944c8e26 
+Asset Pipeline Refresh (id=d33061606c0f9f8439826ba311dab652): Total: 0.110 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-aleks-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-aleks channel disconnected successfully.
+Lingering sessions upon destruction of worker manager
+Unity Data Store service was successfully shut down
+UDS shutting down local client system
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+Exiting batchmode successfully now!
+[ExitDontLaunchBugReporter] Exiting without the bug reporter. Application will exit with return code 0
