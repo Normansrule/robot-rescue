@@ -1,50 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="'Trebuchet MS', Verdana, Arial, sans-serif" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTplOGVlNDMzOS05NjhiLTQwMTQtYjc2Mi00MTA0OTVkODFmMjgAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaDj5h70FyTcgUMf95/fGfacAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo1YzUzZTMyNC01MjJmLTQzZDgtYTI4My1kODZlMDkwYzIyMmVscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNojYTPXDoZoPlFJM8BX9Aj0AAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggOwdA17kNuvytUXneW53A2zatARNCkZ2sxAKsfQXIGYSkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaHJRq4kdgiHIncKZAvz6+hEAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDzFWXwRmTCsG6CGS/EothyvDv2m2l08Ifu2Zkp1eUuXmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjRZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmU4ZWU0MzM5LTk2OGItNDAxNC1iNzYyLTQxMDQ5NWQ4MWYyOC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjM0OWU1OWQxLTBhYzgtNDFjNy1iMTFkLTJmZmYwNWU0N2VlNXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCA7B0DXuQ26/K1Red5bncDbNq0BE0KRnazEAqx9BcgZhKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggoG0qcsPzFSnFOaUfDmX6ReYdhzn6pRqpP5bTsBEFaByiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggO8CxU7xMphxPISmsCwsij7MKhCP19nW3lfbtYGYdDGt0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQF3GhuISQvqVtpshgaWua4kyJpRoH+ToMPbZSclhEHVRpbKCsL4ViP3E3dVyVrzcjuV4UxAXeJnS/lqH5cu6qcU=</c2pa:manifest></metadata>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="'Trebuchet MS', Verdana, Arial, sans-serif">
 <defs>
 <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f1a3d"/><stop offset="0.38" stop-color="#3a5aa8"/><stop offset="0.62" stop-color="#9fd3ff"/><stop offset="1" stop-color="#d9f1ff"/></linearGradient>
 <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5ec4e8"/><stop offset="1" stop-color="#1f6f9e"/></linearGradient>
 <radialGradient id="planet" cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="#7fd0ff"/><stop offset="1" stop-color="#1c4f9c"/></radialGradient>
 </defs>
 <rect width="1200" height="560" rx="22" fill="url(#sky)"/>
-<circle cx="396" cy="35" r="0.9" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="3.1s" repeatCount="indefinite"/></circle>
-<circle cx="642" cy="64" r="1.3" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
-<circle cx="63" cy="73" r="0.9" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="1.7s" repeatCount="indefinite"/></circle>
-<circle cx="512" cy="126" r="1.0" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/></circle>
-<circle cx="748" cy="143" r="1.2" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="2.9s" repeatCount="indefinite"/></circle>
-<circle cx="1152" cy="20" r="1.1" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="3.6s" repeatCount="indefinite"/></circle>
-<circle cx="187" cy="30" r="1.6" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="2.3s" repeatCount="indefinite"/></circle>
-<circle cx="230" cy="93" r="1.2" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="3.1s" repeatCount="indefinite"/></circle>
-<circle cx="655" cy="23" r="1.0" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
-<circle cx="809" cy="72" r="1.4" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="2.3s" repeatCount="indefinite"/></circle>
-<circle cx="546" cy="55" r="1.5" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="3.5s" repeatCount="indefinite"/></circle>
-<circle cx="303" cy="92" r="1.7" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="2.8s" repeatCount="indefinite"/></circle>
-<circle cx="866" cy="53" r="0.9" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="4.0s" repeatCount="indefinite"/></circle>
-<circle cx="505" cy="117" r="1.3" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="1.9s" repeatCount="indefinite"/></circle>
-<circle cx="65" cy="105" r="1.4" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="3.4s" repeatCount="indefinite"/></circle>
-<circle cx="1036" cy="57" r="1.4" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="3.2s" repeatCount="indefinite"/></circle>
-<circle cx="693" cy="76" r="1.7" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="3.6s" repeatCount="indefinite"/></circle>
-<circle cx="570" cy="104" r="1.5" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="1.7s" repeatCount="indefinite"/></circle>
-<circle cx="771" cy="149" r="1.1" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="3.6s" repeatCount="indefinite"/></circle>
-<circle cx="468" cy="105" r="1.3" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
-<circle cx="215" cy="30" r="1.6" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
-<circle cx="170" cy="48" r="1.7" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="2.5s" repeatCount="indefinite"/></circle>
-<circle cx="113" cy="75" r="1.7" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="2.9s" repeatCount="indefinite"/></circle>
-<circle cx="970" cy="132" r="1.2" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="2.2s" repeatCount="indefinite"/></circle>
-<circle cx="436" cy="134" r="1.0" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="3.9s" repeatCount="indefinite"/></circle>
-<circle cx="224" cy="46" r="1.3" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="2.1s" repeatCount="indefinite"/></circle>
-<circle cx="703" cy="50" r="1.2" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/></circle>
-<circle cx="448" cy="91" r="1.5" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="3.9s" repeatCount="indefinite"/></circle>
-<circle cx="618" cy="98" r="0.9" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="3.2s" repeatCount="indefinite"/></circle>
-<circle cx="1063" cy="120" r="1.6" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="3.7s" repeatCount="indefinite"/></circle>
-<circle cx="475" cy="68" r="1.4" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/></circle>
-<circle cx="92" cy="23" r="1.0" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="2.0s" repeatCount="indefinite"/></circle>
-<circle cx="414" cy="21" r="1.0" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/></circle>
-<circle cx="138" cy="63" r="1.7" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
-<circle cx="732" cy="34" r="1.1" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="2.1s" repeatCount="indefinite"/></circle>
-<circle cx="442" cy="31" r="1.8" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="3.6s" repeatCount="indefinite"/></circle>
-<circle cx="561" cy="80" r="0.9" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="1.7s" repeatCount="indefinite"/></circle>
-<circle cx="417" cy="50" r="1.0" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="3.6s" repeatCount="indefinite"/></circle>
-<circle cx="47" cy="143" r="0.9" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="2.8s" repeatCount="indefinite"/></circle>
-<circle cx="650" cy="18" r="1.8" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="2.8s" repeatCount="indefinite"/></circle>
+<circle cx="396" cy="35" r="0.9" fill="#fff" opacity="0.45"/>
+<circle cx="642" cy="64" r="1.3" fill="#fff" opacity="0.70"/>
+<circle cx="63" cy="73" r="0.9" fill="#fff" opacity="0.95"/>
+<circle cx="512" cy="126" r="1.0" fill="#fff" opacity="0.45"/>
+<circle cx="748" cy="143" r="1.2" fill="#fff" opacity="0.70"/>
+<circle cx="1152" cy="20" r="1.1" fill="#fff" opacity="0.95"/>
+<circle cx="187" cy="30" r="1.6" fill="#fff" opacity="0.45"/>
+<circle cx="230" cy="93" r="1.2" fill="#fff" opacity="0.70"/>
+<circle cx="655" cy="23" r="1.0" fill="#fff" opacity="0.95"/>
+<circle cx="809" cy="72" r="1.4" fill="#fff" opacity="0.45"/>
+<circle cx="546" cy="55" r="1.5" fill="#fff" opacity="0.70"/>
+<circle cx="303" cy="92" r="1.7" fill="#fff" opacity="0.95"/>
+<circle cx="866" cy="53" r="0.9" fill="#fff" opacity="0.45"/>
+<circle cx="505" cy="117" r="1.3" fill="#fff" opacity="0.70"/>
+<circle cx="65" cy="105" r="1.4" fill="#fff" opacity="0.95"/>
+<circle cx="1036" cy="57" r="1.4" fill="#fff" opacity="0.45"/>
+<circle cx="693" cy="76" r="1.7" fill="#fff" opacity="0.70"/>
+<circle cx="570" cy="104" r="1.5" fill="#fff" opacity="0.95"/>
+<circle cx="771" cy="149" r="1.1" fill="#fff" opacity="0.45"/>
+<circle cx="468" cy="105" r="1.3" fill="#fff" opacity="0.70"/>
+<circle cx="215" cy="30" r="1.6" fill="#fff" opacity="0.95"/>
+<circle cx="170" cy="48" r="1.7" fill="#fff" opacity="0.45"/>
+<circle cx="113" cy="75" r="1.7" fill="#fff" opacity="0.70"/>
+<circle cx="970" cy="132" r="1.2" fill="#fff" opacity="0.95"/>
+<circle cx="436" cy="134" r="1.0" fill="#fff" opacity="0.45"/>
+<circle cx="224" cy="46" r="1.3" fill="#fff" opacity="0.70"/>
+<circle cx="703" cy="50" r="1.2" fill="#fff" opacity="0.95"/>
+<circle cx="448" cy="91" r="1.5" fill="#fff" opacity="0.45"/>
+<circle cx="618" cy="98" r="0.9" fill="#fff" opacity="0.70"/>
+<circle cx="1063" cy="120" r="1.6" fill="#fff" opacity="0.95"/>
+<circle cx="475" cy="68" r="1.4" fill="#fff" opacity="0.45"/>
+<circle cx="92" cy="23" r="1.0" fill="#fff" opacity="0.70"/>
+<circle cx="414" cy="21" r="1.0" fill="#fff" opacity="0.95"/>
+<circle cx="138" cy="63" r="1.7" fill="#fff" opacity="0.45"/>
+<circle cx="732" cy="34" r="1.1" fill="#fff" opacity="0.70"/>
+<circle cx="442" cy="31" r="1.8" fill="#fff" opacity="0.95"/>
+<circle cx="561" cy="80" r="0.9" fill="#fff" opacity="0.45"/>
+<circle cx="417" cy="50" r="1.0" fill="#fff" opacity="0.70"/>
+<circle cx="47" cy="143" r="0.9" fill="#fff" opacity="0.95"/>
+<circle cx="650" cy="18" r="1.8" fill="#fff" opacity="0.45"/>
 <text x="600" y="44" font-size="30" font-weight="bold" fill="#fff" text-anchor="middle">The campaign: every stop is built</text>
 <text x="600" y="72" font-size="15" fill="#cfe0ff" text-anchor="middle">Green tick = the level generates and runs in Unity 6.6 on the dev PC (18 Oct 2026). Nobody has signed off a full playtest yet.</text>
 <g transform="translate(110 150)">

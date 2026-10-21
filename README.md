@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/Normansrule/robot-rescue/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/Normansrule/robot-rescue?label=download&color=ff8c26&style=for-the-badge"></a>
-  <a href="https://normansrule.github.io/robot-rescue/"><img alt="Play in your browser" src="https://img.shields.io/badge/play-in%20browser-4fe3ff?style=for-the-badge"></a>
+  <a href="https://normansrule.github.io/robot-rescue/play/"><img alt="Play in your browser" src="https://img.shields.io/badge/play-in%20browser-2fe0ff?style=for-the-badge"></a>
   <img alt="Unity 6" src="https://img.shields.io/badge/Unity-6000.6-222?style=for-the-badge&logo=unity">
   <img alt="Platforms" src="https://img.shields.io/badge/Windows%20%C2%B7%20Web-ok-36b35a?style=for-the-badge">
 </p>
@@ -17,21 +17,157 @@
   <img alt="Co-op" src="https://img.shields.io/badge/co--op-planned-aab3c8?style=flat-square">
 </p>
 
-**ROBOT RESCUE** is a cute co-op physics-puzzle game. You build your own little rescue bot (**PIP** is the default), the newest recruit at the Robot Rescue Bureau,
-a little space station in orbit. **DISPATCH** fires you down in mission pods to save people from everyday disasters:
-pasta that won't cook, a coffee machine that's about to blow, a food critic who's about to write a terrible review.
-And someone keeps sending an S.O.S. from under the sea. ([Setting and story](docs/STORY.md))
+**Robot Rescue** is a cute, cosy physics-puzzle game about a rookie rescue bot. You build your own little bot (**PIP**
+is the default), join the Robot Rescue Bureau on its space station, and get fired down in mission pods to fix everyday
+disasters in Brightwater Reach: pasta that won't cook, a coffee machine about to blow, a cat that won't come down from a
+tree. Puzzles are about power, weight and swinging on your Tether Cable, with a bit of the "aha" of Portal 2 and none
+of the pressure. It's made for anyone who likes a gentle puzzle, playing on their own today and with 2 to 4 friends
+once co-op lands, and it runs on Windows or straight in your browser. Its [website](https://normansrule.github.io/robot-rescue/)
+lets you try the Tether before you download anything. ([Setting and story](docs/STORY.md))
 
 <p align="center">
   <img src="docs/media/orbit_Station.gif" width="49%" alt="The Bureau Station: training decks and the Launch Bay over a blue planet">
   <img src="docs/media/orbit_Brightwater.gif" width="49%" alt="Brightwater Reach: a floating city of ocean rigs joined by bridges">
 </p>
+
+## Key features
+
+- **Your own bot.** Pick a body, head, feet, antenna, badge, colours, eyes, smile, voice and a name. Four save slots,
+  ready for co-op, and DISPATCH (the Bureau's radio voice) calls your bot by its name.
+- **One cable, three jobs.** The Tether plugs into sockets to power things, pulls objects to you, and swings you
+  across gaps. A swappable **Tool Arm** adds a Whisk, a Screwdriver and a Magnet.
+- **8 chapters, 20 calls, 8 Big Rescues.** From a Bureau training deck to the Founders' Festival, with a story about a
+  hum under the sea and Unit Zero, the Bureau's very first bot.
+- **Forgiving by design.** A flat battery leaves you on slow reserve instead of stopping you dead, parts that pop off
+  float home on their own, red pads reset just one room, and **H** gives a hint (the goal first, the answer last).
+- **Helper Drones with personalities** (cheerful, nervous, grumpy, sleepy, show-off) that you stack, carry and throw.
+- **Two places to explore, no loading screens inside them:** the Bureau Station and Brightwater Reach, a floating city
+  of ocean rigs.
+- **Plays anywhere:** a Windows download, or [in your browser](https://normansrule.github.io/robot-rescue/play/) with
+  nothing to install. Keyboard and mouse or a gamepad, in light or dark mode.
+- **A website you can play with.** The [Tether Playground](https://normansrule.github.io/robot-rescue/#playground) is
+  a tiny physics toy that teaches the cable's three jobs in twenty seconds, and the calls board shows every level's
+  real progress.
+
 <p align="center">
   <img src="docs/media/pip_turntable.gif" width="30%" alt="PIP turntable">
   <img src="docs/media/pip_moods.gif" width="30%" alt="PIP's LED face moods">
   <img src="docs/media/crew.png" width="36%" alt="PIP and the Helper Drone crew">
 </p>
 
+## Screenshots
+
+### The new look: "Live Wire"
+
+The website, the play page and the game's menus and HUD (heads-up display) share one design, built around the Tether
+Cable (more in [Design](#design)). These are real captures of the website and play page from a browser.
+
+<p align="center">
+  <img src="docs/media/design/site-hero.gif" width="100%" alt="The website loads dark: PIP hangs from its cable, its eyes blink on, current runs up the wire and lights the Robot Rescue title. Then PIP gets grabbed and swung.">
+</p>
+
+<p align="center">
+  <img src="docs/media/design/tether-playground.gif" width="100%" alt="The Tether Playground: PIP plugs into a socket and current runs along a wire to open a door, hooks a crate off a shelf, then swings from a ring across a gap of water">
+</p>
+
+<table>
+<tr>
+<td width="50%" align="center"><b>Light mode</b><br><img src="docs/media/design/site-light.png" width="100%" alt="The website in light mode: the Robot Rescue title in orange and navy on workshop white, PIP hanging from a cyan cable"></td>
+<td width="50%" align="center"><b>Dark mode</b><br><img src="docs/media/design/site-dark.png" width="100%" alt="The website in dark mode: sea-navy background, the main line glowing cyan down the left edge"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><b>Calls board (with its empty state)</b><br><img src="docs/media/design/calls-board.png" width="100%" alt="Every call grouped by chapter as buttons with a lit pin; the Pump House is selected and the panel says it isn't filmed yet"></td>
+<td width="50%" align="center"><b>Play page: loading</b><br><img src="docs/media/design/play-page.png" width="100%" alt="The play page: key hints in the top bar and a game frame where current fills a cable towards a plug, 42 percent"></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><b>On a phone</b><br><img src="docs/media/design/phone.png" width="60%" alt="The website at phone width: the hero in dark mode and the playground in light mode"></td>
+</tr>
+</table>
+
+**In the game** the same tokens, fonts and cable panels are in the code, but they haven't been captured yet, so there's
+nothing honest to show. Run **Robot Rescue > Capture Gameplay** in Unity and these fill in: main menu, HUD during a
+call, pause card.
+
+### Every level, running
+
+Every clip below was recorded **inside Unity in Play Mode** by `Robot Rescue > Capture Gameplay`, which presses Play on
+each level and drives the bot with a virtual keyboard. These animated GIFs (Graphics Interchange Format clips) were
+filmed between 12 and 18 Oct, so they show the interface from before the refresh. The 3D look is still the procedural
+prototype (no hand-made art yet).
+
+<details open>
+<summary><b>Show or hide the gallery</b></summary>
+
+<table>
+<tr>
+<td width="50%" align="center"><b>Main menu</b><br><img src="docs/media/gameplay/MainMenu.gif" width="100%" alt="Main menu"></td>
+<td width="50%" align="center"><b>Customize your bot</b><br><img src="docs/media/customizer/customizer.gif" width="100%" alt="Bot customizer"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><b>Bureau Station (hub)</b><br><img src="docs/media/gameplay/World_Station.gif" width="100%" alt="Bureau Station world"></td>
+<td width="50%" align="center"><b>Brightwater Reach (sea city)</b><br><img src="docs/media/gameplay/World_Brightwater.gif" width="100%" alt="Brightwater Reach world"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><b>Training 1: Stack 'Em Up</b><br><img src="docs/media/gameplay/Test01_StackEmUp.gif" width="100%" alt="Training 1: Stack 'Em Up, captured in Play Mode"></td>
+<td width="50%" align="center"><b>Training 2: Conveyor Caper</b><br><img src="docs/media/gameplay/Test02_ConveyorCaper.gif" width="100%" alt="Training 2: Conveyor Caper, captured in Play Mode"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><b>Training 3: Swing Shift</b><br><img src="docs/media/gameplay/Test03_SwingShift.gif" width="100%" alt="Training 3: Swing Shift, captured in Play Mode"></td>
+<td width="50%" align="center"><b>Big Rescue: Coffee Crisis</b><br><img src="docs/media/gameplay/Ch1_Boss_CoffeeCrisis.gif" width="100%" alt="Big Rescue: Coffee Crisis, captured in Play Mode"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><b>Call 2-1: Pasta Emergency</b><br><img src="docs/media/gameplay/Ch2_Call01_PastaEmergency.gif" width="100%" alt="Call 2-1: Pasta Emergency, captured in Play Mode"></td>
+<td width="50%" align="center"><b>Call 2-2: Whisk Business</b><br><img src="docs/media/gameplay/Ch2_Call02_WhiskBusiness.gif" width="100%" alt="Call 2-2: Whisk Business, captured in Play Mode"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><b>Big Rescue: Pasta Panic</b><br><img src="docs/media/gameplay/Ch2_Boss_PastaPanic.gif" width="100%" alt="Big Rescue: Pasta Panic, captured in Play Mode"></td>
+<td width="50%" align="center"><b>Call 3-1: Loose Screws</b><br><img src="docs/media/gameplay/Ch3_Call01_LooseScrews.gif" width="100%" alt="Call 3-1: Loose Screws, captured in Play Mode"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><b>Big Rescue: Up a Tree</b><br><img src="docs/media/gameplay/Ch3_Boss_UpATree.gif" width="100%" alt="Big Rescue: Up a Tree, captured in Play Mode"></td>
+<td width="50%" align="center"><b>Call 4-1: Catch the Hum</b><br><img src="docs/media/gameplay/Ch4_Call01_CatchTheHum.gif" width="100%" alt="Call 4-1: Catch the Hum, captured in Play Mode"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><b>Big Rescue: Slightly Too Big</b><br><img src="docs/media/gameplay/Ch4_Boss_SlightlyTooBig.gif" width="100%" alt="Big Rescue: Slightly Too Big, captured in Play Mode"></td>
+<td width="50%" align="center"><b>Call 5-1: Heavy Lifting</b><br><img src="docs/media/gameplay/Ch5_Call01_HeavyLifting.gif" width="100%" alt="Call 5-1: Heavy Lifting, captured in Play Mode"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><b>Big Rescue: Lights Out</b><br><img src="docs/media/gameplay/Ch5_Boss_LightsOut.gif" width="100%" alt="Big Rescue: Lights Out, captured in Play Mode"></td>
+<td width="50%" align="center"><b>Call 6-1: Carousel Chaos</b><br><img src="docs/media/gameplay/Ch6_Call01_CarouselChaos.gif" width="100%" alt="Call 6-1: Carousel Chaos, captured in Play Mode"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><b>Big Rescue: Stuck at the Top</b><br><img src="docs/media/gameplay/Ch6_Boss_StuckAtTheTop.gif" width="100%" alt="Big Rescue: Stuck at the Top, captured in Play Mode"></td>
+<td width="50%" align="center"><b>Call 7-1: Going Down</b><br><img src="docs/media/gameplay/Ch7_Call01_GoingDown.gif" width="100%" alt="Call 7-1: Going Down, captured in Play Mode"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><b>Big Rescue: Unit Zero</b><br><img src="docs/media/gameplay/Ch7_Boss_UnitZero.gif" width="100%" alt="Big Rescue: Unit Zero, captured in Play Mode"></td>
+<td width="50%" align="center"><b>Call 8-1: Stage Fright</b><br><img src="docs/media/gameplay/Ch8_Call01_StageFright.gif" width="100%" alt="Call 8-1: Stage Fright, captured in Play Mode"></td>
+</tr>
+<tr>
+<td width="50%" align="center"><b>Big Rescue: The Founders' Song</b><br><img src="docs/media/gameplay/Ch8_Boss_TheFoundersSong.gif" width="100%" alt="Big Rescue: The Founders' Song, captured in Play Mode"></td>
+<td width="50%" align="center"><b>Side call: The Pump House</b><br><i>Not filmed yet. Run <b>Robot Rescue &gt; Capture Gameplay</b> in Unity.</i></td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary><b>What happens in each chapter</b></summary>
+
+- **Chapter 3: Brightwater Park**: the Screwdriver, a drawbridge over the duck pond, a dry fountain, and the Big Rescue
+  *Up a Tree*: Mittens the cat climbs higher every time you get close, and the Hum shakes the whole oak.
+- **Chapter 4: School Science Fair**: catch the Hum on Priya's seismograph, then the Big Rescue *Slightly Too Big*:
+  Theo's volcano floods the gym with foam that surges with every hum.
+- **Chapter 5: Docks & Lighthouse**: the Magnet floats heavy metal crates, a listing barge needs levelling, and the Big
+  Rescue *Lights Out*: climb the lighthouse and be the beacon that brings Captain Mo home through the fog.
+- **Chapter 6: Funland Pier**: put the carousel animals back on their poles, then the Big Rescue *Stuck at the Top*:
+  turn the jammed Ferris wheel to bring Grandpa Sal and the twins down, and spot the Old Rig from the tower.
+- **Chapter 7: The Old Rig**: swing across a flooded hall into the Bureau's lost outpost, then the Big Rescue
+  *Unit Zero*: charge the Bureau's very first bot before his battery runs out, and carry him to the rescue lift.
+- **Chapter 8: Founders' Festival** (the finale): get the festival stage ready, then the Big Rescue *The Founders'
+  Song*: power three pylons and hold the link while the whole Reach plays, so the anchor engine never needs a keeper again.
+
+</details>
 
 ## Progress tracker
 
@@ -87,109 +223,212 @@ The day-by-day log is in [docs/PROGRESS.md](docs/PROGRESS.md); the design rules 
 
 <p align="center"><img src="docs/art/campaign-map.svg" width="100%" alt="Animated map: the Bureau Station in orbit, a pod drop to Brightwater Reach, and chapters 2 to 8 on ocean platforms, all built"></p>
 
-## See it running
+## Setup and usage
 
-Every clip below was recorded **inside Unity in Play Mode** by `Robot Rescue > Capture Gameplay`, which presses Play on
-each level and drives the bot with a virtual keyboard. Chapters 1-4 were filmed on 12 Oct, Chapter 5 on 14 Oct and
-Chapters 6-8 on 18 Oct. The look is still the procedural prototype (no hand-made art yet).
-
-<table>
-<tr>
-<td width="50%" align="center"><b>Main menu</b><br><img src="docs/media/gameplay/MainMenu.gif" width="100%" alt="Main menu"></td>
-<td width="50%" align="center"><b>Customize your bot</b><br><img src="docs/media/customizer/customizer.gif" width="100%" alt="Bot customizer"></td>
-</tr>
-<tr>
-<td width="50%" align="center"><b>Bureau Station (hub)</b><br><img src="docs/media/gameplay/World_Station.gif" width="100%" alt="Bureau Station world"></td>
-<td width="50%" align="center"><b>Brightwater Reach (sea city)</b><br><img src="docs/media/gameplay/World_Brightwater.gif" width="100%" alt="Brightwater Reach world"></td>
-</tr>
-<tr>
-<td width="50%" align="center"><b>Training 1: Stack 'Em Up</b><br><img src="docs/media/gameplay/Test01_StackEmUp.gif" width="100%" alt="Training 1: Stack 'Em Up, captured in Play Mode"></td>
-<td width="50%" align="center"><b>Training 2: Conveyor Caper</b><br><img src="docs/media/gameplay/Test02_ConveyorCaper.gif" width="100%" alt="Training 2: Conveyor Caper, captured in Play Mode"></td>
-</tr>
-<tr>
-<td width="50%" align="center"><b>Training 3: Swing Shift</b><br><img src="docs/media/gameplay/Test03_SwingShift.gif" width="100%" alt="Training 3: Swing Shift, captured in Play Mode"></td>
-<td width="50%" align="center"><b>Big Rescue: Coffee Crisis</b><br><img src="docs/media/gameplay/Ch1_Boss_CoffeeCrisis.gif" width="100%" alt="Big Rescue: Coffee Crisis, captured in Play Mode"></td>
-</tr>
-<tr>
-<td width="50%" align="center"><b>Call 2-1: Pasta Emergency</b><br><img src="docs/media/gameplay/Ch2_Call01_PastaEmergency.gif" width="100%" alt="Call 2-1: Pasta Emergency, captured in Play Mode"></td>
-<td width="50%" align="center"><b>Call 2-2: Whisk Business</b><br><img src="docs/media/gameplay/Ch2_Call02_WhiskBusiness.gif" width="100%" alt="Call 2-2: Whisk Business, captured in Play Mode"></td>
-</tr>
-<tr>
-<td width="50%" align="center"><b>Big Rescue: Pasta Panic</b><br><img src="docs/media/gameplay/Ch2_Boss_PastaPanic.gif" width="100%" alt="Big Rescue: Pasta Panic, captured in Play Mode"></td>
-<td width="50%" align="center"><b>Call 3-1: Loose Screws</b><br><img src="docs/media/gameplay/Ch3_Call01_LooseScrews.gif" width="100%" alt="Call 3-1: Loose Screws, captured in Play Mode"></td>
-</tr>
-<tr>
-<td width="50%" align="center"><b>Big Rescue: Up a Tree</b><br><img src="docs/media/gameplay/Ch3_Boss_UpATree.gif" width="100%" alt="Big Rescue: Up a Tree, captured in Play Mode"></td>
-<td width="50%" align="center"><b>Call 4-1: Catch the Hum</b><br><img src="docs/media/gameplay/Ch4_Call01_CatchTheHum.gif" width="100%" alt="Call 4-1: Catch the Hum, captured in Play Mode"></td>
-</tr>
-<tr>
-<td width="50%" align="center"><b>Big Rescue: Slightly Too Big</b><br><img src="docs/media/gameplay/Ch4_Boss_SlightlyTooBig.gif" width="100%" alt="Big Rescue: Slightly Too Big, captured in Play Mode"></td>
-<td width="50%" align="center"><b>Call 5-1: Heavy Lifting</b><br><img src="docs/media/gameplay/Ch5_Call01_HeavyLifting.gif" width="100%" alt="Call 5-1: Heavy Lifting, captured in Play Mode"></td>
-</tr>
-<tr>
-<td width="50%" align="center"><b>Big Rescue: Lights Out</b><br><img src="docs/media/gameplay/Ch5_Boss_LightsOut.gif" width="100%" alt="Big Rescue: Lights Out, captured in Play Mode"></td>
-<td width="50%" align="center"><b>Call 6-1: Carousel Chaos</b><br><img src="docs/media/gameplay/Ch6_Call01_CarouselChaos.gif" width="100%" alt="Call 6-1: Carousel Chaos, captured in Play Mode"></td>
-</tr>
-<tr>
-<td width="50%" align="center"><b>Big Rescue: Stuck at the Top</b><br><img src="docs/media/gameplay/Ch6_Boss_StuckAtTheTop.gif" width="100%" alt="Big Rescue: Stuck at the Top, captured in Play Mode"></td>
-<td width="50%" align="center"><b>Call 7-1: Going Down</b><br><img src="docs/media/gameplay/Ch7_Call01_GoingDown.gif" width="100%" alt="Call 7-1: Going Down, captured in Play Mode"></td>
-</tr>
-<tr>
-<td width="50%" align="center"><b>Big Rescue: Unit Zero</b><br><img src="docs/media/gameplay/Ch7_Boss_UnitZero.gif" width="100%" alt="Big Rescue: Unit Zero, captured in Play Mode"></td>
-<td width="50%" align="center"><b>Call 8-1: Stage Fright</b><br><img src="docs/media/gameplay/Ch8_Call01_StageFright.gif" width="100%" alt="Call 8-1: Stage Fright, captured in Play Mode"></td>
-</tr>
-<tr>
-<td width="50%" align="center"><b>Big Rescue: The Founders' Song</b><br><img src="docs/media/gameplay/Ch8_Boss_TheFoundersSong.gif" width="100%" alt="Big Rescue: The Founders' Song, captured in Play Mode"></td>
-<td width="50%" align="center"><b>Side call: The Pump House</b><br><i>Not filmed yet. Run <b>Robot Rescue &gt; Capture Gameplay</b> in Unity.</i></td>
-</tr>
-</table>
-
-## What's in the game
-
-- **Toy-like 3D look**: rounded, outlined toon shading, a painted sky, soft fog and bloom.
-- **Personalities**: PIP has an LED face with moods, a wobbly head and a little chirpy voice. Every Helper Drone has a
-  name and a temperament (cheerful, nervous, grumpy, sleepy, show-off) and reacts to you. Press **G** to wave.
-- **Missions by pod**: the Bureau Station is the hub. Finish Chapter 1 and the Launch Bay pod flies you down to
-  **Brightwater Reach**, a floating city of ocean rigs. Inside each place there are no loading screens: finish a
-  call and the bridge to the next gate powers up, all the way from the trattoria to the Founders' Festival on the summit.
-- **The Hum**: something under the sea keeps sending an S.O.S. Golden bolts are memory bolts: each one you find plays
-  the next log from Unit Zero, the Bureau's very first bot.
-- **Battery**: PIP's battery drains while it moves, faster when running, climbing, using tools or powering things.
-  Standing still is free. Recharge on glowing service bays, plug the Tether into green charger posts, or carry a Helper
-  Drone to borrow its charge. Run flat and you're on **reserve**: you can still walk slowly, carry things and plug into
-  a charger, but you can't climb or use tools. If you don't reach a charger in time, the tow truck brings you back.
-- **Parts that pop off**: hard landings and heavy hits knock off an arm, a foot or the antenna (each changes how PIP
-  handles). A bobbing marker shows where it landed: bump into it to snap it back on, or stand in a service bay. Parts
-  that land in water float, and anything you can't reach comes home on its own.
-- **Your own bot**: pick a body, head, feet, antenna, badge, colours, eyes, smile, voice and a name (up to 4 saved bots,
-  ready for co-op). DISPATCH calls your bot by its name.
-- **Side call: The Pump House**: a three-room rescue with portable power cells, a counterweight gate and a drawbridge
-  with two answers. Red reset pads reset just that room; press **H** for a hint, goal first.
-- **Climbing**: walls with chunky yellow handholds, a grip meter, and golden bolts hidden on top of things.
-- **Chapter 3: Brightwater Park**: the Screwdriver, a drawbridge over the duck pond, a dry fountain, and the Big Rescue
-  *Up a Tree*: Mittens the cat climbs higher every time you get close, and the Hum shakes the whole oak.
-- **Chapter 4: School Science Fair**: catch the Hum on Priya's seismograph, then the Big Rescue *Slightly Too Big*:
-  Theo's volcano floods the gym with foam that surges with every hum.
-- **Chapter 5: Docks & Lighthouse**: the Magnet floats heavy metal crates, a listing barge needs levelling, and the Big
-  Rescue *Lights Out*: climb the lighthouse and be the beacon that brings Captain Mo home through the fog.
-- **Chapter 6: Funland Pier**: put the carousel animals back on their poles, then the Big Rescue *Stuck at the Top*:
-  turn the jammed Ferris wheel to bring Grandpa Sal and the twins down, and spot the Old Rig from the tower.
-- **Chapter 7: The Old Rig**: swing across a flooded hall into the Bureau's lost outpost, then the Big Rescue
-  *Unit Zero*: charge the Bureau's very first bot before his battery runs out, and carry him to the rescue lift.
-- **Chapter 8: Founders' Festival** (the finale): get the festival stage ready, then the Big Rescue *The Founders'
-  Song*: power three pylons and hold the link while the whole Reach plays, so the anchor engine never needs a keeper again.
-
-## Download and play
+### Play it
 
 | Your computer | Download | How to start |
 |---|---|---|
 | **Windows** | [RobotRescue-Windows.zip](https://github.com/Normansrule/robot-rescue/releases/latest/download/RobotRescue-Windows.zip) | Unzip, double-click `RobotRescue.exe` (Windows may ask "run anyway?": More info > Run anyway) |
-| **Mac / Linux** | not built yet | the dev PC's Unity doesn't have the Mac and Linux build modules yet |
-| **Any browser** | [**Play now**](https://normansrule.github.io/robot-rescue/) | Nothing to install. Chrome, Edge or Firefox on a computer works best |
+| **Mac / Linux** | not built yet | the dev computer's Unity doesn't have the Mac and Linux build modules yet |
+| **Any browser** | [**Play now**](https://normansrule.github.io/robot-rescue/play/) | Nothing to install. Chrome, Edge or Firefox on a computer works best |
 
-The latest release (**v0.3.0**, 11 Oct) has Chapters 1 and 2; Chapters 3-8 and the Pump House come with the next
-release. All downloads are on the [Releases page](https://github.com/Normansrule/robot-rescue/releases). Progress saves automatically;
-the main menu has **Continue** and **Choose a call**.
+The latest release (**v0.3.0**, 11 Oct) has Chapters 1 and 2; Chapters 3 to 8, the Pump House and the refreshed
+interface come with the next release. All downloads are on the [Releases page](https://github.com/Normansrule/robot-rescue/releases).
+Progress saves automatically, and the main menu has **Continue** and **Choose a call**.
+
+### Controls
+
+| Action | Keyboard and mouse | Gamepad |
+|---|---|---|
+| Move / look | WASD / mouse | Left stick / right stick |
+| Jump (also: let go of a swing) | Space | A |
+| Pick up / put down | E | X |
+| Throw | Left mouse | RT (right trigger) |
+| Fire / release Tether | Right mouse | LT (left trigger) |
+| Reel in / out (swinging) | Q / Z | RB / LB (right and left bumpers) |
+| Use tool (hold) | F | B |
+| Swap tool | Tab | Y |
+| Climb (jump into a wall with yellow holds) | Space | A |
+| Hint (goal first, answer last) | H | D-pad (directional pad) down |
+| Wave | G | D-pad up |
+| Pause | Esc / P | Start |
+| Menus: move / select / back | Arrows, Enter, Esc | D-pad, A, B |
+| Next call (after a win) | Enter | A |
+| Restart | Backspace | Select |
+
+Prefer less movement on screen? Turn on **Calm motion** on the Controls page: no flashing, screen tints, sliding
+cards or sparks. The same page has **Light mode**, which swaps the night-blue panels for workshop white. The website
+follows your system's light or dark setting (the sun and moon button switches it) and respects "reduce motion".
+
+### Build it from source
+
+You need **Unity 6000.6.5f1** (install it with Unity Hub) with the Universal Render Pipeline (URP), which the project
+already uses. Open the project folder in Unity Hub, then use the **Robot Rescue** menu:
+
+| Menu item | What it does |
+|---|---|
+| **Build Everything** | Generates every level, the main menu, the campaign and Build Settings |
+| Chapter 1 / Chapter 2 / Test Chambers / ... | Rebuild one level |
+| **Capture Gameplay** / **Capture README Media** | Records the GIFs and screenshots in `docs/media/` |
+| **Build Game** > Windows / Linux / Mac / Browser / All | Player builds into `Builds/` (the browser build uses the page in `Assets/WebGLTemplates/RobotRescue`) |
+
+The website is plain HTML (HyperText Markup Language), CSS (Cascading Style Sheets) and JavaScript in `site/`, with no
+build step. To try it locally, run `python3 -m http.server` inside `site/` and open the address it prints. The level
+pictures live in `docs/media/`, and `rr pages` copies them next to the site when it publishes.
+
+Then open `Assets/_Project/Scenes/MainMenu` and press **Play**.
+
+### Ubuntu commands (copy and paste)
+
+Everything else goes through one small script, [`tools/rr`](tools/rr). These blocks work from **any folder** in a fresh
+Ubuntu terminal. On Windows that's **WSL** (Windows Subsystem for Linux: Start menu > "Ubuntu"); the game folder is then
+`/mnt/c/Users/aleks/Desktop/Robot Rescue`.
+
+#### 1. One-time setup
+
+```bash
+sudo apt update && sudo apt install -y git git-lfs gh zip unzip python3 curl
+bash "/mnt/c/Users/aleks/Desktop/Robot Rescue/tools/rr" install
+source ~/.bashrc
+rr help
+```
+
+After this, `rr` works in every new terminal, from any folder.
+
+#### 2. Put it on GitHub (first time creates the repo)
+
+```bash
+rr publish
+```
+
+It signs you in to GitHub if needed (follow the code it prints), creates the public repo `robot-rescue` on your account,
+and pushes everything, art and all (big files go through Git LFS, Large File Storage). Run the same command again any time to upload new
+progress. Want another name? `RR_REPO=my-name rr publish`.
+
+#### 3. Make the downloads (Unity must be closed)
+
+```bash
+rr modules          # which platforms your Unity can build (add missing ones in Unity Hub > Installs > Add modules)
+rr build all        # Windows + Linux + Mac + browser (WebGL, Web Graphics Library) builds into Builds/
+rr release 0.3.0    # zips them and publishes GitHub Release v0.3.0 (the README download links point here)
+rr pages            # puts the website and the browser build online (website at /robot-rescue/, game at /robot-rescue/play/)
+```
+
+#### Check progress
+
+```bash
+rr progress         # levels built, screenshots, builds, recent commits, Unity compile errors
+rr open             # open the project in Unity
+rr log              # watch Unity's log live while you work (Ctrl+C stops)
+rr levels           # rebuild every level + menu (Unity closed)
+rr media            # re-render the screenshots + GIFs in this README (Unity closed)
+rr gallery          # open the screenshots folder
+rr snap             # screenshot your screen (e.g. Unity) into docs/progress/
+rr play             # play your latest Windows build
+rr web              # play the browser build at http://localhost:8080
+```
+
+<details>
+<summary>On a different computer (no copy of the project yet)</summary>
+
+```bash
+sudo apt update && sudo apt install -y git git-lfs
+git lfs install
+git clone https://github.com/Normansrule/robot-rescue.git ~/robot-rescue
+bash ~/robot-rescue/tools/rr install && source ~/.bashrc
+rr progress
+```
+Building needs Unity 6000.6.5f1 (Unity Hub) on that computer; `rr` finds it in `~/Unity/Hub/Editor`, or set `RR_UNITY`.
+</details>
+
+<details>
+<summary>Optional: cloud builds with GitHub Actions</summary>
+
+[`.github/workflows/build.yml`](.github/workflows/build.yml) builds all four platforms on GitHub's servers, makes a
+release and deploys the browser version to Pages. It only runs when you start it (Actions tab > Build game > Run
+workflow) and needs Unity licence secrets first (`UNITY_LICENSE`, `UNITY_EMAIL`, `UNITY_PASSWORD`; see
+[game.ci activation](https://game.ci/docs/github/activation)). If you use it for Pages, set Settings > Pages > Source to
+"GitHub Actions" instead of the `gh-pages` branch that `rr pages` uses.
+</details>
+
+## Project structure
+
+```
+Robot Rescue/
+  Assets/_Project/
+    Scripts/   (RobotRescue.Runtime assembly)
+      Core/       EventBus, GameManager (pause, restart, next level), HUD interfaces
+      Bots/       BotInput, BotController, BotCamera, TetherCable, Grabber, ToolArm, BotBattery, BotParts, HelperDrone
+        Customize/  BotLook, BotCustomizer, DroneCustomizer (the bot workshop's data)
+      Tools/      ToolDefinition, ToolPickup, IToolUsable
+      Puzzles/    TetherTarget + PowerSocket / Carryable / TetherAnchor, PressurePlate, Door, Conveyor, PowerWire,
+                  PowerCombiner, PuzzleReset, CounterweightLift, MagnetBlock...
+      Tasks/      TaskDefinition, TaskRunner, step signals
+        Cooking/    CookingPot, MixingBowl, recipes, OrderBoard, ServingHatch, KitchenChaos, CriticNPC...
+        Rescue/     CoffeeMachine, CatNPC, FoamFlood, FerrisRescue, ZeroRescue, Seismograph...
+      Campaign/   CampaignDefinition, CampaignProgress, Collectible, LevelExit
+      Narrative/  DispatchScript, DispatchNarrator, LayeredHints
+      World/      WorldDirector (open-world areas), Area, MissionPod, HumTremor, SignText
+      UI/         UiTheme (Live Wire tokens, fonts, light/dark, cable panels), MenuFocus (keyboard and gamepad
+                  menus with the springy focus plug), MainMenu, PrototypeHUD, BotWorkshop, EndCredits
+      Dev/        PumpHouseSelfTest
+    Editor/    (RobotRescue.Editor assembly) ChamberKit helpers, one builder per chapter, WorldBuilder, ProjectBuilder,
+               BuildScript, Media/ (gameplay capture and GIF encoder)
+    Resources/Fonts/   Unbounded and Figtree (SIL Open Font License)
+    Shaders/   Toon, BotFace, Sky, SignText
+  Assets/WebGLTemplates/RobotRescue/   the play page around the browser build
+  site/        the website: index.html, site.css, site.js (rope physics, playground, calls board), fonts/
+  docs/        DESIGN.md, STORY.md, PROGRESS.md, art/ (animated SVG, Scalable Vector Graphics), media/ (GIFs and screenshots)
+  tools/rr     Ubuntu / WSL helper;  tools/art/*.py draws the progress art
+```
+
+Levels are code: each scene is generated by an `Editor/*Builder.cs` from the `ChamberKit` helpers, so nothing is
+hand-placed in a scene file.
+
+<details>
+<summary><b>How the systems talk to each other</b></summary>
+
+```mermaid
+flowchart TB
+    subgraph Bot [PIP]
+      BI[BotInput] --> BC[BotController]
+      BI --> TC[TetherCable]
+      BI --> GR[Grabber]
+      BI --> TA[ToolArm]
+    end
+    TC -- Power --> PS[PowerSocket]
+    TC -- Pull --> CA[Carryable]
+    TC -- Swing --> AN[TetherAnchor]
+    PS & PP[PressurePlate] -- IPowerable --> X[Stove · Door · Conveyor · SteamVent · PowerCombiner]
+    TA -- IToolUsable --> MB[MixingBowl]
+    X & MB & CP[CookingPot] -- TaskStepCompleted --> EB((EventBus))
+    EB --> TR[TaskRunner] -- TaskCompleted --> D[Doors open]
+    EB --> DN[DISPATCH narrator]
+    OB[OrderBoard] -- IBossMeter --> HUD[HUD]
+    CM[CoffeeMachine] -- IBossMeter --> HUD
+    LE[LevelExit] -- LevelCompleted --> GM[GameManager] --> CPG[CampaignProgress<br>unlocks + next level]
+```
+
+```mermaid
+flowchart LR
+    S1[Socket<br>PIP plugged in] --> W1[Blue wire] --> V1[Vent A]
+    P1[Plate 1.5 kg<br>one drone] --> W2[Green wire] --> V2[Vent B]
+    P2[Plate 3 kg<br>two drones] --> W3[Yellow wire] --> V3[Vent C]
+    V1 & V2 & V3 --> CM{{Coffee machine<br>pressure}}
+```
+
+- **Tether Cable** attaches to any `TetherTarget`; the target decides the mode (`PowerSocket` = Power, `Carryable` = Pull,
+  `TetherAnchor` = Swing). Power and Swing use a rope-length constraint, no joints.
+- **Power** is `IPowerable.SetPowered(bool)`. Sockets and plates power whatever they list; `PowerCombiner` (AND/OR)
+  merges inputs; `PowerWire` lights up so players can follow it.
+- **Cooking**: `CookingPot` (boil) and `MixingBowl` (whisk) match their contents against `RecipeDefinition`s.
+  `OrderBoard` spawns tickets with patience timers; `ServingHatch` fulfils them; `KitchenChaos` throws mishaps.
+- **Tasks and story**: everything raises `TaskStepCompleted` / `NarrationCue` on a typed `EventBus`. `TaskRunner` ticks
+  the checklist; `DispatchNarrator` plays DISPATCH's lines from a `DispatchScript` asset.
+- **Levels are code**: `Assets/_Project/Editor/*Builder.cs` generate each scene from the `ChamberKit` helpers
+  (rooms, sockets, plates, drones, stoves, sinks, pots, bowls, dispensers, the critic, the coffee machine...).
+</details>
 
 ## How PIP works
 
@@ -339,169 +578,38 @@ tower and plug in at the top. With all three on, stay plugged in while the link 
 speeds it up. If a pylon drops out, the link slowly fades.
 </details>
 
-## Controls
+## Design
 
-| Action | Keyboard / mouse | Gamepad |
-|---|---|---|
-| Move / look | WASD / mouse | Left stick / right stick |
-| Jump (also: let go of a swing) | Space | A |
-| Pick up / put down | E | X |
-| Throw | Left mouse | RT |
-| Fire / release Tether | Right mouse | LT |
-| Reel in / out (swinging) | Q / Z | RB / LB |
-| Use tool (hold) | F | B |
-| Swap tool | Tab | Y |
-| Climb (jump into a wall with yellow holds) | Space | A |
-| Wave | G | D-pad up |
-| Pause | Esc / P | Start |
-| Next call (after a win) | Enter | A |
-| Restart | Backspace | Select |
+The design is called **Live Wire**, and the idea is simple: **the Tether Cable is the interface**. The cable is the
+game's one verb (it powers, pulls and swings), so the website and the menus are wired together like a circuit. Things
+sit quietly "off" until current reaches them, and powering on is how a section, a panel or a button says it's ready.
+The full rules are in [docs/DESIGN.md](docs/DESIGN.md#interface).
 
-## Ubuntu commands (copy and paste)
+- **One cable down the page.** On the website a single line runs down the left edge, and every section is a socket on
+  it. As you scroll, current flows down and the sockets light up. In the game, panels hang from the top of the screen on
+  a short lead and power on when they open: a spark runs down the cable and the border glows, then settles.
+- **Colour means current.** Tether cyan is "live": focus, keys to press, things that are on. Bureau orange belongs to
+  PIP and to the one main action on a screen. Unpowered things are a quiet slate. Green, amber and red only ever mean
+  charged, low and lost.
+- **Type with a personality, used sparingly.** Unbounded (wide, rounded and a bit engineered) for titles and headings,
+  Figtree for everything you read. Sizes follow one scale, and the game's scale grows with your screen and never shrinks
+  below 80%.
+- **Real physics, not decoration.** The hanging cable is a verlet rope (each point remembers where it was a moment ago,
+  and the difference is its speed), doors and landings are damped springs, and the swing is a proper pendulum. The game
+  menu's focus ring is a plug that springs from button to button. Motion only happens when something changes, and each
+  loop goes to sleep when things stop moving.
+- **Light and dark.** Sea-navy at night, workshop white by day, in the game and on the web. The cyan and orange get a
+  little deeper in light mode so text stays readable.
+- **Everyone can use it.** Keyboard and gamepad everywhere that matters, visible focus, text contrast that meets WCAG
+  (Web Content Accessibility Guidelines) AA in both modes, "reduce motion" and the game's Calm motion respected (cables
+  hang still and power just switches on), and a website that still reads fine with JavaScript turned off.
+- **Honest states.** Loading, empty and error states are written like a person would say them: "Not filmed yet",
+  "The clip didn't load, so here's the still", "Best on a computer". The calls board shows real progress, including
+  what hasn't been playtested.
 
-Everything goes through one small script, [`tools/rr`](tools/rr). These blocks work from **any folder** in a fresh
-Ubuntu terminal. On Windows that's **WSL** (Start menu > "Ubuntu"); the game folder is then
-`/mnt/c/Users/aleks/Desktop/Robot Rescue`.
-
-### 1. One-time setup
-
-```bash
-sudo apt update && sudo apt install -y git git-lfs gh zip unzip python3 curl
-bash "/mnt/c/Users/aleks/Desktop/Robot Rescue/tools/rr" install
-source ~/.bashrc
-rr help
-```
-
-After this, `rr` works in every new terminal, from any folder.
-
-### 2. Put it on GitHub (first time creates the repo)
-
-```bash
-rr publish
-```
-
-It signs you in to GitHub if needed (follow the code it prints), creates the public repo `robot-rescue` on your account,
-and pushes everything, art and all (big files go through Git LFS). Run the same command again any time to upload new
-progress. Want another name? `RR_REPO=my-name rr publish`.
-
-### 3. Make the downloads (Unity must be closed)
-
-```bash
-rr modules          # which platforms your Unity can build (add missing ones in Unity Hub > Installs > Add modules)
-rr build all        # Windows + Linux + Mac + browser builds into Builds/
-rr release 0.3.0    # zips them and publishes GitHub Release v0.3.0 (the README download links point here)
-rr pages            # puts the browser build online at https://normansrule.github.io/robot-rescue/
-```
-
-### Check progress
-
-```bash
-rr progress         # levels built, screenshots, builds, recent commits, Unity compile errors
-rr open             # open the project in Unity
-rr log              # watch Unity's log live while you work (Ctrl+C stops)
-rr levels           # rebuild every level + menu (Unity closed)
-rr media            # re-render the screenshots + GIFs in this README (Unity closed)
-rr gallery          # open the screenshots folder
-rr snap             # screenshot your screen (e.g. Unity) into docs/progress/
-rr play             # play your latest Windows build
-rr web              # play the browser build at http://localhost:8080
-```
-
-<details>
-<summary>On a different computer (no copy of the project yet)</summary>
-
-```bash
-sudo apt update && sudo apt install -y git git-lfs
-git lfs install
-git clone https://github.com/Normansrule/robot-rescue.git ~/robot-rescue
-bash ~/robot-rescue/tools/rr install && source ~/.bashrc
-rr progress
-```
-Building needs Unity 6000.6.5f1 (Unity Hub) on that computer; `rr` finds it in `~/Unity/Hub/Editor`, or set `RR_UNITY`.
-</details>
-
-<details>
-<summary>Optional: cloud builds with GitHub Actions</summary>
-
-[`.github/workflows/build.yml`](.github/workflows/build.yml) builds all four platforms on GitHub's servers, makes a
-release and deploys the browser version to Pages. It only runs when you start it (Actions tab > Build game > Run
-workflow) and needs Unity licence secrets first (`UNITY_LICENSE`, `UNITY_EMAIL`, `UNITY_PASSWORD`; see
-[game.ci activation](https://game.ci/docs/github/activation)). If you use it for Pages, set Settings > Pages > Source to
-"GitHub Actions" instead of the `gh-pages` branch that `rr pages` uses.
-</details>
-
-## Inside Unity
-
-Open the project with **Unity 6000.6.5f1** (Unity Hub), then use the **Robot Rescue** menu:
-
-| Menu item | What it does |
-|---|---|
-| **Build Everything** | Generates every level, the main menu, the campaign and Build Settings |
-| Chapter 1 / Chapter 2 / Test Chambers / ... | Rebuild one level |
-| **Capture README Media** | Renders `docs/media/*.png` + `*.gif` |
-| **Build Game** > Windows / Linux / Mac / Browser / All | Player builds into `Builds/` |
-
-Then open `Assets/_Project/Scenes/MainMenu` and press **Play**.
-
-## How it's built
-
-```mermaid
-flowchart TB
-    subgraph Bot [PIP]
-      BI[BotInput] --> BC[BotController]
-      BI --> TC[TetherCable]
-      BI --> GR[Grabber]
-      BI --> TA[ToolArm]
-    end
-    TC -- Power --> PS[PowerSocket]
-    TC -- Pull --> CA[Carryable]
-    TC -- Swing --> AN[TetherAnchor]
-    PS & PP[PressurePlate] -- IPowerable --> X[Stove · Door · Conveyor · SteamVent · PowerCombiner]
-    TA -- IToolUsable --> MB[MixingBowl]
-    X & MB & CP[CookingPot] -- TaskStepCompleted --> EB((EventBus))
-    EB --> TR[TaskRunner] -- TaskCompleted --> D[Doors open]
-    EB --> DN[DISPATCH narrator]
-    OB[OrderBoard] -- IBossMeter --> HUD[HUD]
-    CM[CoffeeMachine] -- IBossMeter --> HUD
-    LE[LevelExit] -- LevelCompleted --> GM[GameManager] --> CPG[CampaignProgress<br>unlocks + next level]
-```
-
-```mermaid
-flowchart LR
-    S1[Socket<br>PIP plugged in] --> W1[Blue wire] --> V1[Vent A]
-    P1[Plate 1.5 kg<br>one drone] --> W2[Green wire] --> V2[Vent B]
-    P2[Plate 3 kg<br>two drones] --> W3[Yellow wire] --> V3[Vent C]
-    V1 & V2 & V3 --> CM{{Coffee machine<br>pressure}}
-```
-
-- **Tether Cable** attaches to any `TetherTarget`; the target decides the mode (`PowerSocket` = Power, `Carryable` = Pull,
-  `TetherAnchor` = Swing). Power and Swing use a rope-length constraint, no joints.
-- **Power** is `IPowerable.SetPowered(bool)`. Sockets and plates power whatever they list; `PowerCombiner` (AND/OR)
-  merges inputs; `PowerWire` lights up so players can follow it.
-- **Cooking**: `CookingPot` (boil) and `MixingBowl` (whisk) match their contents against `RecipeDefinition`s.
-  `OrderBoard` spawns tickets with patience timers; `ServingHatch` fulfils them; `KitchenChaos` throws mishaps.
-- **Tasks and story**: everything raises `TaskStepCompleted` / `NarrationCue` on a typed `EventBus`. `TaskRunner` ticks
-  the checklist; `DispatchNarrator` plays DISPATCH's lines from a `DispatchScript` asset.
-- **Levels are code**: `Assets/_Project/Editor/*Builder.cs` generate each scene from the `ChamberKit` helpers
-  (rooms, sockets, plates, drones, stoves, sinks, pots, bowls, dispensers, the critic, the coffee machine...).
-
-```
-Assets/_Project/
-  Scripts/  (RobotRescue.Runtime)
-    Core/      EventBus, GameManager (pause, restart, next level), HUD interfaces
-    Bots/      BotInput, BotController, BotCamera, TetherCable, Grabber, ToolArm, HelperDrone
-    Tools/     ToolDefinition, ToolPickup, IToolUsable
-    Puzzles/   TetherTarget + PowerSocket / Carryable / TetherAnchor, PressurePlate, Door, Conveyor, PowerWire, PowerCombiner...
-    Tasks/     TaskDefinition, TaskRunner, step signals
-      Cooking/ CookingPot, MixingBowl, Recipe/Ingredient definitions, OrderBoard, ServingHatch, KitchenChaos, CriticNPC...
-      Rescue/  CoffeeMachine, SteamVent
-    Campaign/  CampaignDefinition, CampaignProgress, LevelExit
-    Narrative/ DispatchScript, DispatchNarrator
-    UI/        PrototypeHUD, MainMenu, MenuCamera
-  Editor/   (RobotRescue.Editor) ChamberKit (+Puzzles, Kitchen, Rooms), level builders, ProjectBuilder, BuildScript, Media/
-tools/rr    Ubuntu/WSL helper
-docs/       art (animated SVGs), media (rendered screenshots + GIFs), PROGRESS.md
-```
+This pass used three design references as guidance: Impeccable's audit checklist, Emil Kowalski's design-engineering
+notes on motion (fast, ease-out, interruptible, and only when it explains something), and taste-skill's list of
+generic "AI-looking" habits to avoid (stock gradients, identical card grids, filler icons, placeholder copy).
 
 ## Roadmap
 
@@ -525,7 +633,8 @@ Details per milestone: [docs/PROGRESS.md](docs/PROGRESS.md).
 
 ## Status
 
-- All 20 scenes build clean in Unity 6000.6.5f1 on the dev PC (18 Oct), and the level lint finds 0 issues.
+- All 20 scenes build clean in Unity 6000.6.5f1 on the dev computer (18 Oct), and the level lint finds 0 issues.
+- The interface refresh (20 Oct) passes the cloud compile check but hasn't been opened in Unity yet.
 - Feel and tuning numbers (speeds, cable length, order timers, battery drain) are first guesses: nobody has played the
   whole campaign start to finish yet. That's the next step.
 - The toon look is procedural (rounded meshes, custom shaders); hand-made models and audio come in the polish milestone.

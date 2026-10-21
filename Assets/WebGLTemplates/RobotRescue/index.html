@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Play {{{ PRODUCT_NAME }}} in your browser</title>
+    <meta name="description" content="A cosy physics-puzzle game about a rookie rescue bot and its Tether Cable. Plays in your browser, nothing to install.">
+    <meta name="theme-color" content="#0A1430">
+    <link rel="icon" href="TemplateData/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="TemplateData/fonts/unbounded-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script>
+      // Same saved theme as the website (same site on GitHub Pages).
+      try { var t = localStorage.getItem("rr-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <header class="bar">
+      <a class="brand" href="https://normansrule.github.io/robot-rescue/">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v5M16 2v5M5 7h14v4a7 7 0 0 1-14 0zM12 18v4"/></svg>
+        <span>Robot Rescue</span>
+      </a>
+      <dl class="keys" aria-label="Controls">
+        <div><dt><kbd>WASD</kbd></dt><dd>move</dd></div>
+        <div><dt><kbd>Space</kbd></dt><dd>jump</dd></div>
+        <div><dt><kbd>E</kbd></dt><dd>pick up</dd></div>
+        <div><dt><kbd>Right mouse</kbd></dt><dd>Tether</dd></div>
+        <div><dt><kbd>H</kbd></dt><dd>hint</dd></div>
+        <div><dt><kbd>Esc</kbd></dt><dd>pause</dd></div>
+      </dl>
+      <button id="fullscreen" class="btn" type="button" disabled>Full screen</button>
+    </header>
+
+    <main class="stage">
+      <div id="unity-container" class="frame">
+        <canvas id="unity-canvas" tabindex="-1" aria-label="{{{ PRODUCT_NAME }}} game"></canvas>
+
+        <!-- Loading is the Tether charging: current runs along the cable to the plug. -->
+        <div id="loading" class="loading" role="status" aria-live="polite">
+          <div class="charge" aria-hidden="true">
+            <div class="charge-wire"><div class="charge-current" id="charge-current"></div></div>
+            <svg class="charge-plug" viewBox="0 0 24 24"><path d="M8 2v5M16 2v5M5 7h14v4a7 7 0 0 1-14 0zM12 18v4"/></svg>
+          </div>
+          <p class="loading-label"><span id="loading-text">Charging your bot</span> <span id="loading-pct" class="pct">0%</span></p>
+          <p class="loading-note">The first visit is a big download, around 50 MB. After that your browser keeps a copy.</p>
+        </div>
+
+        <div id="notice" class="notice" role="alert" hidden>
+          <p id="notice-text"></p>
+          <button class="btn" type="button" id="notice-retry" hidden>Try again</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Version {{{ PRODUCT_VERSION }}}. Best in Chrome, Edge or Firefox on a computer, with a keyboard or a gamepad.</p>
+      <p>
+        <a href="https://github.com/Normansrule/robot-rescue/releases/latest">Download for Windows</a>
+        <a href="https://github.com/Normansrule/robot-rescue">Source and progress</a>
+      </p>
+    </footer>
+
+    <script>
+      const canvas = document.querySelector("#unity-canvas");
+      const loading = document.querySelector("#loading");
+      const current = document.querySelector("#charge-current");
+      const pct = document.querySelector("#loading-pct");
+      const notice = document.querySelector("#notice");
+      const noticeText = document.querySelector("#notice-text");
+      const retry = document.querySelector("#notice-retry");
+      const fullscreen = document.querySelector("#fullscreen");
+
+      // Unity's messages: errors stay up with a retry, warnings fade after a few seconds.
+      function unityShowBanner(msg, type) {
+        noticeText.textContent = msg;
+        notice.dataset.type = type === "error" ? "error" : "warning";
+        retry.hidden = type !== "error";
+        notice.hidden = false;
+        if (type !== "error") setTimeout(() => { notice.hidden = true; }, 6000);
+      }
+      retry.addEventListener("click", () => location.reload());
+
+      const buildUrl = "Build";
+      const config = {
+        arguments: [],
+        dataUrl: buildUrl + "/{{{ DATA_FILENAME }}}",
+        frameworkUrl: buildUrl + "/{{{ FRAMEWORK_FILENAME }}}",
+#if USE_THREADS
+        workerUrl: buildUrl + "/{{{ WORKER_FILENAME }}}",
+#endif
+        codeUrl: buildUrl + "/{{{ CODE_FILENAME }}}",
+#if MEMORY_FILENAME
+        memoryUrl: buildUrl + "/{{{ MEMORY_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+        symbolsUrl: buildUrl + "/{{{ SYMBOLS_FILENAME }}}",
+#endif
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
+        productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
+        productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
+        showBanner: unityShowBanner,
+      };
+
+      function load() {
+      const script = document.createElement("script");
+      script.src = buildUrl + "/{{{ LOADER_FILENAME }}}";
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          const p = Math.round(progress * 100);
+          current.style.transform = "scaleX(" + progress + ")";
+          pct.textContent = p + "%";
+        }).then((instance) => {
+          loading.classList.add("is-done");
+          document.querySelector("#loading-text").textContent = "Charged";
+          fullscreen.disabled = false;
+          fullscreen.onclick = () => instance.SetFullscreen(1);
+          canvas.focus();
+        }).catch((message) => unityShowBanner("The game couldn't start: " + message, "error"));
+      };
+      script.onerror = () => unityShowBanner("The game files didn't load. Check your connection, then try again.", "error");
+      document.body.appendChild(script);
+      }
+
+      // Phones and tablets: the game wants a keyboard or gamepad, so ask before a 50 MB download.
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        document.body.classList.add("is-mobile");
+        config.devicePixelRatio = 1;
+        document.querySelector("#loading-text").textContent = "Best on a computer";
+        pct.hidden = true;
+        document.querySelector(".loading-note").textContent = "Robot Rescue needs a keyboard or a gamepad, and the first load is about 50 MB. Open this page on a computer, or load it here anyway.";
+        const go = document.createElement("button");
+        go.className = "btn"; go.type = "button"; go.textContent = "Load anyway";
+        go.addEventListener("click", () => { go.remove(); pct.hidden = false; document.querySelector("#loading-text").textContent = "Charging your bot"; load(); });
+        loading.appendChild(go);
+      } else {
+        load();
+      }
+    </script>
+  </body>
+</html>

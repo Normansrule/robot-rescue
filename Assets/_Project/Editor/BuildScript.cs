@@ -62,6 +62,8 @@ namespace RobotRescue.EditorTools
             // Uncompressed WebGL runs on GitHub Pages and any plain static server without special headers.
             PlayerSettings.WebGL.compressionFormat = WebGLCompressionFormat.Disabled;
             PlayerSettings.WebGL.decompressionFallback = false;
+            // Our own page (Assets/WebGLTemplates/RobotRescue): the game's colours, a charging-battery loader, controls.
+            PlayerSettings.WebGL.template = "PROJECT:RobotRescue";
 
             var log = new List<string> { $"Robot Rescue {PlayerSettings.bundleVersion}  ·  {DateTime.Now:yyyy-MM-dd HH:mm}" };
             bool failed = false;

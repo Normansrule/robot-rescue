@@ -28,7 +28,6 @@ a = s.append
 a(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" font-family="\'Trebuchet MS\', Verdana, Arial, sans-serif">')
 a('''<defs>
 <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff8ee"/><stop offset="1" stop-color="#eef6ff"/></linearGradient>
-<linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
 <clipPath id="r"><rect x="0" y="0" width="1" height="1"/></clipPath>
 </defs>''')
 a(f'<rect width="{W}" height="{H}" rx="22" fill="url(#bg)"/>')
@@ -62,13 +61,11 @@ for i, (label, done, total, col, note) in enumerate(rows):
     if w > 0:
         a(f'<g><rect x="{bx}" y="{y+4}" width="0" height="26" rx="13" fill="{col}">'
           f'<animate attributeName="width" from="0" to="{w:.1f}" begin="{begin:.2f}s" dur="1.1s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.3 1" keyTimes="0;1"/></rect>')
-        # shimmer that loops inside the filled part
-        a(f'<rect x="{bx}" y="{y+6}" width="60" height="10" rx="5" fill="url(#shine)" opacity="0">'
-          f'<animate attributeName="x" from="{bx-60}" to="{bx+w}" begin="{begin+1.2:.2f}s" dur="2.6s" repeatCount="indefinite"/>'
-          f'<set attributeName="opacity" to="1" begin="{begin+1.2:.2f}s"/></rect></g>')
+        # The fill animates once, to its real value: the motion is the information. No looping shimmer.
+        a('</g>')
     else:
         a(f'<rect x="{bx+2}" y="{y+6}" width="22" height="22" rx="11" fill="none" stroke="{col}" stroke-width="3" stroke-dasharray="4 4">'
-          f'<animateTransform attributeName="transform" type="rotate" from="0 {bx+13} {y+17}" to="360 {bx+13} {y+17}" dur="6s" repeatCount="indefinite"/></rect>')
+          f'</rect>')
     a(f'<text x="{bx+bw+18}" y="{y+24}" font-size="20" font-weight="bold" fill="{col if col!=GREY else SUB}" opacity="0">{done}/{total}'
       f'<set attributeName="opacity" to="1" begin="{begin+0.9:.2f}s"/></text>')
     a(f'<text x="{bx+6}" y="{y+48}" font-size="14" fill="{SUB}">{note}</text>')

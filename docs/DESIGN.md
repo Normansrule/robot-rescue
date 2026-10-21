@@ -133,6 +133,47 @@ every chapter.
 Rendering tests to do: park arrival, kitchen clutter, lighthouse in fog, Old Rig with Zero, the Bureau after several
 missions. Render the same park view in two styles before committing to more art.
 
+## Interface
+
+**Live Wire.** The Tether Cable is the interface: things are off until current reaches them, and powering on is how
+something says it's ready. One system across three places: the game (`Scripts/UI/UiTheme.cs`, `MenuFocus.cs`), the
+play page around the browser build (`Assets/WebGLTemplates/RobotRescue`) and the website (`site/`). Same tokens in C#
+and CSS; change one, change the others.
+
+- **Colour has jobs.** Tether cyan is live current: focus, keys, things that are on (`#2FE0FF` dark, `#008AB0` light,
+  `#00718F` when it's small text on light). Bureau orange `#FF8C26` is PIP and the one main action on a screen
+  (Continue, Resume, Play). Unpowered things are slate (`#24335F` dark, `#CFC8B8` light). Green, amber and red only
+  mean charged, low and lost. Backgrounds: sea-navy `#0A1430` at night, workshop white `#F6F3EC` by day.
+- **Light and dark.** The website follows the system setting, with a toggle saved as `rr-theme` (shared with the play
+  page). The game has **Light mode** on the Controls page (PlayerPrefs `rr.ui.light`); screens that cache styles rebuild
+  when `UiTheme.Version` changes. The game frame and end credits stay dark in both.
+- **Type.** Unbounded Bold for headings 24 and up, Figtree for the rest (Bold for buttons and labels), loaded from
+  `Resources/Fonts` and `site/fonts`. Game scale on a 1080-pixel canvas: 76 / 44 / 24 / 18 / 16 / 14, never below 80%.
+  Sentence case everywhere.
+- **Contrast** (checked): body text about 15:1 in both modes, secondary text 5.8:1 or better, small cyan and orange text
+  4.5:1 or better, the light-mode title orange (`#CC6210`) above 3:1 as large text, and focus rings and selected states
+  above 3:1.
+- **Spacing.** A 4-pixel base used in steps of 8, 12, 16, 24, 32, 48, 64 and 96 on the web; 8 / 16 / 24 in the game.
+- **Cables.** On the website one main line runs down the left edge and each section is a socket on it; scrolling
+  powers it. In the game, cards (pause, win, lose, flat battery) and the Calls and Controls pages hang on a short lead
+  from the top of the screen and power on when they open (`UiTheme.PowerOn`): a 0.15-second spark, then a border glow
+  that settles to a steady live edge. The battery shows current running in along a lead while it charges.
+- **Motion is physics, and only when something changes.** Verlet rope for hanging cables, damped springs for doors,
+  landings and the game's focus plug (stiffness 600, damping 40), a real pendulum for the swing. Arrivals use a strong
+  ease-out; frequent things (menu buttons) don't animate. Every web animation loop sleeps when nothing moves or it's off
+  screen. Warnings breathe about once a second instead of flashing.
+- **Reduced motion.** `prefers-reduced-motion` on the web and **Calm motion** in the game: cables hang still, power just
+  switches on, the playground jumps to each result, no sparks or tints. Every state change still shows.
+- **Keyboard and gamepad.** Main and pause menus: arrows / D-pad (directional pad) move the plug, Enter / A presses,
+  Esc / B goes back. Website: everything is reachable with Tab, swatches are a radio group (arrow keys), and the
+  playground's 1 / 2 / 3 / R keys only work while it has focus, so single-key shortcuts never fire elsewhere. The game's
+  call list and workshop still need a mouse; that's the next interface job.
+- **States are written, not decorated.** Loading says what's happening ("Charging your bot 42%"), empty says why
+  ("Not filmed yet"), errors say what to do ("Check your connection, then try again") and keep whatever did load.
+  On phones the play page asks before a 50 MB download, because the game needs a keyboard or gamepad.
+- **Don't:** stock gradients, glassy cards in identical grids, filler icons, placeholder copy, decorative loops. README
+  art loops only where a character is alive (PIP blinking, the pod flying).
+
 ## What to build next
 
 0. Done 2026-10-18: the atlas's three-room rescue slice, **The Pump House** (side call). Plan, test report and

@@ -144,7 +144,7 @@ Robot Rescue helper (project: $PROJ)
  Share it
   rr publish         First time: create the GitHub repo and push. Later: commit + push
   rr release <ver>   Zip the builds and publish a GitHub Release (download links in README)
-  rr pages           Put the browser build on GitHub Pages ("Play in browser" link)
+  rr pages           Put the website (site/) and the browser build (under play/) on GitHub Pages
   rr install         Make 'rr' a command you can type anywhere
 HELP
 }
@@ -307,13 +307,19 @@ cmd_pages() {
   [[ -f "$src/index.html" ]] || die "No browser build yet. Run: rr build webgl"
   slug="$(repo_slug)"; [[ -n "$slug" ]] || die "No GitHub repo yet. Run: rr publish"
   tmp="$(mktemp -d)"
-  cp -r "$src/." "$tmp/"
+  # The website (site/) goes at the root, the playable build under play/, and the level stills and clips under media/.
+  cp -r "$PROJ/site/." "$tmp/"
+  mkdir -p "$tmp/play" "$tmp/media/gameplay"
+  cp -r "$src/." "$tmp/play/"
+  cp "$PROJ"/docs/media/*.png "$tmp/media/" 2>/dev/null || true
+  cp "$PROJ"/docs/media/gameplay/*.gif "$tmp/media/gameplay/" 2>/dev/null || true
+  cp "$PROJ/docs/media/customizer/customizer.gif" "$tmp/media/" 2>/dev/null || true
   touch "$tmp/.nojekyll"
-  (cd "$tmp" && git init -q -b gh-pages && git add -A && git -c user.name="$(git -C "$PROJ" config user.name)" -c user.email="$(git -C "$PROJ" config user.email)" commit -qm "Browser build" \
+  (cd "$tmp" && git init -q -b gh-pages && git add -A && git -c user.name="$(git -C "$PROJ" config user.name)" -c user.email="$(git -C "$PROJ" config user.email)" commit -qm "Website and browser build" \
      && git push -qf "https://github.com/$slug.git" gh-pages)
   rm -rf "$tmp"
   gh api -X POST "repos/$slug/pages" -f "source[branch]=gh-pages" -f "source[path]=/" >/dev/null 2>&1 || true
-  say "Browser version: https://${slug%%/*}.github.io/${slug#*/}/  (first deploy takes a minute or two)"
+  say "Website: https://${slug%%/*}.github.io/${slug#*/}/  Play: .../play/  (first deploy takes a minute or two)"
 }
 
 case "${1:-help}" in

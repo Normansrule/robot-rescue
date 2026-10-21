@@ -27,8 +27,9 @@ import random
 random.seed(7)
 for i in range(40):
     x, y = random.uniform(20, W - 20), random.uniform(14, 150)
-    d = random.uniform(1.5, 4)
-    a(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{random.uniform(0.8,1.8):.1f}" fill="#fff"><animate attributeName="opacity" values="1;0.2;1" dur="{d:.1f}s" repeatCount="indefinite"/></circle>')
+    d = random.uniform(1.5, 4)  # still drawn so the seeded layout below stays the same
+    # Static stars: forty twinkles fought the pod drop and the chapter animations for attention.
+    a(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{random.uniform(0.8,1.8):.1f}" fill="#fff" opacity="{0.45 + (i % 3) * 0.25:.2f}"/>')
 a('<text x="600" y="44" font-size="30" font-weight="bold" fill="#fff" text-anchor="middle">The campaign: every stop is built</text>')
 a('<text x="600" y="72" font-size="15" fill="#cfe0ff" text-anchor="middle">Green tick = the level generates and runs in Unity 6.6 on the dev PC (18 Oct 2026). Nobody has signed off a full playtest yet.</text>')
 

@@ -15,17 +15,17 @@ namespace RobotRescue.UI
 
         static readonly string[] Lines =
         {
-            "<size=56><b>ROBOT RESCUE</b></size>",
+            "<size=64><b><color=#FF8C26>ROBOT</color> <color=#4FE3FF>RESCUE</color></b></size>",
             "",
             "The Reach is anchored. The hum is music now.",
             "Unit Zero is home.",
             "", "", "",
-            "<b>THE BUREAU</b>",
+            "<color=#AEB8D6><b>The Bureau</b></color>",
             "PIP, rookie rescue bot",
             "DISPATCH",
             "Unit Zero, the first of us",
             "", "",
-            "<b>BRIGHTWATER REACH</b>",
+            "<color=#AEB8D6><b>Brightwater Reach</b></color>",
             "Nonna and the trattoria kitchen",
             "Mittens, who was never really stuck",
             "Priya and her seismograph",
@@ -34,11 +34,11 @@ namespace RobotRescue.UI
             "Grandpa Sal, the twins and Benny on the pier",
             "Everyone who came to the Founders' Festival",
             "", "",
-            "<b>HELPER DRONES</b>",
+            "<color=#AEB8D6><b>Helper Drones</b></color>",
             "Cheerful, nervous, grumpy, sleepy and show-off,",
             "and every one of them carried on a plate at least once.",
             "", "",
-            "<b>MADE BY</b>",
+            "<color=#AEB8D6><b>Made by</b></color>",
             "Alek",
             "with Claude",
             "", "", "",
@@ -47,7 +47,7 @@ namespace RobotRescue.UI
         };
 
         float start;
-        GUIStyle style;
+        GUIStyle style, hint;
 
         void OnEnable() => start = Time.unscaledTime;
 
@@ -66,23 +66,28 @@ namespace RobotRescue.UI
         {
             float t = Time.unscaledTime - start - delay;
             if (t < -2f) return;
-            style ??= new GUIStyle(GUI.skin.label) { fontSize = 26, alignment = TextAnchor.MiddleCenter, richText = true, wordWrap = true };
+            if (style == null)
+            {
+                style = UiTheme.Style(26, UiTheme.NightText, TextAnchor.MiddleCenter, wrap: true);
+                hint = UiTheme.Style(UiTheme.Caption + 2, UiTheme.NightMuted, TextAnchor.MiddleRight);
+            }
+            UiTheme.Begin(out float w, out float h);
             GUI.depth = -100;
-            float fade = Mathf.Clamp01((t + 2f) / 2f);
-            GUI.color = new Color(0.04f, 0.07f, 0.16f, 0.92f * fade);
-            GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), Texture2D.whiteTexture);
+            float fade = UiTheme.EaseOut((t + 2f) / 2f);
+            GUI.color = new Color(0.04f, 0.07f, 0.16f, 0.94f * fade);
+            GUI.DrawTexture(new Rect(0, 0, w, h), Texture2D.whiteTexture);
             GUI.color = new Color(1f, 1f, 1f, fade);
 
+            // A steady, linear roll: constant motion reads as calm, and the eye can follow any line.
             const float lineH = 44f;
             float total = Lines.Length * lineH;
-            float y = Screen.height - Mathf.Clamp01(t / scrollSeconds) * (Screen.height * 0.5f + total);
+            float y = h - Mathf.Clamp01(t / scrollSeconds) * (h * 0.5f + total);
             for (int i = 0; i < Lines.Length; i++, y += lineH)
-                if (y > -lineH && y < Screen.height) GUI.Label(new Rect(0, y, Screen.width, lineH), Lines[i], style);
+                if (y > -lineH && y < h) GUI.Label(new Rect(0, y, w, lineH), Lines[i], style);
 
-            GUI.color = new Color(1f, 1f, 1f, 0.6f * fade);
-            if (t > 3f) GUI.Label(new Rect(0, Screen.height - 40f, Screen.width - 20f, 30f), "<size=16>Press any key to return to the title</size>",
-                new GUIStyle(style) { alignment = TextAnchor.MiddleRight });
+            if (t > 3f) GUI.Label(new Rect(0, h - 48f, w - UiTheme.Margin, 30f), "Press any key to return to the title", hint);
             GUI.color = Color.white;
+            UiTheme.End();
 
             var e = Event.current;
             if (t > 3f && (e.type == EventType.KeyDown || e.type == EventType.MouseDown)) Finish();

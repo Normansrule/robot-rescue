@@ -15,6 +15,7 @@ namespace RobotRescue.UI
     /// IMGUI HUD: crosshair, context prompts, task checklist, tool bar, battery and parts, stamina, bolts, order
     /// tickets, boss meters, world progress bars, drone name tags, DISPATCH (with a talking portrait and radio voice),
     /// area title cards and toasts in the open world, pause / win / lose screens.
+    /// Looks and motion come from <see cref="UiTheme"/>; the pause menu takes arrows / D-pad and Enter / A via <see cref="MenuFocus"/>.
     /// Replace with a UI Toolkit HUD in the polish milestone.
     /// </summary>
     public class PrototypeHUD : MonoBehaviour
@@ -46,7 +47,9 @@ namespace RobotRescue.UI
         int lastLine = -1;
         string garbleSource, garbled;
 
-        GUIStyle box, label, small, big, subtitle, ticket, button, left, tagStyle, labelRight, labelLeft;
+        GUIStyle label, small, caption, left, labelRight, heading, meterTitle, tagStyle, big, body, subtitle, ticketStyle, button, primary;
+        readonly MenuFocus pauseFocus = new MenuFocus();
+        bool wasPaused;
 
         static WorldDirector World => WorldDirector.Instance;
         TaskRunner Runner => World && World.Active ? World.Active.runner : taskRunner;
@@ -111,20 +114,39 @@ namespace RobotRescue.UI
             return narrator;
         }
 
+
+        int styledFor = -1;
+        static float cardOpenedAt;
+        static int cardFrame = -10;
+
         void BuildStyles()
         {
-            if (box != null) return;
-            box = new GUIStyle(GUI.skin.box) { alignment = TextAnchor.UpperLeft, fontSize = 16, padding = new RectOffset(12, 12, 10, 10), wordWrap = true, richText = true };
-            label = new GUIStyle(GUI.skin.label) { fontSize = 16, alignment = TextAnchor.MiddleCenter, richText = true };
-            small = new GUIStyle(label) { fontSize = 13 };
-            left = new GUIStyle(small) { alignment = TextAnchor.MiddleLeft };
-            tagStyle = new GUIStyle(small) { fontSize = 14, fontStyle = FontStyle.Bold };
-            labelRight = new GUIStyle(label) { alignment = TextAnchor.MiddleRight };
-            labelLeft = new GUIStyle(label) { alignment = TextAnchor.MiddleLeft };
-            big = new GUIStyle(GUI.skin.label) { fontSize = 40, fontStyle = FontStyle.Bold, alignment = TextAnchor.MiddleCenter, richText = true };
-            subtitle = new GUIStyle(GUI.skin.box) { fontSize = 20, alignment = TextAnchor.MiddleLeft, wordWrap = true, richText = true, padding = new RectOffset(16, 16, 10, 10) };
-            ticket = new GUIStyle(GUI.skin.box) { fontSize = 15, alignment = TextAnchor.UpperCenter, richText = true, wordWrap = true, padding = new RectOffset(6, 6, 6, 6) };
-            button = new GUIStyle(GUI.skin.button) { fontSize = 20, fixedHeight = 44 };
+            if (label != null && styledFor == UiTheme.Version) return;
+            styledFor = UiTheme.Version;
+            label = UiTheme.Style(UiTheme.Label, UiTheme.Text, TextAnchor.MiddleCenter);
+            small = UiTheme.Style(UiTheme.Caption, UiTheme.Text, TextAnchor.MiddleCenter);
+            caption = UiTheme.Style(UiTheme.Caption, UiTheme.TextMuted);
+            left = UiTheme.Style(UiTheme.Label, UiTheme.Text);
+            labelRight = UiTheme.Style(UiTheme.Label, UiTheme.Text, TextAnchor.MiddleRight);
+            heading = UiTheme.Style(UiTheme.Body, UiTheme.Text, bold: true);
+            meterTitle = UiTheme.Style(UiTheme.Label, UiTheme.Text, TextAnchor.MiddleCenter, bold: true);
+            tagStyle = UiTheme.Style(UiTheme.Caption, UiTheme.Text, TextAnchor.MiddleCenter, bold: true);
+            big = UiTheme.Style(UiTheme.Title, UiTheme.Text, TextAnchor.MiddleCenter, bold: true);
+            body = UiTheme.Style(UiTheme.Body, UiTheme.Text, TextAnchor.MiddleCenter, wrap: true);
+            subtitle = UiTheme.Style(UiTheme.Body + 1, UiTheme.Text, TextAnchor.UpperLeft, wrap: true);
+            ticketStyle = UiTheme.Style(UiTheme.Caption, UiTheme.Text, TextAnchor.UpperCenter, wrap: true);
+            button = UiTheme.Button(size: UiTheme.Body);
+            primary = UiTheme.Button(primary: true, size: UiTheme.Body);
+        }
+
+        void OnEnable() => pauseFocus.Enable();
+        void OnDisable() => pauseFocus.Disable();
+        void OnDestroy() => pauseFocus.Dispose();
+
+        void LateUpdate()
+        {
+            var gm = GameManager.Instance;
+            if (gm && gm.Paused && !inWorkshop) pauseFocus.Tick();
         }
 
         void OnGUI()
@@ -132,7 +154,7 @@ namespace RobotRescue.UI
             if (World && World.InTitle) return;
             BuildStyles();
             Scan();
-            float w = Screen.width, h = Screen.height;
+            UiTheme.Begin(out float w, out float h);
             var gm = GameManager.Instance;
 
             DrawWorldBars();
@@ -160,7 +182,9 @@ namespace RobotRescue.UI
             if (gm && gm.LevelComplete) DrawComplete(w, h);
             else if (failure != null) DrawFailure(w, h, failure);
             else if (gm && gm.Paused) DrawPause(w, h, gm);
+            else wasPaused = false;
             if (inWorkshop && !(gm && gm.Paused)) { inWorkshop = false; workshop.Close(); }
+            UiTheme.End();
         }
 
         static bool Alive(object o) => o != null && !(o is Object u && !u);
@@ -182,11 +206,8 @@ namespace RobotRescue.UI
             GUI.color = old;
         }
 
-        static void Bar(Rect r, float t, Color c)
-        {
-            Fill(r, new Color(0f, 0f, 0f, 0.55f));
-            Fill(new Rect(r.x + 2, r.y + 2, (r.width - 4) * Mathf.Clamp01(t), r.height - 4), c);
-        }
+        /// <summary>A warning colour that breathes between a dimmer and full version of itself, instead of strobing white.</summary>
+        static Color Breathe(Color c) => Color.Lerp(c * new Color(0.6f, 0.6f, 0.6f, 1f), c, UiTheme.Pulse());
 
         void DrawWorldBars()
         {
@@ -196,9 +217,9 @@ namespace RobotRescue.UI
             {
                 if (!Live(p) || !p.ShowProgress) continue;
                 if (bot && (p.IndicatorPosition - bot.transform.position).sqrMagnitude > 900f) continue;
-                Vector3 s = cam.WorldToScreenPoint(p.IndicatorPosition);
+                Vector3 s = UiTheme.WorldToCanvas(cam, p.IndicatorPosition);
                 if (s.z <= 0f) continue;
-                Bar(new Rect(s.x - 40f, Screen.height - s.y - 6f, 80f, 12f), p.Progress01, p.ProgressColor);
+                UiTheme.Bar(new Rect(s.x - 40f, s.y - 6f, 80f, 12f), p.Progress01, p.ProgressColor);
             }
         }
 
@@ -212,15 +233,16 @@ namespace RobotRescue.UI
                 Vector3 pos = d.transform.position + Vector3.up * 0.95f;
                 float dist = Vector3.Distance(pos, bot.transform.position);
                 if (dist > 6f) continue;
-                Vector3 s = cam.WorldToScreenPoint(pos);
+                Vector3 s = UiTheme.WorldToCanvas(cam, pos);
                 if (s.z <= 0f) continue;
+                // Tags fade in as you walk up rather than popping.
                 float a = Mathf.Clamp01((6f - dist) / 2f);
                 Color old = GUI.color;
                 GUI.color = new Color(1f, 1f, 1f, a);
                 var drone = d.GetComponent<HelperDrone>();
-                string extra = drone && drone.Charge01 < 0.99f ? $"  <size=11>{Mathf.RoundToInt(drone.Charge01 * 100f)}%</size>" : "";
-                string share = drone && drone.IsSharing ? "\n<size=11><color=#7dff9a>sharing charge with " + BotLookStore.PlayerName + "</color></size>" : "";
-                GUI.Label(new Rect(s.x - 110f, Screen.height - s.y - 28f, 220f, 44f), $"{d.droneName} <size=11><i>{d.Description}</i></size>{extra}{share}", tagStyle);
+                string extra = drone && drone.Charge01 < 0.99f ? $"  <color={UiTheme.MutedHex}>{Mathf.RoundToInt(drone.Charge01 * 100f)}%</color>" : "";
+                string share = drone && drone.IsSharing ? $"\n<size=12><color={UiTheme.GoodHex}>sharing charge with {BotLookStore.PlayerName}</color></size>" : "";
+                UiTheme.Shadowed(new Rect(s.x - 120f, s.y - 30f, 240f, 46f), $"{d.droneName} <size=12><color={UiTheme.MutedHex}>{d.Description}</color></size>{extra}{share}", tagStyle);
                 GUI.color = old;
             }
         }
@@ -228,9 +250,17 @@ namespace RobotRescue.UI
         void DrawCrosshair(float w, float h)
         {
             bool onTarget = tether && tether.AimTarget;
-            Color c = onTarget ? new Color(0.3f, 1f, 0.5f) : new Color(1f, 1f, 1f, 0.7f);
-            float s = onTarget ? 12f : 6f;
-            Fill(new Rect(w / 2 - s / 2, h / 2 - s / 2, s, s), c);
+            // A soft dot that grows into a cyan ring when the Tether has something to hook.
+            if (onTarget)
+            {
+                UiTheme.Outline(new Rect(w / 2 - 9f, h / 2 - 9f, 18f, 18f), UiTheme.Signal, 2f, 9f);
+                UiTheme.Panel(new Rect(w / 2 - 2f, h / 2 - 2f, 4f, 4f), UiTheme.Signal, 2f);
+            }
+            else
+            {
+                UiTheme.Panel(new Rect(w / 2 - 4f, h / 2 - 4f, 8f, 8f), new Color(0f, 0f, 0f, 0.35f), 4f);
+                UiTheme.Panel(new Rect(w / 2 - 3f, h / 2 - 3f, 6f, 6f), new Color(1f, 1f, 1f, 0.8f), 3f);
+            }
         }
 
         void DrawPrompts(float w, float h)
@@ -250,10 +280,17 @@ namespace RobotRescue.UI
             }
             if (toolArm && toolArm.isActiveAndEnabled && toolArm.Current && toolArm.Focus is Component c)
                 lines.Add(toolArm.IsUsing
-                    ? $"<b>{toolArm.Current.displayName} at work...</b>"
+                    ? $"<b>{toolArm.Current.displayName} at work…</b>"
                     : $"[hold F / B] {toolArm.Current.useVerb} the {c.name.ToLowerInvariant()}");
+            // Each prompt sits on its own small pill so it reads over snow, sky or a bright kitchen.
             for (int i = 0; i < lines.Count; i++)
-                GUI.Label(new Rect(0, h / 2 + 30f + i * 24f, w, 24f), lines[i], label);
+            {
+                string text = UiTheme.Keys(lines[i]);
+                float tw = label.CalcSize(new GUIContent(text)).x + 28f;
+                Rect r = new Rect(w / 2 - tw / 2, h / 2 + 34f + i * 34f, tw, 28f);
+                UiTheme.Panel(r, UiTheme.Ink, 14f);
+                GUI.Label(r, text, label);
+            }
         }
 
         void DrawTask()
@@ -262,11 +299,22 @@ namespace RobotRescue.UI
             if (!runner || !runner.task) return;
             if (World && World.Active && World.Active.IsComplete) return;
             var task = runner.task;
-            var sb = new StringBuilder();
-            sb.Append("<b>").Append(task.title).Append("</b>\n<i>for ").Append(task.rescuee).Append("</i>\n\n");
+            const float x = UiTheme.Margin, y = UiTheme.Margin, pw = 340f, row = 26f;
+            float ph = 72f + task.steps.Length * row;
+            UiTheme.Panel(new Rect(x, y, pw, ph), UiTheme.Ink);
+            GUI.Label(new Rect(x + UiTheme.Pad, y + 12f, pw - 32f, 24f), task.title, heading);
+            GUI.Label(new Rect(x + UiTheme.Pad, y + 36f, pw - 32f, 18f), "for " + task.rescuee, caption);
+            float sy = y + 62f;
             foreach (var step in task.steps)
-                sb.Append(runner.IsStepDone(step.id) ? "<color=#7dff9a>[x]</color> " : "[  ] ").Append(step.label).Append('\n');
-            GUI.Box(new Rect(16f, 16f, 320f, 60f + task.steps.Length * 22f), sb.ToString(), box);
+            {
+                bool done = runner.IsStepDone(step.id);
+                Rect box = new Rect(x + UiTheme.Pad, sy + 5f, 16f, 16f);
+                if (done) UiTheme.Panel(box, UiTheme.Good, 5f);
+                else UiTheme.Outline(box, UiTheme.TextMuted, 2f, 5f);
+                // Finished steps step back so the next job is the brightest line on the card.
+                GUI.Label(new Rect(x + UiTheme.Pad + 26f, sy, pw - 58f, row), done ? $"<color={UiTheme.MutedHex}>{step.label}</color>" : step.label, left);
+                sy += row;
+            }
         }
 
         void DrawTool(float h)
@@ -274,116 +322,133 @@ namespace RobotRescue.UI
             if (!toolArm || !toolArm.Current) return;
             bool armOk = toolArm.isActiveAndEnabled;
             var tools = toolArm.Unlocked;
-            float x = 16f, y = h - 70f;
-            GUI.Box(new Rect(x, y, 74f + tools.Count * 44f, 54f), GUIContent.none);
-            GUI.Label(new Rect(x + 6f, y + 4f, 60f, 46f), "TOOL\n<size=11>Tab / Y</size>", small);
+            float x = UiTheme.Margin, y = h - 82f;
+            UiTheme.Panel(new Rect(x, y, 84f + tools.Count * 46f, 58f), UiTheme.Ink);
+            GUI.Label(new Rect(x + 12f, y + 8f, 64f, 20f), "Tool", caption);
+            GUI.Label(new Rect(x + 12f, y + 28f, 64f, 20f), $"<b><color={UiTheme.SignalHex}>Tab / Y</color></b>", caption);
             for (int i = 0; i < tools.Count; i++)
             {
                 var t = tools[i];
                 bool on = t == toolArm.Current;
-                Rect r = new Rect(x + 66f + i * 44f, y + (on ? 4f : 10f), on ? 40f : 34f, on ? 46f : 34f);
-                Fill(r, armOk ? (on ? t.color : t.color * 0.6f) : new Color(0.4f, 0.4f, 0.4f));
+                Rect r = new Rect(x + 76f + i * 46f, y + (on ? 7f : 12f), on ? 40f : 34f, on ? 44f : 34f);
+                // Tool heads keep their own colours (DESIGN.md), the current one is full size with a cyan ring.
+                UiTheme.Panel(r, armOk ? (on ? t.color : t.color * new Color(0.6f, 0.6f, 0.6f, 1f)) : new Color(0.4f, 0.4f, 0.4f), 8f);
+                if (on && armOk) UiTheme.Outline(new Rect(r.x - 3f, r.y - 3f, r.width + 6f, r.height + 6f), UiTheme.Signal, 2f, 10f);
                 string abbr = t.displayName.Substring(0, Mathf.Min(2, t.displayName.Length));
-                GUI.Label(r, $"<b><color=black>{abbr}</color></b>", small);
+                GUI.Label(r, $"<b><color=#141414>{abbr}</color></b>", small);
             }
-            GUI.Label(new Rect(x, y - 22f, 260f, 20f), armOk ? "<b>" + toolArm.Current.displayName + "</b>" : "<b><color=#ff7a6b>Tool arm missing!</color></b>", left);
+            UiTheme.Shadowed(new Rect(x + 2f, y - 26f, 280f, 22f),
+                armOk ? "<b>" + toolArm.Current.displayName + "</b>" : $"<b><color={UiTheme.DangerHex}>Tool arm missing</color></b>  <size=13>find it or visit a service bay</size>", left);
         }
 
         void DrawBattery(float h)
         {
             if (!battery) return;
-            float x = 16f, y = h - 128f;
+            float x = UiTheme.Margin, y = h - 140f;
             float c = battery.Charge01;
-            bool flash = battery.IsCritical && !battery.IsCharging && Mathf.Repeat(Time.time * 3f, 1f) < 0.5f;
-            Color col = c > 0.5f ? new Color(0.35f, 0.95f, 0.5f) : c > battery.lowThreshold ? new Color(1f, 0.85f, 0.25f) : new Color(1f, 0.35f, 0.3f);
-            if (flash) col = Color.white;
+            // The fill keeps its bright colours in both modes: it sits behind dark text.
+            Color col = c > 0.5f ? new Color(0.42f, 0.89f, 0.56f) : c > battery.lowThreshold ? new Color(1f, 0.79f, 0.3f) : new Color(1f, 0.48f, 0.42f);
+            if (battery.IsCritical && !battery.IsCharging) col = Breathe(col);
 
-            Fill(new Rect(x, y, 96f, 34f), new Color(0f, 0f, 0f, 0.6f));
-            Fill(new Rect(x + 96f, y + 10f, 6f, 14f), new Color(0f, 0f, 0f, 0.6f));
-            Fill(new Rect(x + 4f, y + 4f, 88f * c, 26f), col);
-            GUI.Label(new Rect(x, y, 96f, 34f), $"<b><color=black>{Mathf.CeilToInt(c * 100f)}%</color></b>", label);
-            string status = battery.IsCharging ? $"<color=#7dff9a><b>Charging</b></color> <size=11>({battery.ChargingFrom})</size>"
-                : battery.OnReserve ? $"<color=#ffd34d><b>RESERVE</b></color> <size=11>walk to a charger · tow in {Mathf.CeilToInt(battery.ReserveLeft)}s</size>"
-                : battery.IsCritical ? "<color=#ff7a6b><b>FIND A CHARGER!</b></color>"
-                : battery.IsLow ? "<color=#ffd34d>Battery low</color>" : "<size=11>BATTERY</size>";
-            GUI.Label(new Rect(x + 110f, y, 320f, 34f), status, left);
+            UiTheme.Panel(new Rect(x, y, 104f, 38f), UiTheme.Ink, 10f);
+            UiTheme.Panel(new Rect(x + 104f, y + 12f, 6f, 14f), UiTheme.Ink, 3f);
+            if (c > 0f) UiTheme.Panel(new Rect(x + 4f, y + 4f, Mathf.Max(10f, 96f * c), 30f), col, 7f);
+            if (battery.IsCharging)
+            {
+                // Live Wire: a lead plugs into the battery's nub and current runs along it into the cell.
+                UiTheme.Panel(new Rect(x + 110f, y + 17.5f, 30f, 3f), UiTheme.Signal, 1.5f);
+                float run = UiTheme.CalmMotion ? 0.5f : 1f - Mathf.Repeat(Time.unscaledTime * 1.6f, 1f);
+                UiTheme.Panel(new Rect(x + 110f + 26f * run, y + 15f, 8f, 8f), Color.white, 4f);
+                UiTheme.Outline(new Rect(x - 2f, y - 2f, 108f, 42f), UiTheme.Signal, 2f, 11f);
+            }
+            GUI.Label(new Rect(x, y, 104f, 38f), $"<b><color=#141414>{Mathf.CeilToInt(c * 100f)}%</color></b>", label);
+            string status = battery.IsCharging ? $"<color={UiTheme.GoodHex}><b>Charging</b></color>  <color={UiTheme.MutedHex}>{battery.ChargingFrom}</color>"
+                : battery.OnReserve ? $"<color={UiTheme.WarnHex}><b>On reserve</b></color>  walk to a charger · tow in {Mathf.CeilToInt(battery.ReserveLeft)}s"
+                : battery.IsCritical ? $"<color={UiTheme.DangerHex}><b>Find a charger</b></color>"
+                : battery.IsLow ? $"<color={UiTheme.WarnHex}><b>Battery low</b></color>"
+                : $"<color={UiTheme.MutedHex}>Battery</color>";
+            UiTheme.Shadowed(new Rect(x + 122f, y, 360f, 38f), status, left);
         }
 
         void DrawParts(float h)
         {
             if (!parts) return;
-            float x = 16f, y = h - 210f;
-            Color ok = new Color(0.92f, 0.94f, 1f, 0.9f), lost = new Color(1f, 0.3f, 0.25f, 0.45f);
+            float x = UiTheme.Margin, y = h - 230f;
+            Color ok = new Color(UiTheme.Text.r, UiTheme.Text.g, UiTheme.Text.b, 0.9f), lost = new Color(UiTheme.Danger.r, UiTheme.Danger.g, UiTheme.Danger.b, 0.5f);
             bool any = parts.MissingCount > 0;
             if (!any && !(bot && bot.IsClimbing)) return;
-            Fill(new Rect(x, y, 150f, 74f), new Color(0f, 0f, 0f, 0.45f));
-            float cx = x + 36f;
-            Fill(new Rect(cx - 2f, y + 6f, 4f, 10f), parts.Has(BotPart.Antenna) ? ok : lost);
-            Fill(new Rect(cx - 14f, y + 16f, 28f, 18f), ok);
-            Fill(new Rect(cx - 11f, y + 36f, 22f, 20f), ok);
-            Fill(new Rect(cx - 21f, y + 37f, 7f, 16f), parts.Has(BotPart.ArmR) ? ok : lost);
-            Fill(new Rect(cx + 14f, y + 37f, 7f, 16f), parts.Has(BotPart.ArmL) ? ok : lost);
-            Fill(new Rect(cx - 12f, y + 58f, 9f, 8f), parts.Has(BotPart.FootR) ? ok : lost);
-            Fill(new Rect(cx + 3f, y + 58f, 9f, 8f), parts.Has(BotPart.FootL) ? ok : lost);
-            var sb = new StringBuilder(any ? "<color=#ff7a6b><b>Lost:</b></color>\n" : "");
+            UiTheme.Panel(new Rect(x, y, 170f, 78f), UiTheme.Ink);
+            float cx = x + 38f;
+            Fill(new Rect(cx - 2f, y + 8f, 4f, 10f), parts.Has(BotPart.Antenna) ? ok : lost);
+            UiTheme.Panel(new Rect(cx - 14f, y + 18f, 28f, 18f), ok, 5f);
+            UiTheme.Panel(new Rect(cx - 11f, y + 38f, 22f, 20f), ok, 4f);
+            UiTheme.Panel(new Rect(cx - 21f, y + 39f, 7f, 16f), parts.Has(BotPart.ArmR) ? ok : lost, 3f);
+            UiTheme.Panel(new Rect(cx + 14f, y + 39f, 7f, 16f), parts.Has(BotPart.ArmL) ? ok : lost, 3f);
+            UiTheme.Panel(new Rect(cx - 12f, y + 60f, 9f, 8f), parts.Has(BotPart.FootR) ? ok : lost, 3f);
+            UiTheme.Panel(new Rect(cx + 3f, y + 60f, 9f, 8f), parts.Has(BotPart.FootL) ? ok : lost, 3f);
+            var sb = new StringBuilder(any ? $"<color={UiTheme.DangerHex}><b>Lost</b></color>\n" : "");
             for (int i = 0; i < 5; i++)
-                if (!parts.Has((BotPart)i)) sb.Append("<size=11>").Append(BotParts.PartName((BotPart)i)).Append("</size>\n");
-            GUI.Label(new Rect(x + 66f, y + 4f, 84f, 66f), sb.ToString(), left);
+                if (!parts.Has((BotPart)i)) sb.Append("<size=13>").Append(BotParts.PartName((BotPart)i)).Append("</size>\n");
+            GUI.Label(new Rect(x + 72f, y + 6f, 94f, 66f), sb.ToString(), left);
         }
 
         void DrawStamina(float w, float h)
         {
             if (!bot || (!bot.IsClimbing && bot.Stamina01 > 0.995f)) return;
             float s = bot.Stamina01;
-            Color c = s > 0.25f ? new Color(1f, 0.85f, 0.3f) : (Mathf.Repeat(Time.time * 4f, 1f) < 0.5f ? new Color(1f, 0.3f, 0.25f) : Color.white);
-            Bar(new Rect(w / 2 - 120f, h - 46f, 240f, 16f), s, c);
-            GUI.Label(new Rect(w / 2 - 120f, h - 68f, 240f, 20f), "<b>STAMINA</b>", small);
+            Color c = s > 0.25f ? UiTheme.Warn : Breathe(UiTheme.Danger);
+            UiTheme.Bar(new Rect(w / 2 - 130f, h - 52f, 260f, 16f), s, c);
+            UiTheme.Shadowed(new Rect(w / 2 - 130f, h - 76f, 260f, 20f), "<b>Grip</b>", small);
         }
 
         void DrawBolts(float w, float h)
         {
             if (Collectible.Total == 0) return;
-            GUI.Label(new Rect(w - 220f, h - 40f, 200f, 28f), $"<b><color=#ffd34d>BOLTS</color></b>  {Collectible.Count} / {Collectible.Total}", labelRight);
+            Rect r = new Rect(w - UiTheme.Margin - 176f, h - UiTheme.Margin - 40f, 176f, 40f);
+            UiTheme.Panel(r, UiTheme.Ink);
+            GUI.Label(new Rect(r.x + 14f, r.y, 80f, r.height), $"<color={UiTheme.WarnHex}><b>Bolts</b></color>", left);
+            GUI.Label(new Rect(r.x, r.y, r.width - 14f, r.height), $"<b>{Collectible.Count}</b> <color={UiTheme.MutedHex}>/ {Collectible.Total}</color>", labelRight);
         }
 
         void DrawOrders(float w)
         {
             if (!board || !board.isActiveAndEnabled) return;
-            const float tw = 150f, th = 92f;
-            float x = w - 16f - board.maxActive * (tw + 8f);
-            GUI.Label(new Rect(x, 14f, 300f, 22f), $"<b>ORDERS</b>  {board.Served}/{board.orders.Length} served", labelLeft);
+            const float tw = 156f, th = 98f;
+            float x = w - UiTheme.Margin - board.maxActive * (tw + UiTheme.Gap) + UiTheme.Gap;
+            UiTheme.Shadowed(new Rect(x, UiTheme.Margin - 4f, 320f, 24f), $"<b>Orders</b>  <color={UiTheme.MutedHex}>{board.Served} of {board.orders.Length} served</color>", left);
             for (int i = 0; i < board.Active.Count; i++)
             {
                 var o = board.Active[i];
                 var recipe = o.spec.recipe;
                 if (!recipe) continue;
-                Rect r = new Rect(x + i * (tw + 8f), 40f, tw, th);
+                Rect r = new Rect(x + i * (tw + UiTheme.Gap), UiTheme.Margin + 26f, tw, th);
                 var sb = new StringBuilder();
-                sb.Append("<b>").Append(recipe.dishName).Append("</b>\n<size=12>");
+                sb.Append("<b>").Append(recipe.dishName).Append("</b>\n<color=").Append(UiTheme.MutedHex).Append(">");
                 sb.Append(recipe.method == CookMethod.Whisk ? "whisk: " : "boil: ");
                 for (int k = 0; k < recipe.ingredients.Length; k++)
                     sb.Append(k > 0 ? " + " : "").Append(recipe.ingredients[k] ? recipe.ingredients[k].displayName : "?");
-                sb.Append("</size>");
-                GUI.Box(r, sb.ToString(), ticket);
-                Color c = Color.Lerp(new Color(1f, 0.3f, 0.25f), new Color(0.45f, 0.9f, 0.45f), o.Patience01);
-                if (o.Patience01 < 0.25f && Mathf.Repeat(Time.time * 4f, 1f) < 0.5f) c = Color.white;
-                Bar(new Rect(r.x + 8f, r.yMax - 20f, r.width - 16f, 12f), o.Patience01, c);
+                sb.Append("</color>");
+                UiTheme.Panel(r, UiTheme.Ink);
+                GUI.Label(new Rect(r.x + 8f, r.y + 8f, r.width - 16f, r.height - 30f), sb.ToString(), ticketStyle);
+                Color c = Color.Lerp(UiTheme.Danger, UiTheme.Good, o.Patience01);
+                if (o.Patience01 < 0.25f) c = Breathe(c);
+                UiTheme.Bar(new Rect(r.x + 10f, r.yMax - 20f, r.width - 20f, 10f), o.Patience01, c);
             }
         }
 
         void DrawMeters(float w)
         {
             // The order board's tickets sit top-right; the boss meters stack top-centre.
-            float y = 16f;
+            float y = UiTheme.Margin;
             foreach (var m in meters)
             {
                 if (!Live(m)) continue;
-                Rect r = new Rect(w / 2 - 180f, y, 360f, 22f);
-                GUI.Label(new Rect(r.x, r.y, r.width, 20f), "<b>" + m.MeterTitle + "</b>", label);
-                Bar(new Rect(r.x, r.y + 22f, r.width, 18f), m.Meter01, m.MeterColor);
+                Rect r = new Rect(w / 2 - 190f, y, 380f, 22f);
+                UiTheme.Shadowed(new Rect(r.x, r.y, r.width, 22f), m.MeterTitle, meterTitle);
+                UiTheme.Bar(new Rect(r.x, r.y + 26f, r.width, 18f), m.Meter01, m.MeterColor);
                 if (!string.IsNullOrEmpty(m.MeterStatus))
-                    GUI.Label(new Rect(r.x - 60f, r.y + 42f, r.width + 120f, 20f), m.MeterStatus, small);
-                y += 70f;
+                    UiTheme.Shadowed(new Rect(r.x - 60f, r.y + 48f, r.width + 120f, 20f), m.MeterStatus, small);
+                y += 76f;
             }
         }
 
@@ -392,8 +457,12 @@ namespace RobotRescue.UI
             if (!chaos || string.IsNullOrEmpty(chaos.LastMishap)) return;
             float age = Time.time - chaos.LastMishapTime;
             if (age > 3f) return;
-            Fill(new Rect(0, 0, w, h), new Color(1f, 0.4f, 0.1f, 0.25f * (1f - age / 3f)));
-            GUI.Label(new Rect(0, h * 0.22f, w, 50f), "<color=#ffb347>" + chaos.LastMishap + "</color>", big);
+            // A brief warm tint says "something just went wrong in the kitchen"; calm motion keeps only the words.
+            if (!UiTheme.CalmMotion) Fill(new Rect(0, 0, w, h), new Color(1f, 0.45f, 0.1f, 0.16f * (1f - age / 3f)));
+            Color old = GUI.color;
+            GUI.color = new Color(1f, 1f, 1f, UiTheme.CardAlpha(age, 3f, 0.2f, 0.5f));
+            UiTheme.Shadowed(new Rect(0, h * 0.22f + UiTheme.Rise(age, 0.2f, 10f), w, 56f), $"<color={UiTheme.WarnHex}>{chaos.LastMishap}</color>", big);
+            GUI.color = old;
         }
 
         void DrawDispatch(float w, float h)
@@ -403,20 +472,26 @@ namespace RobotRescue.UI
             string text = speaker.CurrentText;
             if (parts && !parts.Has(BotPart.Antenna)) text = Garble(text);
 
-            Rect r = new Rect(w * 0.2f + 86f, h - 150f, w * 0.6f - 86f, 80f);
-            GUI.Box(r, "<b>DISPATCH:</b> " + text, subtitle);
+            float pw = Mathf.Min(860f, w - 2f * UiTheme.Margin);
+            Rect r = new Rect(w / 2 - pw / 2, h - 176f, pw, 104f);
+            UiTheme.Panel(r, UiTheme.Ink);
 
             // A little monitor face that talks along with the radio voice.
-            Rect p = new Rect(w * 0.2f, h - 150f, 80f, 80f);
-            Fill(p, new Color(0.15f, 0.17f, 0.3f, 0.95f));
-            Fill(new Rect(p.x + 5f, p.y + 5f, 70f, 70f), new Color(0.05f, 0.07f, 0.15f, 1f));
+            Rect p = new Rect(r.x + 12f, r.y + 12f, 80f, 80f);
+            UiTheme.Panel(p, new Color(0.15f, 0.17f, 0.3f, 1f), 10f);
+            UiTheme.Panel(new Rect(p.x + 5f, p.y + 5f, 70f, 70f), new Color(0.04f, 0.06f, 0.14f, 1f), 7f);
             bool blink = Mathf.Repeat(Time.time, 3.7f) < 0.12f;
             Color eye = new Color(1f, 0.75f, 0.3f);
-            Fill(new Rect(p.x + 20f, p.y + (blink ? 30f : 22f), 12f, blink ? 3f : 16f), eye);
-            Fill(new Rect(p.x + 48f, p.y + (blink ? 30f : 22f), 12f, blink ? 3f : 16f), eye);
+            UiTheme.Panel(new Rect(p.x + 20f, p.y + (blink ? 30f : 22f), 12f, blink ? 3f : 16f), eye, blink ? 1f : 4f);
+            UiTheme.Panel(new Rect(p.x + 48f, p.y + (blink ? 30f : 22f), 12f, blink ? 3f : 16f), eye, blink ? 1f : 4f);
             bool talking = dispatchVoice ? dispatchVoice.IsTalking : true;
             float mouth = talking ? 3f + Mathf.Abs(Mathf.Sin(Time.time * 18f)) * 10f : 3f;
-            Fill(new Rect(p.x + 28f, p.y + 52f - mouth * 0.5f, 24f, mouth), eye);
+            UiTheme.Panel(new Rect(p.x + 28f, p.y + 52f - mouth * 0.5f, 24f, mouth), eye, 1.5f);
+
+            // Speaker name on its own line, so the words themselves start clean.
+            float tx = p.xMax + 16f, tw = r.xMax - tx - UiTheme.Pad;
+            GUI.Label(new Rect(tx, r.y + 10f, tw, 20f), $"<b><color={UiTheme.AccentHex}>DISPATCH</color></b>", caption);
+            GUI.Label(new Rect(tx, r.y + 32f, tw, r.height - 40f), text, subtitle);
         }
 
         string Garble(string text)
@@ -431,7 +506,7 @@ namespace RobotRescue.UI
                 bool scramble = ch != ' ' && ((i * 7919 + text.Length * 31) % 100) < 22;
                 sb.Append(scramble ? noise[(i * 13) % noise.Length] : ch);
             }
-            garbled = sb.Append("  <size=12><i>(antenna missing: bad signal)</i></size>").ToString();
+            garbled = sb.Append($"  <size=13><color={UiTheme.MutedHex}>(antenna missing: bad signal)</color></size>").ToString();
             return garbled;
         }
 
@@ -442,57 +517,73 @@ namespace RobotRescue.UI
             if (area && age < titleCardTime)
             {
                 string t = $"{area.chapterTitle}  ·  {area.DisplayTitle}";
-                if (area.IsComplete) t += "  <color=#7dff9a>(solved)</color>";
+                if (area.IsComplete) t += $"  <color={UiTheme.GoodHex}>solved</color>";
                 DrawTitleCard(w, h, t, age);
             }
             float toastAge = Time.time - World.ToastTime;
             if (!string.IsNullOrEmpty(World.Toast) && toastAge < 4f)
             {
                 Color old = GUI.color;
-                GUI.color = new Color(1f, 1f, 1f, Mathf.Clamp01(Mathf.Min(toastAge * 3f, (4f - toastAge) * 2f)));
-                GUI.Label(new Rect(0, h * 0.18f, w, 60f), "<color=#ffd34d>" + World.Toast + "</color>", big);
+                GUI.color = new Color(1f, 1f, 1f, UiTheme.CardAlpha(toastAge, 4f));
+                UiTheme.Shadowed(new Rect(0, h * 0.18f + UiTheme.Rise(toastAge), w, 60f), $"<color={UiTheme.WarnHex}>{World.Toast}</color>", big);
                 GUI.color = old;
             }
         }
 
         void DrawTitleCard(float w, float h, string text, float age)
         {
-            float a = Mathf.Clamp01(Mathf.Min(age * 2f, (titleCardTime - age) * 2f));
+            // Rises a few pixels into place as it fades in, then leaves a little faster than it came.
             Color old = GUI.color;
-            GUI.color = new Color(1f, 1f, 1f, a);
-            GUI.Label(new Rect(0, h * 0.36f, w, 60f), text, big);
+            GUI.color = new Color(1f, 1f, 1f, UiTheme.CardAlpha(age, titleCardTime, 0.45f, 0.35f));
+            UiTheme.Shadowed(new Rect(0, h * 0.36f + UiTheme.Rise(age, 0.45f), w, 60f), text, big);
             GUI.color = old;
         }
 
-        static void Dim(float w, float h, float alpha) => Fill(new Rect(0, 0, w, h), new Color(0f, 0f, 0f, alpha));
+        static void Dim(float w, float h, float alpha) => Fill(new Rect(0, 0, w, h), new Color(0.02f, 0.03f, 0.08f, alpha));
+
+        /// <summary>A centred card for the flat / complete / failed / paused screens.</summary>
+        static Rect Card(float w, float h, float cw, float ch)
+        {
+            var r = new Rect(w / 2 - cw / 2, h * 0.42f - ch / 2, cw, ch);
+            // A card that wasn't showing a moment ago has just opened: it powers on along its cable.
+            if (Time.frameCount - cardFrame > 2) cardOpenedAt = Time.unscaledTime;
+            cardFrame = Time.frameCount;
+            UiTheme.Panel(r, UiTheme.Ink, 18f);
+            UiTheme.PowerOn(r, Time.unscaledTime - cardOpenedAt, 18f);
+            return r;
+        }
 
         void DrawFlat(float w, float h)
         {
             Dim(w, h, 0.4f);
-            GUI.Label(new Rect(0, h * 0.32f, w, 60f), "<color=#ff7a6b>BATTERY FLAT</color>", big);
-            GUI.Label(new Rect(0, h * 0.32f + 60f, w, 30f), "Calling the Bureau tow truck... back to the last charger.", label);
+            var r = Card(w, h, 560f, 150f);
+            GUI.Label(new Rect(r.x, r.y + 26f, r.width, 54f), $"<color={UiTheme.DangerHex}>Battery flat</color>", big);
+            GUI.Label(new Rect(r.x + 24f, r.y + 88f, r.width - 48f, 40f), "The Bureau tow truck is on its way. Back to the last charger.", body);
         }
 
         void DrawComplete(float w, float h)
         {
             Dim(w, h, 0.35f);
+            var r = Card(w, h, 600f, 190f);
             var runner = Runner;
             float t = runner ? runner.Elapsed : 0f;
-            GUI.Label(new Rect(0, h * 0.3f, w, 60f), "CALL COMPLETE!", big);
+            GUI.Label(new Rect(r.x, r.y + 26f, r.width, 54f), $"<color={UiTheme.GoodHex}>Call complete</color>", big);
             string extra = board ? $"   ·   Hero moments {board.HeroMoments}" : "";
-            GUI.Label(new Rect(0, h * 0.3f + 60f, w, 30f), $"Rescue time {(int)t / 60}:{(int)t % 60:00}{extra}", label);
-            GUI.Label(new Rect(0, h * 0.3f + 92f, w, 30f), "<b>Enter / A</b>: next call   ·   <b>Backspace / Select</b>: replay", label);
+            GUI.Label(new Rect(r.x, r.y + 86f, r.width, 28f), $"Rescue time <b>{(int)t / 60}:{(int)t % 60:00}</b>{extra}", body);
+            GUI.Label(new Rect(r.x, r.y + 132f, r.width, 28f), UiTheme.Keys("[Enter / A] next call      [Backspace / Select] replay"), label);
         }
 
         void DrawFailure(float w, float h, string text)
         {
             Dim(w, h, 0.45f);
-            GUI.Label(new Rect(0, h * 0.3f, w, 60f), "<color=#ff6b5b>" + text + "</color>", big);
-            GUI.Label(new Rect(0, h * 0.3f + 64f, w, 30f), "<b>Backspace / Select</b> to try again", label);
+            var r = Card(w, h, 640f, 160f);
+            GUI.Label(new Rect(r.x + 20f, r.y + 26f, r.width - 40f, 54f), $"<color={UiTheme.DangerHex}>{text}</color>", big);
+            GUI.Label(new Rect(r.x, r.y + 100f, r.width, 28f), UiTheme.Keys("[Backspace / Select] try again"), label);
         }
 
         void DrawPause(float w, float h, GameManager gm)
         {
+            if (!wasPaused) { pauseFocus.Reset(); wasPaused = true; }
             if (inWorkshop)
             {
                 // Barely dimmed so you can watch your bot change.
@@ -501,13 +592,18 @@ namespace RobotRescue.UI
                 return;
             }
             Dim(w, h, 0.5f);
-            GUI.Label(new Rect(0, h * 0.22f, w, 60f), "PAUSED", big);
-            float bw = 260f, x = w / 2 - bw / 2, y = h * 0.22f + 80f;
-            if (GUI.Button(new Rect(x, y, bw, 44f), "Resume", button)) gm.SetPaused(false);
-            if (GUI.Button(new Rect(x, y + 54f, bw, 44f), "Restart call", button)) gm.Restart();
-            if ((World || CampaignProgress.Campaign) && GUI.Button(new Rect(x, y + 108f, bw, 44f), World ? "Title screen" : "Main menu", button)) gm.QuitToMenu();
-            if (GUI.Button(new Rect(x, y + 162f, bw, 44f), "Customize bots", button)) { workshop.Open(); inWorkshop = true; }
-            GUI.Label(new Rect(0, y + 224f, w, 24f), "Esc / P / Start to resume", small);
+            bool menu = World || CampaignProgress.Campaign;
+            float bw = 300f, bh = UiTheme.ButtonHeight, step = bh + 14f;
+            int count = menu ? 4 : 3;
+            var r = Card(w, h, bw + 80f, 110f + count * step + 30f);
+            GUI.Label(new Rect(r.x, r.y + 22f, r.width, 54f), "Paused", big);
+            float x = r.x + 40f, y = r.y + 96f;
+            pauseFocus.BeginGUI();
+            if (pauseFocus.Button(new Rect(x, y, bw, bh), "Resume", primary)) gm.SetPaused(false);
+            if (pauseFocus.Button(new Rect(x, y += step, bw, bh), "Restart call", button)) gm.Restart();
+            if (menu && pauseFocus.Button(new Rect(x, y += step, bw, bh), World ? "Title screen" : "Main menu", button)) gm.QuitToMenu();
+            if (pauseFocus.Button(new Rect(x, y += step, bw, bh), "Customize bots", button)) { workshop.Open(); inWorkshop = true; }
+            GUI.Label(new Rect(r.x, r.yMax - 40f, r.width, 24f), UiTheme.Keys("[Esc / P / Start] resume"), small);
         }
     }
 }

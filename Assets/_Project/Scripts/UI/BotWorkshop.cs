@@ -15,7 +15,7 @@ namespace RobotRescue.UI
         DroneLivery livery;
         BotCustomizer preview;
         Vector2 scroll;
-        GUIStyle panel, header, row, value, button, tabOn, tabOff, field, hint;
+        GUIStyle panel, header, row, value, button, done, tabOn, tabOff, field, hint;
 
         const int CrewTab = BotLookStore.MaxPlayers;
 
@@ -34,23 +34,26 @@ namespace RobotRescue.UI
             if (preview) preview.Apply(BotLookStore.Load(preview.playerSlot));
         }
 
+        int styledFor = -1;
+
         void Styles()
         {
-            if (panel != null) return;
-            var bg = new Texture2D(1, 1);
-            bg.SetPixel(0, 0, new Color(0.08f, 0.1f, 0.2f, 0.82f));
-            bg.Apply();
-            panel = new GUIStyle(GUI.skin.box) { padding = new RectOffset(18, 18, 14, 14) };
-            panel.normal.background = bg;
-            header = new GUIStyle(GUI.skin.label) { fontSize = 24, fontStyle = FontStyle.Bold, richText = true };
-            row = new GUIStyle(GUI.skin.label) { fontSize = 17, alignment = TextAnchor.MiddleLeft };
-            value = new GUIStyle(GUI.skin.label) { fontSize = 17, fontStyle = FontStyle.Bold, alignment = TextAnchor.MiddleCenter };
-            button = new GUIStyle(GUI.skin.button) { fontSize = 17 };
-            tabOff = new GUIStyle(GUI.skin.button) { fontSize = 15 };
-            tabOn = new GUIStyle(tabOff) { fontStyle = FontStyle.Bold };
-            tabOn.normal.textColor = tabOn.hover.textColor = new Color(1f, 0.62f, 0.2f);
-            field = new GUIStyle(GUI.skin.textField) { fontSize = 18, alignment = TextAnchor.MiddleCenter };
-            hint = new GUIStyle(GUI.skin.label) { fontSize = 13, wordWrap = true, fontStyle = FontStyle.Italic };
+            if (panel != null && styledFor == UiTheme.Version) return;
+            styledFor = UiTheme.Version;
+            panel = UiTheme.PanelStyle();
+            header = UiTheme.Style(UiTheme.Heading, UiTheme.Text, bold: true);
+            row = UiTheme.Style(UiTheme.Label, UiTheme.TextMuted);
+            value = UiTheme.Style(UiTheme.Label, UiTheme.Text, TextAnchor.MiddleCenter, bold: true);
+            button = UiTheme.Button(size: UiTheme.Label);
+            done = UiTheme.Button(primary: true, size: UiTheme.Body);
+            tabOff = UiTheme.Button(size: UiTheme.Caption + 1);
+            tabOff.fontStyle = FontStyle.Normal;
+            tabOff.normal.textColor = tabOff.hover.textColor = UiTheme.TextMuted;
+            // The open tab is the only one in cyan, the same colour as focus everywhere else.
+            tabOn = UiTheme.Button(size: UiTheme.Caption + 1);
+            tabOn.normal.textColor = tabOn.hover.textColor = tabOn.active.textColor = UiTheme.Signal;
+            field = UiTheme.Field();
+            hint = UiTheme.Style(UiTheme.Caption, UiTheme.TextMuted, wrap: true);
         }
 
         /// <summary>Draws the panel down the left side of the screen. Returns true when the player presses Done.</summary>
@@ -61,7 +64,9 @@ namespace RobotRescue.UI
             float pw = Mathf.Min(460f, w - 40f);
             var area = new Rect(24f, 24f, pw, h - 48f);
             GUILayout.BeginArea(area, panel);
-            GUILayout.Label("<color=#ff8c26>BUREAU</color> WORKSHOP", header);
+            GUILayout.Label($"<color={UiTheme.AccentHex}>Bureau</color> workshop", header);
+            GUILayout.Label("Changes save as you make them.", hint);
+            GUILayout.Space(8f);
 
             GUILayout.BeginHorizontal();
             for (int i = 0; i <= CrewTab; i++)
@@ -70,7 +75,7 @@ namespace RobotRescue.UI
                 if (GUILayout.Button(label, i == tab ? tabOn : tabOff, GUILayout.Height(32f))) SwitchTab(i);
             }
             GUILayout.EndHorizontal();
-            GUILayout.Space(6f);
+            GUILayout.Space(10f);
 
             scroll = GUILayout.BeginScrollView(scroll);
             if (tab == CrewTab) DrawCrew();
@@ -78,10 +83,10 @@ namespace RobotRescue.UI
             GUILayout.EndScrollView();
 
             GUILayout.Space(6f);
-            bool done = GUILayout.Button("Done", button, GUILayout.Height(42f));
+            bool finished = GUILayout.Button("Done", done, GUILayout.Height(UiTheme.ButtonHeight));
             GUILayout.EndArea();
-            if (done) Close();
-            return done;
+            if (finished) Close();
+            return finished;
         }
 
         void SwitchTab(int i)
@@ -174,10 +179,9 @@ namespace RobotRescue.UI
             {
                 // HDR LED colours are squashed back into 0..1 for the swatch.
                 float m = hdr ? Mathf.Max(1f, Mathf.Max(c.r, Mathf.Max(c.g, c.b))) : 1f;
-                var old = GUI.color;
-                GUI.color = new Color(c.r / m, c.g / m, c.b / m, 1f);
-                GUI.DrawTexture(new Rect(r.x, r.y + 4f, 24f, 24f), Texture2D.whiteTexture);
-                GUI.color = old;
+                var chip = new Rect(r.x, r.y + 4f, 24f, 24f);
+                UiTheme.Panel(chip, new Color(c.r / m, c.g / m, c.b / m, 1f), 7f);
+                UiTheme.Outline(chip, UiTheme.Line, 1f, 7f);
             }
             GUILayout.Label(options[index].name, value, GUILayout.Height(32f));
             if (GUILayout.Button(">", button, GUILayout.Width(40f), GUILayout.Height(32f))) index++;
