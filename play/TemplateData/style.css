@@ -1,0 +1,127 @@
+/* Robot Rescue play page: "Live Wire". Same tokens as the website (site/site.css) and the game (UiTheme.cs). */
+
+@font-face { font-family: "Unbounded"; src: url("fonts/unbounded-latin.woff2") format("woff2"); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: "Figtree"; src: url("fonts/figtree-latin.woff2") format("woff2"); font-weight: 300 900; font-display: swap; }
+
+:root {
+  --bg: #0A1430; --bg-raised: #111E42; --bg-sunk: #071026; --line: #24335F;
+  --text: #F3F0E8; --muted: #A9B4D4;
+  --live: #2FE0FF; --live-text: #2FE0FF; --live-glow: rgba(47, 224, 255, 0.35);
+  --pip: #FF8C26; --on-pip: #1B1206; --warn: #FFC94D; --bad: #FF7A6B;
+  --display: "Unbounded", "Figtree", system-ui, sans-serif;
+  --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius: 16px;
+  --gutter: clamp(16px, 3vw, 40px);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  /* The game frame: 16:9, as big as the window allows under the bar. Everything lines up to it. */
+  --fit: min(1280px, calc(100vw - 2 * var(--gutter)), calc((100vh - 170px) * 16 / 9));
+  color-scheme: dark;
+}
+:root[data-theme="light"] {
+  --bg: #F6F3EC; --bg-raised: #FFFFFF; --bg-sunk: #ECE7DB; --line: #CFC8B8;
+  --text: #121A33; --muted: #545E7A; --live: #008AB0; --live-text: #00718F; --live-glow: rgba(0, 138, 176, 0.22);
+  --warn: #A86A00; --bad: #C8402F;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #F6F3EC; --bg-raised: #FFFFFF; --bg-sunk: #ECE7DB; --line: #CFC8B8;
+    --text: #121A33; --muted: #545E7A; --live: #008AB0; --live-text: #00718F; --live-glow: rgba(0, 138, 176, 0.22);
+    --warn: #A86A00; --bad: #C8402F;
+    color-scheme: light;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  min-height: 100vh; padding: 0 var(--gutter);
+  background: var(--bg); color: var(--text);
+  font: 400 1rem/1.55 var(--body);
+  display: flex; flex-direction: column; align-items: center;
+}
+::selection { background: var(--live); color: var(--bg); }
+:focus-visible { outline: 2px solid var(--live); outline-offset: 3px; border-radius: 6px; }
+a { color: inherit; text-decoration-color: var(--live); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+a:hover { color: var(--live-text); }
+
+/* ---- Bar --------------------------------------------------------------------------------------------- */
+
+.bar { width: var(--fit); display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; padding: 16px 0; }
+.brand { display: flex; align-items: center; gap: 8px; font: 700 0.95rem/1 var(--display); text-decoration: none; }
+.brand svg { width: 22px; height: 22px; fill: none; stroke: var(--live); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.keys { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 0 0 0 auto; color: var(--muted); font-size: 0.875rem; }
+.keys div { display: flex; align-items: center; gap: 6px; }
+.keys dt, .keys dd { margin: 0; }
+kbd {
+  display: inline-grid; place-items: center; min-width: 1.6em; height: 1.6em; padding: 0 0.4em;
+  border-radius: 6px; background: var(--bg-sunk); box-shadow: inset 0 -2px 0 var(--line);
+  color: var(--live-text); font: 700 0.8125rem/1 var(--body);
+}
+
+.btn {
+  min-height: 40px; padding: 0 18px; border: 0; border-radius: 999px;
+  background: var(--bg-raised); box-shadow: inset 0 0 0 1.5px var(--line);
+  color: var(--text); font: 700 0.9375rem/1 var(--body); cursor: pointer;
+  transition: box-shadow 150ms ease, transform 120ms var(--ease-out);
+}
+.btn:active:not(:disabled) { transform: scale(0.97); }
+.btn:disabled { opacity: 0.45; cursor: default; }
+@media (hover: hover) and (pointer: fine) { .btn:hover:not(:disabled) { box-shadow: inset 0 0 0 1.5px var(--live); } }
+
+/* ---- Game frame ---------------------------------------------------------------------------------------- */
+
+.stage { width: var(--fit); }
+.frame {
+  position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden;
+  border-radius: var(--radius); background: #071026;
+  box-shadow: 0 0 0 1px var(--line), 0 24px 60px -30px rgba(0, 0, 0, 0.7);
+}
+#unity-canvas { display: block; width: 100%; height: 100%; background: #071026; }
+
+/* Loading: the frame stays dark in both themes, like the game itself. */
+.loading {
+  position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 14px;
+  padding: 24px; text-align: center; color: #F3F0E8; background: #0A1430;
+  transition: opacity 300ms var(--ease-out), visibility 300ms;
+}
+.loading.is-done { opacity: 0; visibility: hidden; }
+.charge { display: flex; align-items: center; gap: 6px; width: min(340px, 70vw); }
+.charge-wire { flex: 1; height: 4px; border-radius: 2px; background: #24335F; overflow: hidden; }
+.charge-current {
+  height: 100%; background: #2FE0FF; box-shadow: 0 0 12px rgba(47, 224, 255, 0.6);
+  transform: scaleX(0); transform-origin: left; transition: transform 200ms var(--ease-out);
+}
+.charge-plug { width: 28px; height: 28px; fill: none; stroke: #2FE0FF; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transform: rotate(90deg); }
+.loading-label { margin: 0; font: 700 clamp(1.05rem, 2.2vw, 1.4rem)/1.2 var(--display); }
+.pct { color: #2FE0FF; font-variant-numeric: tabular-nums; }
+.loading-note { margin: 0; color: #A9B4D4; font-size: 0.9rem; max-width: 46ch; }
+
+.notice {
+  position: absolute; left: 16px; right: 16px; bottom: 16px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px;
+  padding: 12px 16px; border-radius: 12px;
+  background: #111E42; color: #F3F0E8; box-shadow: inset 0 0 0 2px #FFC94D;
+}
+.notice p { margin: 0; flex: 1 1 24ch; }
+.notice[data-type="error"] { box-shadow: inset 0 0 0 2px #FF7A6B; }
+.notice[hidden] { display: none; }
+.loading .btn { margin-top: 6px; background: #111E42; color: #F3F0E8; box-shadow: inset 0 0 0 1.5px #24335F; }
+.notice .btn { background: #FF8C26; color: #1B1206; box-shadow: none; }
+
+/* ---- Footer ------------------------------------------------------------------------------------------- */
+
+.footer { width: var(--fit); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding: 16px 0 32px; color: var(--muted); font-size: 0.875rem; }
+.footer p { margin: 0; display: flex; flex-wrap: wrap; gap: 16px; }
+
+/* Phones: no room for key hints. */
+@media (max-width: 720px) {
+  .keys { display: none; }
+  #fullscreen { margin-left: auto; }
+  .frame { aspect-ratio: 3 / 4; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0ms !important; animation-duration: 0ms !important; }
+  .btn:active { transform: none; }
+}
